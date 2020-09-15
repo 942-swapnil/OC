@@ -1,0 +1,67 @@
+
+.categories .prev-next {
+    position: absolute;
+   display: block;
+    cursor: pointer;
+}
+
+.categories .prev-next i {
+    color: #0880c4;
+    margin: 0 3px;
+}
+.categories .prev-next i:hover {
+    color: #000;
+    margin: 0 3px;
+}
+
+.fixed {
+    top: 13%;
+    width: 95%;
+}
+
+.cla1{
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 0em !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px 4px 0 0;
+    padding: .75em .75em 0 .75em;
+    width: 600px;
+    background: white;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    /* background-color: rgba(0, 0, 0, 0.04); */
+    background: white !important;
+    width: 699px !important;
+    font-size: 17px !important;
+    color: black !important;
+}
+
+
+.mat-form-field-wrapper {
+    padding-bottom: 0px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0em !important;
+}

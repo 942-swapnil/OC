@@ -1,0 +1,1687 @@
+<div *ngIf="given === 'popup1'" >
+    <div style="display: flex; align-items: flex-start;">
+        <h3 mat-dialog-title>Create New Contact</h3>
+        <button mat-stroked-button style="margin: 0px 13px; border-radius: 25px;" [matMenuTriggerFor]="menu1">
+            <span class="material-icons">
+                label
+            </span>
+            No Label
+        </button>
+        <mat-menu #menu1="matMenu">
+            <p>Add to label</p>
+            <button>
+                <mat-icon>label</mat-icon>
+                <span>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="New Label" />
+                    </mat-form-field>
+                </span>
+            </button>
+        </mat-menu>
+    </div>
+    <form [formGroup]="contactForm">
+
+
+
+        <mat-dialog-content class="mat-typography" style="border-top: 1px solid lightgray;" >
+            <div class="container-fluid" style="padding-right:0px;padding-left: 0px;">
+                   
+                <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;margin-top: 10px;position: relative;">
+                            <img src="../../../../assets/images/dumy1.png" style="height:60px;width:60px;border-radius: 50%;border: 1px solid;"/>
+                            <input type="file" #contactImage class="custom-file-input img1 form-control" id="inputGroupFile01" name="avatar" (change)="browser($event)" style="display: none;">   
+                            <span  class="material-icons" (click)="contactImage.click()" style="position: absolute;bottom:25px;background-color: lightgray;"> 
+                                    center_focus_weak
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row"> 
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div  class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>Prefix</mat-label>
+                                                <mat-select  formControlName="prefix">
+                                                 <mat-option *ngFor="let prif of prifs"  [value]="prif.name">{{prif.name}}</mat-option>
+                                                </mat-select>
+                                              </mat-form-field>
+                                        </div>
+                                        <div  class="col-3">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>First name</mat-label>
+                                                <input matInput formControlName="firstName" placeholder="Enter First Name" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div  class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>Middle name</mat-label>
+                                                <input matInput formControlName="middleName" placeholder="Enter Middle Name"/>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>Last name</mat-label>
+                                                <input matInput formControlName="lastName" placeholder="Enter Last Name"/>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <mat-form-field appearance="legacy" style="width: 100%;" *ngIf="getFields('Suffix')">
+                                        <mat-label> Suffix </mat-label>
+                                        <mat-select  formControlName="suffix">
+                                          <mat-option value="Ji">Ji</mat-option>
+                                          <mat-option value="Jr.">Jr.</mat-option>
+                                          <mat-option value="Miss">Sr.</mat-option>
+                                          <mat-option value="Saheb">Saheb</mat-option>
+                                          <mat-option value="Custom Label">Custom Label</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div class="row"> 
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div  class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Gender </mat-label>
+                                                <mat-select matNativeControl formControlName="gender" required>
+                                                  <mat-option value="Male">Male</mat-option>
+                                                  <mat-option value="Female">Female</mat-option>
+                                                  <mat-option value="Other">Other</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="getFields('Phonetic First')" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Phonetic first </mat-label>
+                                                <input matInput formControlName="phoneticFirst" placeholder="Enter Phonetic First" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="getFields('Phonetic Middle')">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Phonetic middle </mat-label>
+                                                <input matInput formControlName="phoneticMiddle" placeholder="Enter Phonetic Middle"/>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="getFields('Phonetic Last')" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Phonetic last </mat-label>
+                                                <input matInput formControlName="phoneticLast" placeholder="Enter Phonetic Last"/>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2"  *ngIf="getFields('Nickname')">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label> Nickname </mat-label>
+                                        <input matInput formControlName="nickname" placeholder="Enter Nickname">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-1" style="display: flex;align-items: flex-start; justify-content: space-around;">
+                        </div>
+                    </div>
+
+                    <div class="row" *ngIf="getFields('Relation')">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-11" formArrayName="relateds" >
+                            <div class="row" *ngFor="let quantity of relateds().controls; let i=index" [formGroupName]="0" >
+                                <div class="col-3">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label> Related </mat-label>
+                                        <mat-select  formControlName="related">
+                                          <mat-option *ngFor="let Relate of Relates" [value]="Relate.name"> {{Relate.name}} </mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                 </div>
+
+                                 <div class="col-3">                                                                    
+                                    <mat-form-field class="example-full-width">
+                                        <input type="text" placeholder="Realative Name" aria-label="Number" matInput
+                                               [formControl]="myControl" [matAutocomplete]="auto">
+                                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                            {{option}}
+                                          </mat-option>
+                                        </mat-autocomplete>
+                                      </mat-form-field>
+                                 </div>
+
+                                 <!-- <div class="col-3" >
+                                    <mat-form-field appearance="legacy" style="width: 100%;" >
+                                        <mat-label> Related Name </mat-label>
+                                        <input matInput placeholder="Enter Related Name" formControlName="relatedName"/>
+                                    </mat-form-field>
+                                </div> -->
+
+                                <div class="col-1 offset-5" >
+                                    <span class="material-icons" style="color: red;" (click)="deleteRelateds(i)" *ngIf="i > 0">
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons" style="color: green;" (click)="addRelateds()" *ngIf="i == 0" >
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                domain
+                            </span>
+                        </div>
+                        <div class="col-11" formArrayName="Companys" >
+                            <div class="row"  *ngFor="let quantity of Companys().controls; let i=index" [formGroupName]="i">
+                                <div class="col-11">
+                                    <div class="row">
+                                        <div class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Company Name </mat-label>
+                                                <input matInput formControlName="companyName" placeholder="Enter Company Name"/>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> GST Number </mat-label>
+                                                <input matInput formControlName="GSTNumber" placeholder="Enter GST Number"/>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Job Title </mat-label>
+                                                <input matInput formControlName="jobTitle" placeholder="Enter Job Title" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3">
+                                            <mat-form-field appearance="legacy" style="width: 100%;" *ngIf="getFields('Department')">
+                                                <mat-label> Department </mat-label>
+                                                <input matInput  placeholder="Enter Department"/>
+                                            </mat-form-field>
+                                        </div>  
+                                        <div class="col-3">
+                                            <mat-checkbox class="example-margin" (click)="changedate()" formControlName="workingCheck"> <span style="font-weight: 400;" > Currently Working </span></mat-checkbox>
+                                        </div>
+                                        <div class="col-3">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>Choose a date</mat-label>
+                                                <input matInput [matDatepicker]="pickerf" formControlName="Datefrom">
+                                                <mat-datepicker-toggle matSuffix [for]="pickerf"></mat-datepicker-toggle>
+                                                <mat-datepicker #pickerf></mat-datepicker>
+                                              </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="!checked">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>Choose a date</mat-label>
+                                                <input matInput [matDatepicker]="pickert">
+                                                <mat-datepicker-toggle matSuffix [for]="pickert"></mat-datepicker-toggle>
+                                                <mat-datepicker #pickert></mat-datepicker>
+                                              </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="checked">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Working </mat-label>
+                                                <input matInput formControlName="workingTitle" placeholder="Enter Job Title"  />
+                                            </mat-form-field>
+                                        </div>
+                                        <!-- <div class="col-3" style="display: flex; align-items: center;">
+                                                <mat-checkbox class="example-margin" (click)="changedate()" > <span style="font-weight: 400;" > Working </span></mat-checkbox>
+                                        </div>
+                                        <div class="col-3">
+                                                <mat-form-field color="accent" appearance="legacy" style="width: 100%;">
+                                                    <mat-label>From Date</mat-label>
+                                                    <input matInput [matDatepicker]="pickerf" >
+                                                    <mat-datepicker-toggle matSuffix [for]="pickerf" ></mat-datepicker-toggle>
+                                                    <mat-datepicker #pickerf></mat-datepicker>
+                                                </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="!checked">
+                                                <mat-form-field color="accent" appearance="legacy" style="width: 100%;">
+                                                    <mat-label>To date</mat-label>
+                                                    <mat-datepicker-toggle matSuffix [for]="pickert" ></mat-datepicker-toggle>
+                                                    <mat-datepicker #pickert color="primary" ></mat-datepicker>
+                                                  </mat-form-field>
+                                        </div>
+                                        <div class="col-3" *ngIf="checked">
+                                                <mat-form-field appearance="legacy" style="width: 100%;" >
+                                                    <mat-label>To date</mat-label>
+                                                    <input matInput  placeholder="Enter Department" />
+                                                </mat-form-field>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="material-icons" style="color: red;" (click)="deleteCompany(i)" *ngIf="i > 0">
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons" style="color: green;" (click)="addCompany()" *ngIf="i == 0" >
+                                        add_circle_outline
+                                    </span>
+                                </div>  
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                email
+                            </span>
+                        </div>
+                        <div class="col-11" formArrayName="emails">
+                            <div class="row" *ngFor="let quantity of emails().controls; let i=index" [formGroupName]="i" >
+                                <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Select label </mat-label>
+                                    <mat-select matNativeControl  formControlName="emailLable">
+                                        <mat-option value="Home"> Home </mat-option>
+                                        <mat-option value="Office"> Office </mat-option>
+                                        <mat-option value="Custom"> Custom </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                 </div>
+                                 <!-- (input)=Onemailshow() -->
+                                <div class="col-5" >
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput formControlName="email" placeholder="Enter Email" />
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-1 offset-3" >
+                                    <span class="material-icons" style="color: red;" (click)="removeQuantity(i)" *ngIf="i > 0">
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons" style="color: green;" (click)="addQuantity()" *ngIf="i == 0" >
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-1" > -->
+                            <!-- <div class="row"> -->
+                                <!-- <div class="col-6">
+                                    <span class="material-icons" style="color: red;" (click)="removeQuantity(i)">
+                                        remove_circle_outline
+                                    </span>
+                                </div> -->
+                                <!-- <div class="col-6"> -->
+                                    <!-- <span class="material-icons" style="color: green;" (click)="addQuantity()" >
+                                        add_circle_outline
+                                    </span> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                call
+                            </span>
+                        </div>
+                        <div class="col-11" formArrayName="contacts">
+                            <div class="row" *ngFor="let quantity of contacts().controls; let i=index" [formGroupName]="0">
+                                <div class="col-12" >
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <mat-form-field style="display: block;">
+                                                <mat-label>Select Country</mat-label>
+                                                <mat-select style="width:100%;" formControlName="flagcountry" (click)="onphoneshow()">
+                                                    <mat-option value="101">India</mat-option>
+                                                    <mat-option value="102">Australia</mat-option>
+                                                    <mat-option value="103">Caneda</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3">
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label>Phone</mat-label>
+                                                <input matInput formControlName="phone" placeholder="Enter Phone No." (click)="onphoneshow()"/>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-3" >
+                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                <mat-label> Select Label </mat-label>
+                                                <mat-select formControlName="phoneLabel">
+                                                    <mat-option value="Home"> Home </mat-option>
+                                                    <mat-option value="Office"> Office </mat-option>
+                                                    <mat-option value="Custom"> Custom </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-1 offset-2">
+                                            <span class="material-icons" style="color: red;" (click)="deleteContact(i)" *ngIf="i > 0">
+                                                remove_circle_outline
+                                            </span>
+                                            <span class="material-icons " style="color: green;" (click)="addContact()" *ngIf="i == 0">
+                                                add_circle_outline
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-1" > -->
+                            <!-- <div class="row"> -->
+                                <!-- <div class="col-6">
+                                    <span class="material-icons" style="color: red;" (click)="deleteContact(i)">
+                                        remove_circle_outline
+                                    </span>
+                                </div> -->
+                                <!-- <div class="col-6"> -->
+                                    <!-- <span class="material-icons " style="color: green;" (click)="addContact()">
+                                        add_circle_outline
+                                    </span> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div >
+                    <div >  
+                    <div class="row" *ngIf="getFields('Address')">
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons" >
+                                location_on
+                            </span>
+                        </div>
+                        <div class="col-11">
+                            <div class="row" formArrayName="addresssOne" *ngFor="let quantity of addresssOne().controls; let j=index" >
+                                <div class="col-11"  [formGroupName]="j">
+                                    
+                                        <div class="col-12" formArrayName="Plots" style="padding-left: 7px;">
+                                            <div class="row" *ngFor="let quantity of Plots(j).controls; let p = index" [formGroupName]="p">
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="plotNoLabel" >
+                                                            <mat-option value="Plot no.">Plot No.</mat-option>
+                                                            <mat-option value="flat no.">Flat No.</mat-option>
+                                                            <mat-option value="shop no.">Shop No.</mat-option>
+                                                            <mat-option value="house no.">House No.</mat-option>
+                                                            <mat-option value="kothi no.">Kothi No.</mat-option>
+                                                            <mat-option value="bunglow no.">Bunglow No.</mat-option>
+                                                            <mat-option value="custom Label">Custom Label </mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Number</mat-label>
+                                                        <input matInput placeholder="Enter Plot Number" formControlName="plotNumber"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1 ">
+                                                    <span class="material-icons" style="color: red;" (click)="deletePlots(j,p)" *ngIf="p > 0" >
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons" style="color: green;" (click)="addPlots(j)"  *ngIf="p == 0" >
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                    
+                                            </div>
+                                        </div>     
+                                        <div class="col-12" formArrayName="Floors">
+                                            <div class="row" *ngFor="let quantity of Floors(j).controls; let f=index" [formGroupName]="f">
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="FloorLabel">
+                                                            <mat-option value="Floor"> Floor </mat-option>
+                                                            <mat-option value="Level"> Level </mat-option>
+                                                            <mat-option value="Mezzanine Floor"> Mezzanine Floor </mat-option>
+                                                            <mat-option value="Custom Label"> Custom Label </mat-option>
+                                                            <mat-option value="kothi no."> Kothi No. </mat-option>
+                                                            <mat-option value="bunglow no."> Bunglow No. </mat-option>
+                                                            <mat-option value="custom Label"> Custom Label </mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Number/Name </mat-label>
+                                                        <input matInput  placeholder="Enter Floor Number/Name" formControlName="FloorNumber"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons" style="color: red;" (click)="removeFloors(j,f)" *ngIf="f > 0"  >
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons" style="color: green;" (click)="addFloors(j)" *ngIf="f == 0">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" formArrayName="Blooks">
+                                            <div class="row" *ngFor="let quantity of Blooks(j).controls; let b=index" [formGroupName]="b">
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="BlockLabel">
+                                                            <mat-option value="Block">Block</mat-option>
+                                                            <mat-option value="Wing">Wing</mat-option>
+                                                            <mat-option value="Mall">Mall</mat-option>
+                                                            <mat-option value="Custom Label">Custom Label</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Number/Name</mat-label>
+                                                        <input matInput placeholder="Enter Block Number/Name" formControlName="Blooks"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1 ">
+                                                    <span class="material-icons" style="color: red;" (click)="deleteBlock(j,b)" *ngIf="b > 0" >
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons " style="color: green;" (click)="addBlock(j)"  *ngIf="b == 0" >
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        <div class="col-12"  formArrayName="Complexs">
+                                            <div class="row" *ngFor="let quantity of Complexs(j).controls; let co=index" [formGroupName]="co" >
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="ComplexLabel">
+                                                            <mat-option value="Plaza">Plaza</mat-option>
+                                                            <mat-option value="Complex">Complex</mat-option>
+                                                            <mat-option value="Building">Building</mat-option>
+                                                            <mat-option value="Custom Label">Custom Label</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Number/Name</mat-label>
+                                                        <input matInput placeholder="Enter Complex Number/Name" formControlName="Complex"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons " style="color: red;" *ngIf="co > 0" (click)="deleteComplexs(j,co)" >
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons " style="color: green;" *ngIf="co == 0" (click)="addComplex(j)">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" formArrayName="Colonies">
+                                            <div class="row" *ngFor="let quantity of Colonies(j).controls; let col=index" [formGroupName]="col">
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="ColonyLabel">
+                                                            <mat-option value="Colony">Colony</mat-option>
+                                                            <mat-option value="Layout">Layout</mat-option>
+                                                            <mat-option value="Cluster">Cluster</mat-option>
+                                                            <mat-option value="Custom Label">Custom Label</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Name/Name</mat-label>
+                                                        <input matInput  placeholder="Enter Colony Number/Name" formControlName="Colony"  />
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons " style="color: red;"  *ngIf="col > 0"  (click)="deleteColony(j,col)">
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons " style="color: green;" *ngIf="col == 0" (click)="addColony(j)">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        <div class="col-12" formArrayName="Roads">
+                                            <div class="row" *ngFor="let quantity of Roads(j).controls; let road=index" [formGroupName]="road">
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="RoadLabel">
+                                                            <mat-option value="Road">Road</mat-option>
+                                                            <mat-option value="Street">Street</mat-option>
+                                                            <mat-option value="Marg">Marg</mat-option>
+                                                            <mat-option value="Custom Label">Custom Label</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Name</mat-label>
+                                                        <input matInput placeholder="Enter Road/Street Name" formControlName="Road"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons" style="color: red;"  *ngIf="road > 0"  (click)="deleteRoad(j,road)">
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons " style="color: green;" *ngIf="road == 0" (click)="addRoad(j)">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        <div class="col-12"  formArrayName="Squares">
+                                            <div class="row" *ngFor="let quantity of Squares(j).controls; let se=index" [formGroupName]="se">
+                                                <div class="col-2">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Select Type </mat-label>
+                                                        <mat-select formControlName="SquareLabel">
+                                                            <mat-option value="Square">Square</mat-option>
+                                                            <mat-option value="Chowk">Chowk</mat-option>
+                                                            <mat-option value="Custom Label">Custom Label</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-4">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Name </mat-label>
+                                                        <input matInput placeholder="Enter Square Name" formControlName="Square"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons" style="color: red;" *ngIf="se > 0" (click)="deleteSquares(j,se)">
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons" style="color: green;" *ngIf="se == 0" (click)="addSquares(j)">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" formArrayName="Areas">
+                                            <div class="row" *ngFor="let quantity of Areas(j).controls; let ar=index" [formGroupName]="ar">
+                                                <div class="col-6">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Area </mat-label>
+                                                        <input matInput formControlName="Area" placeholder="Enter Area"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons" style="color: red;" *ngIf="ar > 0"  (click)="deleteArea(j,ar)">
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons" style="color: green;"  *ngIf="ar == 0" (click)="addArea(j)">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12"  formArrayName="Landmarks">
+                                            <div class="row"  *ngFor="let quantity of Landmarks(j).controls; let l=index" [formGroupName]="l">
+                                                <div class="col-6">
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Landmark </mat-label>
+                                                        <input matInput placeholder="Enter Landmark" formControlName="Landmark" />
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-1">
+                                                    <span class="material-icons " style="color: red;" *ngIf="l > 0"  (click)="deleteLandmark(j,l)">
+                                                        remove_circle_outline
+                                                    </span>
+                                                    <span class="material-icons" style="color: green;" *ngIf="l == 0" (click)="addLandmark(j)">
+                                                        add_circle_outline
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                 <div class="col-3" >
+                                                    <mat-form-field style="width: 100%;" >
+                                                        <mat-label>Country</mat-label>
+                                                        <mat-select formControlName="Country"  (selectionChange)="CountryId($event)">
+                                                            <mat-option *ngFor="let country of countryList" [value]="country.id">{{country.name}}</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                 </div>
+                                                 <div class="col-3" >
+                                                    <mat-form-field style="width: 100%;" >
+                                                        <mat-label>State</mat-label>
+                                                        <mat-select formControlName="state" (selectionChange)="StateId($event)">
+                                                            <mat-option  *ngFor="let state of stateList" [value]="state.id">{{state.name}}</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3">
+                                                    <mat-form-field style="width: 100%;" >
+                                                        <mat-label> City / Town </mat-label>
+                                                        <mat-select formControlName="city">
+                                                            <mat-option *ngFor="let city of cityList" [value]="city.id"> {{city.name}}</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3" >
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label>Pin Code</mat-label>
+                                                        <input matInput placeholder="Enter Pin Code"/>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-3" >
+                                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                                        <mat-label> Direction </mat-label>
+                                                        <input matInput placeholder="Enter Direction"/>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-3" >
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                                <mat-label> Latitude</mat-label>
+                                                                <input matInput placeholder="Enter Latitude"/>
+                                                            </mat-form-field>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <mat-form-field appearance="legacy" style="width: 100%;">
+                                                                <mat-label> Longitude</mat-label>
+                                                                <input matInput placeholder="Enter Longitude"/>
+                                                            </mat-form-field>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-1">
+                                    <span class="material-icons " style="color: red;" *ngIf="j > 0" (click)="deleteAddresssOne(j)">
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons " style="color: green;" *ngIf="j == 0" (click)="addAddresssOne()"> 
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons" >
+                                location_on
+                            </span>
+                        </div>
+                        <div class="col-10" >
+                            <div class="row">
+                                <div class="col-12" >
+                                <div class="row" >
+                                    <div class="col-3">
+                                        <mat-form-field appearance="legacy" style="width: 100%;">
+                                            <mat-label> Select Type </mat-label>
+                                            <mat-select formControlName="plotNoLabel">
+                                                <mat-option value="Plot no."> Plot No. </mat-option>
+                                                <mat-option value="flat no."> Flat No. </mat-option>
+                                                <mat-option value="shop no."> Shop No. </mat-option>
+                                                <mat-option value="house no."> House No. </mat-option>
+                                                <mat-option value="kothi no."> Kothi No. </mat-option>
+                                                <mat-option value="bunglow no."> Bunglow No. </mat-option>
+                                                <mat-option value="custom Label"> Custom Label </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-3">
+                                        <mat-form-field appearance="legacy" style="width: 100%;">
+                                            <mat-label> Number </mat-label>
+                                            <input matInput placeholder="Enter Plot No." formControlName="plotNumber"/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-1 ">
+                                        <span class="material-icons " style="color: red;"   
+                                        > remove_circle_outline
+                                        </span>
+                                        <span class="material-icons " style="color: green;">
+                                            add_circle_outline
+                                        </span>
+                                    </div>
+                                </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                        
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-12" formArrayName="Floors">
+                            <div class="row" *ngFor="let quantity of Floors().controls; let i=index" [formGroupName]="0">
+                                <div class="col-3">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label> Select Type </mat-label>
+                                        <mat-select formControlName="FloorLabel">
+                                            <mat-option value="Floor"> Floor </mat-option>
+                                            <mat-option value="Level"> Level </mat-option>
+                                            <mat-option value="Mezzanine Floor"> Mezzanine Floor </mat-option>
+                                            <mat-option value="Custom Label"> Custom Label </mat-option>
+                                            <mat-option value="kothi no."> Kothi No. </mat-option>
+                                            <mat-option value="bunglow no."> Bunglow No. </mat-option>
+                                            <mat-option value="custom Label"> Custom Label </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-3">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label> Number/Name </mat-label>
+                                        <input matInput  placeholder="Enter Floor Number/Name" formControlName="FloorNumber"/>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-1">
+                                    <span class="material-icons" style="color: red;" (click)="removeFloors(i)" *ngIf="i > 0"  >
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons" style="color: green;" (click)="addFloors()" *ngIf="i == 0">
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div>
+                             </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                       
+                    </div>
+                    <div class="col-10" formArrayName="Blooks">
+                        <div class="row" *ngFor="let quantity of Blooks().controls; let i=index" [formGroupName]="0">
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Select Type </mat-label>
+                                    <mat-select formControlName="BlockLabel">
+                                        <mat-option value="Block">Block</mat-option>
+                                        <mat-option value="Wing">Wing</mat-option>
+                                        <mat-option value="Mall">Mall</mat-option>
+                                        <mat-option value="Custom Label">Custom Label</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Number/Name</mat-label>
+                                    <input matInput placeholder="Enter Block Number/Name" formControlName="Blooks"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1 ">
+                                <span class="material-icons" style="color: red;" (click)="deleteBlock(i)" *ngIf="i > 0" >
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons " style="color: green;" (click)="addBlock()"  *ngIf="i == 0" >
+                                    add_circle_outline
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                        
+                    </div>
+                    <div class="col-10"  formArrayName="Complexs">
+                        <div class="row" *ngFor="let quantity of Complexs().controls; let i=index" [formGroupName]="0" >
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Select Type </mat-label>
+                                    <mat-select formControlName="ComplexLabel">
+                                        <mat-option value="Plaza">Plaza</mat-option>
+                                        <mat-option value="Complex">Complex</mat-option>
+                                        <mat-option value="Building">Building</mat-option>
+                                        <mat-option value="Custom Label">Custom Label</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Number/Name</mat-label>
+                                    <input matInput placeholder="Enter Complex Number/Name" formControlName="Complex"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1">
+                                <span class="material-icons " style="color: red;" *ngIf="i > 0" (click)="deleteComplexs(i)" >
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons " style="color: green;" *ngIf="i == 0" (click)="addComplex()">
+                                    add_circle_outline
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                       
+                    </div>
+                    <div class="col-10" formArrayName="Colonies">
+                        <div class="row" *ngFor="let quantity of Colonies().controls; let i=index" [formGroupName]="0">
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Select Type </mat-label>
+                                    <mat-select formControlName="ColonyLabel">
+                                        <mat-option value="Colony">Colony</mat-option>
+                                        <mat-option value="Layout">Layout</mat-option>
+                                        <mat-option value="Cluster">Cluster</mat-option>
+                                        <mat-option value="Custom Label">Custom Label</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Name/Name</mat-label>
+                                    <input matInput  placeholder="Enter Colony Number/Name" formControlName="Colony"  />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1">
+                                <span class="material-icons " style="color: red;"  *ngIf="i > 0"  (click)="deleteColony(i)">
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons " style="color: green;" *ngIf="i == 0" (click)="addColony()">
+                                    add_circle_outline
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                       
+                    </div>
+                    <div class="col-10" formArrayName="Roads">
+                        <div class="row" *ngFor="let quantity of Roads().controls; let i=index" [formGroupName]="0">
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Select Type </mat-label>
+                                    <mat-select formControlName="RoadLabel">
+                                        <mat-option value="Road">Road</mat-option>
+                                        <mat-option value="Street">Street</mat-option>
+                                        <mat-option value="Marg">Marg</mat-option>
+                                        <mat-option value="Custom Label">Custom Label</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Name</mat-label>
+                                    <input matInput placeholder="Enter Road/Street Name" formControlName="Road"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1">
+                                <span class="material-icons" style="color: red;"  *ngIf="i > 0"  (click)="deleteRoad(i)">
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons " style="color: green;" *ngIf="i == 0" (click)="addRoad()">
+                                    add_circle_outline
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                       
+                    </div>
+                    <div class="col-10"  formArrayName="Squares">
+                        <div class="row" *ngFor="let quantity of Squares().controls; let i=index" [formGroupName]="0">
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Select Type </mat-label>
+                                    <mat-select formControlName="SquareLabel">
+                                        <mat-option value="Square">Square</mat-option>
+                                        <mat-option value="Chowk">Chowk</mat-option>
+                                        <mat-option value="Custom Label">Custom Label</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-4">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Name </mat-label>
+                                    <input matInput placeholder="Enter Square Name" formControlName="Square"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1">
+                                <span class="material-icons" style="color: red;" *ngIf="i > 0" (click)="deleteSquares(i)">
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons" style="color: green;" *ngIf="i == 0" (click)="addSquares()">
+                                    add_circle_outline
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                       
+                    </div>
+                    <div class="col-10" formArrayName="Areas">
+                        <div class="row" *ngFor="let quantity of Areas().controls; let i=index" [formGroupName]="0">
+                            <div class="col-6">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Area </mat-label>
+                                    <input matInput formControlName="Area" placeholder="Enter Area"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1">
+                                <span class="material-icons" style="color: red;" *ngIf="i > 0"  (click)="deleteArea(i)">
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons" style="color: green;"  *ngIf="i == 0" (click)="addArea()">
+                                    add_circle_outline
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                        
+                    </div>
+                    <div class="col-10"  formArrayName="Landmarks">
+                        <div class="row"  *ngFor="let quantity of Landmarks().controls; let i=index" [formGroupName]="0">
+                            <div class="col-6">
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Landmark </mat-label>
+                                    <input matInput placeholder="Enter Landmark" formControlName="Landmark" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-1">
+                                <span class="material-icons " style="color: red;" *ngIf="i > 0"  (click)="deleteLandmark(i)">
+                                    remove_circle_outline
+                                </span>
+                                <span class="material-icons" style="color: green;" *ngIf="i == 0" (click)="addLandmark()">
+                                    add_circle_outline
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+
+                    <div class="row" >
+                    <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                        
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                             <div class="col-3" >
+                                <mat-form-field style="width: 100%;" >
+                                    <mat-label>Country</mat-label>
+                                    <mat-select formControlName="Country"  (selectionChange)="CountryId($event)">
+                                        <mat-option *ngFor="let country of countryList" [value]="country.id">{{country.name}}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                             </div>
+                             <div class="col-3" >
+                                <mat-form-field style="width: 100%;" >
+                                    <mat-label>State</mat-label>
+                                    <mat-select formControlName="state" (selectionChange)="StateId($event)">
+                                        <mat-option  *ngFor="let state of stateList" [value]="state.id">{{state.name}}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field style="width: 100%;" >
+                                    <mat-label> City / Town </mat-label>
+                                    <mat-select formControlName="city">
+                                        <mat-option *ngFor="let city of cityList" [value]="city.id"> {{city.name}}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3" >
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label>Pin Code</mat-label>
+                                    <input matInput placeholder="Enter Pin Code"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3" >
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label> Direction </mat-label>
+                                    <input matInput placeholder="Enter Direction"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-3" >
+                                <div class="row">
+                                    <div class="col-6">
+                                        <mat-form-field appearance="legacy" style="width: 100%;">
+                                            <mat-label> Latitude</mat-label>
+                                            <input matInput placeholder="Enter Latitude"/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6">
+                                        <mat-form-field appearance="legacy" style="width: 100%;">
+                                            <mat-label> Longitude</mat-label>
+                                            <input matInput placeholder="Enter Longitude"/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                       
+                    </div>
+                    <div class="col-1" style="display: flex;align-items: flex-start;justify-content: space-around;">
+                       
+                    </div>
+                    </div> -->
+                    </div>
+                </div>
+
+               
+                    
+                    <div class="row" *ngIf="getFields('Event')">
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                today
+                            </span>
+                        </div>
+                        <div class="col-11" formArrayName="Events">
+                            <div class="row" *ngFor="let quantity of Events().controls; let i=index" [formGroupName]="i">
+                                <div class="col-3" >
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label>Select Label</mat-label>
+                                    <mat-select formControlName="eventLabel" >
+                                        <mat-option value="Birthday">Birthday</mat-option>
+                                        <mat-option value="Birthday">Anniversary</mat-option>
+                                        <!-- <mat-option value="Website">Website</mat-option> -->
+                                        <!-- <mat-option value="Relationship">Relationship</mat-option> -->
+                                        <!-- <mat-option value="Chat">Chat</mat-option> -->
+                                        <!-- <mat-option value="Internet cal">Internet call</mat-option> -->
+                                        <mat-option value="Custom field">Custom Label</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                </div>
+                                <div class="col-3" >
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Choose a date</mat-label>
+                                        <input matInput [matDatepicker]="picker" formControlName="event">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                      </mat-form-field>
+                                </div>
+                                <div class="col-1 offset-5">
+                                    <span class="material-icons" style="color: red;" *ngIf="i>0" (click)="deletEvent(i)">
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons " style="color: green;" *ngIf="i == 0" (click)="addEvent()" >
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="getFields('Website')">
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                today
+                            </span>
+                        </div>
+                        <div class="col-11" formArrayName="Websites">
+                            <div class="row" *ngFor="let quantity of Websites().controls; let i=index" [formGroupName]="i">
+                                <div class="col-3" >
+                                <mat-form-field appearance="legacy" style="width: 100%;">
+                                    <mat-label>Select Label</mat-label>
+                                    <mat-select formControlName="website" >
+                                        <mat-option value="Website"> Website </mat-option>
+                                        <mat-option value="Custom field"> Custom Label </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                </div>
+                                <div class="col-5" >
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label> Website URL </mat-label>
+                                        <input matInput formControlName="websiteurl"  placeholder="Enter Event" />
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-1 offset-3">
+                                    <span class="material-icons" style="color: red;" *ngIf="i>0" (click)="deletWebsites(i)">
+                                        remove_circle_outline
+                                    </span>
+                                    <span class="material-icons " style="color: green;" *ngIf="i == 0" (click)="addWebsites()" >
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                link
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Website</mat-label>
+                                        <input matInput formControlName="Website" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1" style="display: flex;align-items: flex-start;justify-content: space-around;">
+                            <span class="material-icons hov">
+                                cancel
+                            </span>
+                            <span class="material-icons hov1">
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                group_work
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Relationship</mat-label>
+                                        <input matInput formControlName="relationship" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1" style="display: flex;align-items: flex-start;justify-content: space-around;">
+                            <span class="material-icons hov">
+                                cancel
+                            </span>
+                            <span class="material-icons hov1">
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                comment
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Chat</mat-label>
+                                        <input matInput formControlName="chat" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1" style="display: flex;align-items: flex-start;justify-content: space-around;">
+                            <span class="material-icons hov">
+                                cancel
+                            </span>
+                            <span class="material-icons hov1">
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                dialer_sip
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div>
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Internet call</mat-label>
+                                        <input matInput formControlName="internetCall" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1" style="display: flex;align-items: flex-start;justify-content: space-around;">
+                            <span class="material-icons hov">
+                                cancel
+                            </span>
+                            <span class="material-icons hov1">
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="row" >
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                view_list
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-3">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label>Custom field</mat-label>
+                                        <input matInput formControlName="customField" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1" style="display: flex;align-items: flex-start;justify-content: space-around">
+                            <span class="material-icons hov">
+                                cancel
+                            </span>
+                            <span class="material-icons hov1">
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-1" style="display: flex;justify-content: center;align-items: flex-start;">
+                            <span class="material-icons">
+                                note
+                            </span>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12" *ngIf="getFields('Notes')">
+                                    <mat-form-field appearance="legacy" style="width: 100%;">
+                                        <mat-label> Notes </mat-label>
+                                        <input matInput formControlName="notes"/>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1" >
+                            <!-- <div class="row">
+                                <div class="col-6">
+                                    <span class="material-icons" style="color: red;">
+                                        remove_circle_outline
+                                    </span>
+                                </div>
+                                <div class="col-6">
+                                    <span class="material-icons " style="color: green;">
+                                        add_circle_outline
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <div style="width: 100%;">
+                <!-- <button mat-button color="primary" (click)="onShow()">Show More</button> -->
+                <button mat-button color="primary" (click)="onlabels()">
+                    Show More
+                </button>
+                <div style="float: right;">
+                    <button mat-button mat-dialog-close color="primary">Cancel</button>
+                    <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </mat-dialog-actions>
+    </form>
+</div>
+
+<div *ngIf="given === 'labels'" >
+    <div style="display: flex; align-items: flex-start;">
+        <h3 mat-dialog-title>Add Field</h3>
+    </div>
+    <mat-dialog-content class="mat-typography changea" style="border-top: 1px solid lightgray;">
+        <div style="width: 60vh !important;">
+
+            <mat-list role="list" *ngFor="let item of fields; let i = index">
+                <mat-list-item role="listitem"   *ngIf="item.status != true" >
+
+                    <div (click)="toggleVisibility(item.name)"> {{item.name}} </div> 
+                    <mat-divider></mat-divider>
+                </mat-list-item>
+            </mat-list>
+            
+            <!-- <mat-list>
+                <mat-list-item *ngIf="item.status != true">
+                    <mat-checkbox class="example-margin" name="{{item.name}}" value="{{item.name}}" [(ngModel)]="item.status" data-md-icheck (change)="toggleVisibility(item.name)"> {{item.name}}
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-divider *ngIf="item.status != true"></mat-divider>
+            </mat-list> -->
+        </div>
+    </mat-dialog-content>
+
+    <!-- <mat-dialog-content class="mat-typography" style="border-top: 1px solid lightgray; min-width: 500px;">
+        <div *ngFor="let item of fields; let i = index">
+            <mat-list>
+                <mat-list-item *ngIf="item.status != true">
+                    <mat-checkbox class="example-margin" name="{{item.name}}" value="{{item.name}}"
+                        [(ngModel)]="item.status" data-md-icheck (change)="toggleVisibility(item.name)">
+                   {{item.name}}
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-divider *ngIf="item.status != true"></mat-divider>
+            </mat-list>
+        </div>
+    </mat-dialog-content> -->
+    <mat-dialog-actions>
+        <div style="width: 100%;">
+            <div style="float: right;">
+                <button mat-button mat-dialog-close color="primary">Cancel</button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+</div>
+
+<!-- <ng-template #elseSpan> -->
+<div *ngIf="given === 'popup2'">
+    <div style="display: flex; align-items: flex-start;">
+        <h3 mat-dialog-title>Create Multiple Contacts</h3>
+        <button mat-stroked-button style="margin: 0px 13px; border-radius: 25px; color: darkgray;">
+            <span class="material-icons">
+                label
+            </span>
+            No Label
+        </button>
+    </div>
+
+    <mat-dialog-content class="mat-typography hps">
+        <div class="container-fluid">
+            <mat-form-field appearance="legacy" style="width: 100%;">
+                <input matInput placeholder="Add names , email addresses, or both" />
+            </mat-form-field>
+            <p style="color: darkgray;">
+                Example: Andrea Fisher, weaver.blake98@gmail.com, Elisa Beckett <br />
+                weaver.blake98@gmail.com
+            </p>
+            <h4>
+                Have a CSV or vCard file?
+                <a style="color: blue;">Import contacts </a> instead
+            </h4>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <div style="width: 100%;">
+            <div style="float: right;">
+                <button mat-button mat-dialog-close color="primary">Cancel</button>
+                <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">
+                    Save
+                </button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+</div>
+
+<!-- </ng-template> -->
+
+<div *ngIf="given === 'popup3'">
+    <div style="
+      display: flex;
+      align-items: center;
+      margin: 0px 0px 20px 0px;
+      justify-content: space-between;
+    ">
+        <div class="hh1">
+            <div class="example-button-container">
+                <img src="../../../../assets/images/dumy1.png" style="width: 70px; height: 70px; border-radius: 50%;" />
+            </div>
+            <div class="hh2">
+                <div style="font-size: 20px;">
+                    Anjali Sharma
+                </div>
+                <div>
+                    <button mat-stroked-button style="margin: 0px 13px; border-radius: 25px;">
+                        <span class="material-icons">
+                            label
+                        </span>
+                        No Label
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hh3">
+            <span class="material-icons" style="margin: 0px 10px;">
+                star_border
+            </span>
+            <span class="material-icons" style="margin: 0px 10px;">
+                create
+            </span>
+            <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" [matMenuTriggerFor]="menu">
+                more_vert
+            </span>
+            <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" mat-dialog-close>
+                close
+            </span>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>print_outline</mat-icon>
+                    <span>Print</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>cloud_download_outline </mat-icon>
+                    <span>Export</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>visibility_off</mat-icon>
+                    <span>Hide from contacts</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>delete_outline</mat-icon>
+                    <span>Delete</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <mat-dialog-content class="mat-typography" style="border-top: 1px solid lightgray;">
+        <div class="container-fluid">
+            <div class="col-12" style="margin: 10px 0px;">
+                <h2>Contact details</h2>
+
+                <div style="margin: 10px 0px 20px 0px; display: flex;">
+                    <span class="material-icons">
+                        call
+                    </span>
+                    <span style="margin-left: 30px; font-size: 16px;">
+                        +91-1234567890 .mobile
+                    </span>
+                </div>
+                <div style="display: flex;">
+                    <span class="material-icons">
+                        room
+                    </span>
+                    <span style="margin-left: 30px; font-size: 16px;">
+                        <span style="color: blue;"> Maharashtra , India </span> .Home
+                    </span>
+                </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+</div>
+
+<!-- view -->
+
+<div *ngIf="given === 'view'">
+    <div mat-dialog-title style="
+      display: flex;
+      align-items: center;
+      margin: 0px 0px 20px 0px;
+      justify-content: space-between;
+    ">
+        <div class="hh1">
+            <div class="example-button-container">
+                <img src="../../../../assets/images/dumy1.png" style="width: 70px; height: 70px; border-radius: 50%;" />
+            </div>
+            <div class="hh2">
+                <div style="font-size: 20px;">
+                    Anjali Sharma
+                </div>
+                <div>
+                    <button mat-stroked-button style="margin: 0px 13px; border-radius: 25px;">
+                        <span class="material-icons">
+                            label
+                        </span>
+                        No Label
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hh3">
+            <span class="material-icons" style="margin: 0px 10px;">
+                star_border
+            </span>
+            <span class="material-icons" style="margin: 0px 10px;" (click)="funn()">
+                create
+            </span>
+            <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" [matMenuTriggerFor]="menu">
+                more_vert
+            </span>
+            <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" mat-dialog-close>
+                close
+            </span>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>print_outline</mat-icon>
+                    <span>Print</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>cloud_download_outline </mat-icon>
+                    <span>Export</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>visibility_off</mat-icon>
+                    <span>Hide from contacts</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>delete_outline</mat-icon>
+                    <span>Delete</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <mat-dialog-content class="mat-typography" style="width: 100vh; border-top: 1px solid #dadada;">
+        <div class="container-fluid">
+            <h2 style="margin: 16px 0; font-size: 16px;">Information</h2>
+            <div class="row">
+                <div class="col-6 fws">
+                    <h3 class="cla">Gender : Female</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Labels : Client</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Frequency: Once in a month</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Since : 01 - Jan - 2020</h3>
+                </div>
+            </div>
+            <h2 style="margin: 16px 0; font-size: 16px;">Contact Details</h2>
+            <div class="row">
+                <div class="col-6 fws">
+                    <h3 class="cla">Mobile Number: 3669988552</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Email: anjalisharma@gmail.com</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Facebook : Anjali Sharma</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Twitter: anjalisharma@gmail.com</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Linkedin : anjalisharma@gmail.com</h3>
+                </div>
+                <div class="col-6 fws">
+                    <h3 class="cla">Whats App : Yes</h3>
+                </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+</div>
+
+<!-- Change Column -->
+
+<div *ngIf="given === 'Column'">
+    <mat-dialog-content class="mat-typography" style="width: 66vh; overflow: hidden;">
+        <div class="container-fluid">
+            <div class="col-12">
+                <h3 style="font-weight: 500;"> Change column order </h3>
+                <p>
+                    Choose columns to show and drag to change order. Small screens may not
+                    display all columns.
+                </p>
+
+                <mat-list>
+                    <mat-list-item role="listitem">1.
+                        <span style="margin: 0px 20px;">
+                            Name
+                        </span>
+                    </mat-list-item>
+                </mat-list>
+
+                <mat-list cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                    <mat-list-item role="listitem" class="example-box" *ngFor="let movie of movies" cdkDrag>
+                        {{ movie.id }}
+                        <span style="margin: 0px 20px;">
+                            <mat-form-field appearance="legacy" style="padding-bottom: 0em !important;">
+                                <select matNativeControl required>
+                                    <option value="volvo"> {{ movie.option1 }}</option>
+                                    <option value="saab">{{ movie.option2 }}</option>
+                                    <option value="saab" *ngIf="movie.option3 == true">{{
+                    movie?.option3
+                  }}</option>
+                                </select>
+                            </mat-form-field>
+                            <span style="margin: 0px 10px;">
+                                <mat-icon style="cursor: grab;" cdkDragHandle>
+                                    clear_all</mat-icon>
+                            </span>
+                        </span>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <div style="width: 100%;">
+            <button mat-button color="primary">Reset</button>
+            <div style="float: right;">
+                <button mat-button mat-dialog-close color="primary">Cancel</button>
+                <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">
+                    Done
+                </button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,39 @@
+.checkbox input[type="checkbox"]:checked + label:after {
+    font-family: "FontAwesome";
+    content: "\F00C";
+    color: #fff;
+  }
+  .btn-danger, .btn-danger:focus {
+    color: #fff;
+    background-color: #f55753;
+    border-color: #f55753;
+}
+  .modal .modal-header {
+    text-align: center;
+    border-bottom: 0;
+    padding: 25px 25px 0;
+    display: block;
+}
+.modal .modal-footer {
+  border-top: 0;
+  box-shadow: none;
+  margin-top: 0;
+  padding: 25px;
+  padding-top: 0;
+  display: block;
+}
+  .select-wrapper:after {
+    content: "";
+    font-family: "FontAwesome" !important;
+    position: absolute;
+    top: 52%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 25px;
+    width: 0;
+    height: initial;
+    z-index: 2;
+    pointer-events: none;
+    color: #2c2c2c;
+}

@@ -1,0 +1,364 @@
+<div *ngIf="display == 'addStation'" class="ase">
+
+    <h3 class="hdd">Add Station</h3>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                <mat-label>Station Name</mat-label>
+                <input matInput placeholder="">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint> -->
+              </mat-form-field>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                <mat-label>Integument</mat-label>
+                <mat-select>
+                    <span matSuffix>
+                        <mat-option value="Hair">Hair</mat-option>
+                        <mat-option value="Skin">Skin</mat-option>
+                        <mat-option value="Nail">Nail</mat-option>
+                    </span>
+                </mat-select>
+              </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                    <mat-label>Type</mat-label>
+                    <input matInput placeholder="">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div> 
+            <div class="col-sm-6  ">
+                <mat-form-field appearance="legacy"  style="width: 100%;">
+                    <mat-label>Unit</mat-label>
+                    <input matInput placeholder="" type="number">
+                    <span matSuffix>sections</span>
+                    
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+                </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field appearance="legacy"  style="width: 100%;">
+                            <mat-label>Capacity</mat-label>
+                            <input matInput placeholder="" type="number">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field appearance="legacy"  style="width: 100%;">
+                            <mat-label>Labels</mat-label>
+                            <mat-select>
+                                <!-- <mat-option value="option" *ngFor="let hero of element;let i=index;">{{hero}}</mat-option> -->
+                                <span matSuffix>
+                                <mat-option value="Chair"> Chair </mat-option>
+                                <mat-option value="Bed"> Bed </mat-option>
+                                <div style="border: 1px solid;"></div>
+                                <mat-option value="custom">Custom Label</mat-option></span>
+                                
+                              </mat-select> 
+                              
+                            <!-- <span matSuffix>chair</span> -->
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            <mat-hint>Hint</mat-hint> -->
+                          </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-sm-6 ">
+                <mat-form-field appearance="legacy"  style="width: 100%;">
+                    <mat-label>Custome</mat-label>
+                    <input matInput placeholder="">
+                  </mat-form-field>
+            </div> -->
+        </div>
+        <div class="col-sm-12">
+            <div  style="display: flex !important;justify-content: center !important; ">
+                <button mat-stroked-button style="margin: 10px;">Add</button>
+            
+                <button mat-stroked-button style="margin: 10px;">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div *ngIf="display == 'viewStation'" style="overflow-x:hidden">
+
+    <mat-dialog-content class="mat-typography" style="overflow: hidden;">
+        <div style="width:100%;">
+            <div class="row">
+                <div class="col-6">
+                    <div style="display:flex; align-items: center;">
+                        <img src="../../../../assets/images/hair.png" style="width:80px;height:80px;border-radius: 50%;">
+                        <div style="display:flex;flex-direction: column;">
+                            <span style="font-size: 20px;
+                            font-weight: 500;
+                            margin-left: 10px;">Styling Section</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-6 asdf">
+                    <div class="row">
+                        <div class="col-2 offset-8">
+                            <div class="example-button-container">
+                                <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="onShow()" class="edt">
+                                    <span class="material-icons" style="margin-top: -13px;">
+                                        create
+                                        </span>
+                                  </button>
+                              </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="example-button-container">
+                                <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="onAdd()" class="edt1">
+                                    <span class="material-icons" style="margin-top: -13px;">
+                                        add
+                                    </span>
+                                  </button>
+                              </div>
+                        </div>
+                    </div>
+                    
+                      
+                </div> -->
+                <div class="col-6 asdf">
+                    <div class="row">
+                        <div class="col-2 offset-8" style="margin-left: 85.666667%;">
+                            <div style="display: flex;justify-content: flex-end;">
+                                <span class="material-icons" style="margin: 0px 10px">
+                                    star_border
+                                 </span>
+                                <span class="material-icons" style="margin: 0px 10px" (click)="onShow()">
+                                    create
+                                </span>
+                                <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" [matMenuTriggerFor]="menu">
+                                    more_vert
+                                </span>
+                                <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" mat-dialog-close>
+                                    close
+                                </span>
+                                
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>
+                                        <mat-icon>print_outline</mat-icon>
+                                        <span>Print</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <mat-icon>cloud_download_outline </mat-icon>
+                                        <span>Export</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <mat-icon>visibility_off</mat-icon>
+                                        <span>Hide from contacts</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <mat-icon>delete_outline</mat-icon>
+                                        <span>Delete</span>
+                                    </button>
+                                </mat-menu>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+   <br>
+   <div class="row">
+       <div class="col 5">
+            <p style="font-size: 15px;font-weight: 400;">Total Seats:05</p>
+       </div>
+       <div class="col-5">
+           <p style="font-size: 15px;font-weight: 400;">Occupancy:01/05</p>
+       </div>
+       <div class="col-2">
+        <p style="font-size: 15px;font-weight: 400;">75%</p>
+    </div>
+   </div>
+   <!-- <div class="row">
+       <div class="col-6">
+        <div class="example-button-container">
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="onShow()" class="edt">
+                <span class="material-icons" style="margin-top: -13px;">
+                    create
+                    </span>
+              </button>
+          </div>
+       </div>
+       <div class="col-6">
+        <div class="example-button-container">
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="onShow()" class="edt1">
+                <span class="material-icons" style="margin-top: -13px;">
+                    add
+                </span>
+              </button>
+          </div>
+       </div>
+   </div> -->
+
+
+   
+</div>
+<div class="mat-elevation-z8" style="box-shadow:none;" *ngIf="show">
+   
+    <table mat-table [dataSource]="dataSource">
+
+        
+        <ng-container matColumnDef="chair">
+          <th mat-header-cell *matHeaderCellDef style="width: 10%; text-align: center;">  </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.chair}} </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="integument">
+          <th mat-header-cell *matHeaderCellDef style="text-align: center; width: 20%;" matTooltip="Location Only(GPS)" matTooltipPosition="above"> Seat </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.integument}} 
+            <mat-form-field appearance="legacy" style="width: 70%; text-align: center;">
+                <mat-label> </mat-label>
+                <mat-select >
+                  <mat-option value="Chair">Chair</mat-option>
+                  <mat-option value="Bed">Bed</mat-option>
+                  <div style="border-top: 1px solid;"></div>
+                  <mat-option value="Label">Custom Label</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+          </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="section">
+          <th mat-header-cell *matHeaderCellDef style="width: 15%; text-align: center;" > Capacity </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.section}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef style="width: 10%; text-align: center;" matTooltip="Unique Code Of The Furniture" matTooltipPosition="above"> Seat Code </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+            <mat-form-field appearance="legacy" style="width: 70%; text-align: center;">
+                <input matInput placeholder=""> 
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%; text-align: center;"> Status </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+                <mat-form-field appearance="legacy" style="width: 70%; text-align: center;">
+                    <mat-select>
+                        <mat-option value="Active">Active</mat-option>
+                      <mat-option value="Order">Out Of Order</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="note">
+            <th mat-header-cell *matHeaderCellDef style="width: 15%; text-align: center;"> Note </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;" [matTooltip]="element.note" > 
+                <p class="asd" style="margin-left: 51px;">{{element.note}} </p>
+            </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef style="width:10%; text-align: center;"> Action </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">
+                <span class="material-icons" style="color: red;">
+                    remove_circle_outline
+                    </span>
+                 <span class="material-icons" style="color: green; margin-right: -24px;" *ngIf="element.chair == 'S5'" (click)="showRow()">
+                    add_circle_outline
+                    </span>    
+            </td>
+          </ng-container>
+<!-- 
+          <ng-container matColumnDef="id" style="width: 5px;">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> </td>
+          </ng-container> -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns11"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns11;"></tr>
+      </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+  
+<div class="mat-elevation-z8" style="box-shadow: none; border-top: 1px solid;" *ngIf="add">
+
+<h3 class="hdd" style="text-align: center; margin-top: 12px;">Add Chairs/Beds</h3>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                <mat-label>Chair/Bed No.</mat-label>
+                <input matInput placeholder="">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint> -->
+              </mat-form-field>
+            </div>
+            <div class="col-sm-6">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                <mat-label>With Station</mat-label>
+                <input matInput placeholder="">
+              </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                    <mat-label>Code</mat-label>
+                    <input matInput placeholder="">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div> 
+            <div class="col-sm-6  ">
+                <mat-form-field appearance="legacy"  style="width: 100%;">
+                    <mat-label>Status</mat-label>
+                    <input matInput placeholder="">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+                </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <mat-form-field appearance="legacy" style="width: 100%;">
+                    <mat-label>Note</mat-label>
+                    <input matInput placeholder="">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+        </div>
+        
+        <div class="col-sm-12">
+            <div  style="display: flex !important;justify-content: center !important; ">
+                <button mat-stroked-button style="margin: 10px;">Add</button>
+            
+                <button mat-stroked-button style="margin: 10px;">Reset</button>
+            </div>
+        </div>
+    </div>
+    
+</div>  
+
+
+</mat-dialog-content>
+
+</div>
+

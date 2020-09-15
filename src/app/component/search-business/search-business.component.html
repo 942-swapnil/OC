@@ -1,0 +1,110 @@
+<!-- <section style="background-color: black;z-index: -1; height:100vh;"> -->
+    <!-- <img *ngIf="Slide"  src="../../../assets/images/loginImage.jpeg"
+        style="width: 100%;height:100vh;opacity: 0.3; position: absolute;z-index: 1;"> -->
+
+
+       
+        <!-- <owl-carousel-o [options]="customOptions" #review >
+            <ng-template carouselSlide>
+                <div class="pr-2 pl-2">
+                    <a>
+                        <div class="cat-content">
+                            <img src="../../../assets/images/bg1.jpg" alt="img" style="height: 90vh; width: 100%;">
+                        </div>
+                    </a>
+                </div>
+
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="pr-2 pl-2">
+                    <a>
+                        <div class="cat-content">                           
+                            <img src="../../../assets/images/bg2.jpg" alt="img" style="height: 90vh; width: 100%;">
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="pr-2 pl-2">
+                    <a>
+                        <div class="cat-content">
+                            <img src="../../../assets/images/bg3.jpg" alt="img" style="height: 90vh; width: 100%;">
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="pr-2 pl-2">
+                    <a>
+                        <div class="cat-content">
+                            <img src="../../../assets/images/bg1.jpg" alt="img" style="height: 90vh; width: 100%;">
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="pr-2 pl-2">
+                    <a>
+                        <div class="cat-content">
+                            <img src="../../../assets/images/bg2.jpg" alt="img" style="height: 90vh; width: 100%;">
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+
+        <div class="row prev-next" >
+            <div class="lhs" (click)="review.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
+                    aria-hidden="true"></i></div>
+            <div class="rhs" (click)="review.next()"> <i class="fa fa-chevron-circle-right fa-3x "
+                    aria-hidden="true"></i></div>
+        </div> -->
+   
+        <!-- <div  style="display: flex;justify-content: space-around;margin-top: 20px;z-index: 999;">
+            <button mat-raised-button (click)="changebg('map')" >First View</button>
+            <button mat-raised-button (click)="changebg('carousel')">Second View</button>
+        </div> -->
+<!-- </section>-->
+
+<section>
+    <div class="container-fluid">
+        <div style="position: relative;" >
+        <div class="cla1" style="padding: 0px;margin:0px;">
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+
+            <input class="form-control form-control-lg" type="text" placeholder="Search Your Bussiness" style="width: 600px;height: 50px;border-radius: 30px;outline: white;font-size: 20px;z-index: 99;">
+
+        
+            <button mat-raised-button style="margin-top: 30px;"> LET'S START </button>
+        </div>
+            <!-- <mat-form-field class="example-full-width"  style="width:561px;background-color:white;margin:0px !important;border-radius: 5px;padding:0px !important;" >
+                <mat-label>Favorite food</mat-label>
+                <input matInput placeholder="Ex. Pizza" value="Sushi" >
+              </mat-form-field>
+            
+            <mat-form-field appearance="legacy" style="width:561px;background-color:white;margin:0px !important;border-radius: 5px;padding:0px !important;" >
+                <mat-label style="font-size: large;"> Search Your Bussiness </mat-label>
+                <input matInput placeholder="Enter Bussiness Name" style="width:561px;color:white;padding:0px !important;margin: 0px !important;">
+            </mat-form-field> -->
+        </div>    
+        <owl-carousel-o [options]="customOptions" #review style="z-index: -1;">
+            <ng-template carouselSlide>
+                <img src="../../../assets/images/bgv2.jpg"  style="width: 100%;height: 100vh;">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="../../../assets/images/bgv3.jpg" style="width: 100%;height: 100vh;">
+            </ng-template>  
+            <ng-template carouselSlide>
+                <img src="../../../assets/images/bvc1.jpg" style="width: 100%;height: 100vh;">
+            </ng-template>
+          </owl-carousel-o>
+          <div class="prev-next" style="display: flex;justify-content: space-between;top: 40%;width: 100%;
+          position: absolute;z-index: 9;">
+            <div class="lhs" (click)="review.prev()"> <i class="fa fa-chevron-circle-left fa-3x "
+            aria-hidden="true" style="color: white;"></i></div>
+            <div class="rhs" (click)="review.next()" style="color: white;"> <i class="fa fa-chevron-circle-right fa-3x " aria-hidden="true"></i></div>
+         </div>
+        </div>
+    </div>
+</section>
+

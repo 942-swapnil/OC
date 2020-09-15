@@ -1,0 +1,870 @@
+<div class="_2k68E6 _260Y5f _1qUHUs" data-qa="scrollable-content" style="display: flex; flex-direction: column;">
+    <section>
+        <div class="_297iDr _37zdEz _2BxTkW" style="">
+            <div class="xveDbv _38CYLo">
+                <div></div>
+                <div class="_18j6NR" style="display: flex; flex-direction: column;">
+                    <div novalidate="" data-qa="form-client-list-filter">
+                        <div class="hEORB6" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="container">
+                                <form [formGroup]="BrandForm">
+                                    <mat-card class="example-card" style="margin-left: 7px;">
+                                        <div class="row">
+                                            <div class="col-12 bg" style="height: 200px;">
+                                                <div class="imag" >
+                                                    <img src="../../../assets/images/dumy1.png" class="imag1" >
+                                                    <span class="imag2" >
+                                                       <span class="imag3" >
+                                                        <mat-icon style="font-size: 38px;height: 38px;
+                                                        width: 38px;color:gold ;cursor: pointer;" (click)="contactImage.click()"> camera </mat-icon>
+                                                        </span>
+                                                         <input type="file" #contactImage  name="avatar" (click)="browser1($event)" style="display: none;">
+                                                    </span>
+                                                </div>
+                                                <!-- <div class="row hove">
+                                                    <span class="hove1" style="position: relative;top: 85px;left:25px">
+                                                        <img class="img-fluid img-thumbnail" src="../../../assets/images/dumy1.png"
+                                                            style="width:150px;height:150px;border-radius: 50%;">
+                                                    </span>
+                                                    <span class="hove2">
+                                                        <span style="width: 100px;">
+                                                            <span class="material-icons" style="position: absolute;position: absolute;height: 100%;display: flex;font-size: 50px;justify-content: center;align-items: center;width: 100%;">
+                                                                control_camera
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div> -->
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                            <mat-label at-label> Brand Name </mat-label>
+                                                            <input matInput placeholder="Enter Brand Name">
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                            <mat-label at-label> Brand Title </mat-label>
+                                                            <input matInput placeholder="Enter Brand Title">
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                            <mat-label at-label> Tag line </mat-label>
+                                                            <input matInput placeholder="Enter Tag line" style="font-style: italic;">
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <mat-form-field appearance="legacy" style="display: block;">
+                                                            <mat-label>Company Type</mat-label>
+                                                            <mat-select>
+                                                                <mat-option value="Brand Owner"> Brand Owner</mat-option>
+                                                                <mat-option value="Franchiser"> Franchiser</mat-option>
+                                                                <mat-option value="Franchisee"> Franchisee</mat-option>
+                                                                <mat-option value="Applied For Trademark">
+                                                                    Applied For Trademark</mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <mat-accordion class="example-headers-align" style="width: 100%;">
+                                                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                        <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                            <h3 style="margin:0px"> Legal Documents </h3>
+                                                            <span class="material-icons">
+                                                                keyboard_arrow_down
+                                                                </span>
+                                                        </mat-panel-title>
+                                                      </mat-expansion-panel-header>
+                                              
+                                                      <div class="col-12" style="margin-top: 30px;">
+                                                    
+                                                        <div class="row">
+                                                            <div class="col-3 offset-3">
+                                                                <mat-form-field appearance="legacy" style="display: block;">
+                                                                    <mat-label> Country Of Origin (COO) </mat-label>
+                                                                    <mat-select>
+                                                                        <mat-option *ngFor="let country of countryList" [value]="country.name">{{country.name}}</mat-option>
+                                                                    </mat-select>
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-6 ">
+                                                                <span style="color: red;">Note :-</span>
+                                                                <span style="font-weight: 500;font-size: medium;">Government Of India</span>
+                                                                <p style="font-size: small;margin: 0px;">Trade Marks Registry , Trade Marks Act 1999 </p>
+                                                                <p style="font-size: small;">Certificate Of Registration Of Trade Mark, Section 23 (2), Rule 56 (1)</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-3 offset-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Trade Mark -1 </mat-label>
+                                                                    <input matInput placeholder="Enter Trade Mark">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-6 ">
+                                                                <span style="color: red;">Note:-</span><span style="font-size: small;">Name to be mentioned as mentioned in TM certificate and on your Outlet Signboard/Signage</span>
+                                                            </div>
+                                                        </div>
+                                                        <h3> TM - (Trade Mark Certificate) </h3>
+                                                        <div class="row" style="margin-top: 20px;">
+                                                           
+                                                            <div class="col-2">
+                                                                <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                      <!-- <h4 style="margin-bottom: 0px;"> MOA </h4>
+                                                                      <p>Memorandum Of Association</p> -->
+                                                                    <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 150px;">
+                                                                    <mat-card-content>
+                                                                        Upload documents (pdf / jpeg) 
+                                                                    </mat-card-content>
+                                                                </mat-card>
+                                                              </div>
+                                                            <div class="col-10">
+                                                                <div class="row">
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Trade Mark No. </mat-label>
+                                                                            <input matInput placeholder="Enter Trade Mark">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Number / Kramank </mat-label>
+                                                                            <input matInput placeholder="Enter Number / Kramank ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> J. No. </mat-label>
+                                                                            <input matInput placeholder="Enter Number / Kramank ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Class </mat-label>
+                                                                            <input matInput placeholder="Enter Class ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Under No. </mat-label>
+                                                                            <input matInput placeholder="Enter Under No. ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Date </mat-label>
+                                                                            <input matInput placeholder="Enter Date ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Registered In The Name Of </mat-label>
+                                                                            <input matInput placeholder="Enter Registered Name ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Firm </mat-label>
+                                                                            <input matInput placeholder="Enter Firm " readonly>
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Person </mat-label>
+                                                                            <input matInput placeholder="Enter Person" readonly>
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Trade Mark Registry </mat-label>
+                                                                            <input matInput placeholder="Enter Trade Mark Registry ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display: block;">
+                                                                            <mat-label> Country </mat-label>
+                                                                            <mat-select>
+                                                                                <mat-option value="Mumbai"> Mumbai</mat-option>
+                                                                                <mat-option value="New Delhi"> New Delhi</mat-option>
+                                                                                <mat-option value="Kolkata"> Kolkata </mat-option>
+                                                                                <mat-option value="Chennai">Chennai</mat-option>
+                                                                                <mat-option value="Ahmedabad">Ahmedabad</mat-option>
+                                                                            </mat-select>
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <mat-form-field appearance="legacy" style="display: block;">
+                                                                            <mat-label>Address</mat-label>
+                                                                            <textarea matInput readonly></textarea >
+                                                                          </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                                            <mat-label at-label> Trading As </mat-label>
+                                                                            <input matInput placeholder="Enter Company Name ">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy" style="display: block;">
+                                                                            <mat-label> Business Category </mat-label>
+                                                                            <mat-select multiple>
+                                                                                <mat-option value="Salon"> Salon </mat-option>
+                                                                                <mat-option value="Spa"> Spa </mat-option>
+                                                                                <mat-option value="Nail Salon"> Nail Salon </mat-option>
+                                                                                <mat-option value="Barber"> Barber </mat-option>
+                                                                                <mat-option value="Beauty Parlour"> Beauty Parlour </mat-option>
+                                                                            </mat-select>
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            </div>
+                                                        
+                                                    </div>
+
+
+                                                  <mat-action-row>
+                                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                  </mat-action-row>
+                                                </mat-expansion-panel>
+                                              
+                                                <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                        <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                            <h3 style="margin:0px"> Roles </h3>
+                                                            <span class="material-icons">
+                                                                keyboard_arrow_down
+                                                                </span>
+                                                        </mat-panel-title>
+                                                      </mat-expansion-panel-header>
+                                              
+                                                      <div class="col-12" style="margin-top: 30px;">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <mat-list>
+                                                                    <mat-list-item >
+                                                                        Brand Owner (Super Admin) :  
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        Admin :
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                  </mat-list>
+                                                            </div>
+                                                            <div class="col-4 offset-2">
+                                                                <mat-list>
+                                                                    <mat-list-item>
+                                                                        Editor :
+                                                                        </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        View Only :
+                                                                       </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                  </mat-list>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              
+                                                  <mat-action-row>
+                                                    <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                  </mat-action-row>
+                                                </mat-expansion-panel>
+
+                                                <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                        <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                            <h3 style="margin:0px"> No. Of Outlets </h3>
+                                                            <span class="material-icons">
+                                                                keyboard_arrow_down
+                                                                </span>
+                                                        </mat-panel-title>
+                                                      </mat-expansion-panel-header>
+                                              
+                                                      <div class="col-12" style="margin-top: 30px;">
+                                         
+                    
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <mat-list>
+                                                                    <mat-list-item >
+                                                                        No. Of Privately Owned Outlets :  
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        Franchisees Pending for approval:
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                  </mat-list>
+                                                            </div>
+                                                            <div class="col-4 offset-2">
+                                                                <mat-list>
+                                                                    <mat-list-item>
+                                                                        No. Of Franchisee Outlets:
+                                                                        </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        Unauthorised Franchisees:
+                                                                       </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                  </mat-list>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              
+                                                  <mat-action-row>
+                                                    <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                  </mat-action-row>
+                                                </mat-expansion-panel>
+
+
+                                                <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                        <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                            <h3 style="margin:0px"> Social Media </h3>
+                                                            <span class="material-icons">
+                                                                keyboard_arrow_down
+                                                                </span>
+                                                        </mat-panel-title>
+                                                      </mat-expansion-panel-header>
+                                              
+                                                      <div class="col-12" style="margin-top: 30px;">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <mat-list>
+                                                                    <mat-list-item >
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-facebook"></a>Facebook
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div style="display: flex;align-items: center;justify-content: space-between;">
+                                                                            <span>
+                                                                        <a href="#" class="fa fa-facebook"></a>Facebook</span>
+                                                                        <span style="display: flex;align-items: center;">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                            </span>
+                                                                        </div> -->
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-google"></a> Google Business
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+        
+        
+        
+        
+                                                                        <!-- <div style="display: flex;align-items: center;justify-content: space-between;">
+                                                                            <span>
+                                                                                <a href="#" class="fa fa-google"></a> Google Business</span>
+                                                                        <span style="display: flex;align-items: center;">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                            </span>
+                                                                        </div> -->
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-youtube"></a> YouTube
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                  </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-twitter"></a> Twitter
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        <mat-divider></mat-divider>
+                                                                        </mat-list-item>
+                                                                  </mat-list>
+                                                            </div>
+                                                            <div class="col-4 offset-2">
+                                                                <mat-list>
+                                                                    <mat-list-item>
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-instagram"></a>Instagram
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        
+                                                                        </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item>
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-google"></a>Google Page
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                       </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                                    <mat-list-item> 
+                                                                        <div class="row" style="display: contents;">
+                                                                            <div class="col-9">
+                                                                                <a href="#" class="fa fa-linkedin"></a>LinkedIn
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <span class="material-icons" style="color: red;">
+                                                                                    remove_circle_outline
+                                                                                </span>
+                                                                                <span class="material-icons" style="color: green;">
+                                                                                    add_circle_outline
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        </mat-list-item>
+                                                                        <mat-divider></mat-divider>
+                                                                  </mat-list>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              
+                                                  <mat-action-row>
+                                                    <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                    <button mat-button color="primary"> Save </button>
+                                                  </mat-action-row>
+                                                </mat-expansion-panel>
+                                              
+                                              
+                                              
+                                              </mat-accordion>
+
+
+
+                                            <!-- <div class="col-12" style="margin-top: 30px;">
+                                                <h2> Legal Documents </h2>
+                                                <div class="row">
+                                                    <div class="col-3 offset-3">
+                                                        <mat-form-field appearance="legacy" style="display: block;">
+                                                            <mat-label> Country Of Origin (COO) </mat-label>
+                                                            <mat-select>
+                                                                <mat-option *ngFor="let country of countryList" [value]="country.name">{{country.name}}</mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-6 ">
+                                                        <span style="color: red;">Note :-</span>
+                                                        <span style="font-weight: 500;font-size: medium;">Government Of India</span>
+                                                        <p style="font-size: small;margin: 0px;">Trade Marks Registry , Trade Marks Act 1999 </p>
+                                                        <p style="font-size: small;">Certificate Of Registration Of Trade Mark, Section 23 (2), Rule 56 (1)</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3 offset-3">
+                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                            <mat-label at-label> Trade Mark -1 </mat-label>
+                                                            <input matInput placeholder="Enter Trade Mark">
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-6 ">
+                                                        <span style="color: red;">Note:-</span><span style="font-size: small;">Name to be mentioned as mentioned in TM certificate and on your Outlet Signboard/Signage</span>
+                                                    </div>
+                                                </div>
+                                                <h3> TM - (Trade Mark Certificate) </h3>
+                                                <div class="row" style="margin-top: 20px;">
+                                                   
+                                                    <div class="col-2">
+                                                        <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                           
+                                                            <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 150px;">
+                                                            <mat-card-content>
+                                                                Upload documents (pdf / jpeg) 
+                                                            </mat-card-content>
+                                                        </mat-card>
+                                                      </div>
+                                                    <div class="col-10">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Trade Mark No. </mat-label>
+                                                                    <input matInput placeholder="Enter Trade Mark">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Number / Kramank </mat-label>
+                                                                    <input matInput placeholder="Enter Number / Kramank ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> J. No. </mat-label>
+                                                                    <input matInput placeholder="Enter Number / Kramank ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Class </mat-label>
+                                                                    <input matInput placeholder="Enter Class ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Under No. </mat-label>
+                                                                    <input matInput placeholder="Enter Under No. ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Date </mat-label>
+                                                                    <input matInput placeholder="Enter Date ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Registered In The Name Of </mat-label>
+                                                                    <input matInput placeholder="Enter Registered Name ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Firm </mat-label>
+                                                                    <input matInput placeholder="Enter Firm " readonly>
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Person </mat-label>
+                                                                    <input matInput placeholder="Enter Person" readonly>
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Trade Mark Registry </mat-label>
+                                                                    <input matInput placeholder="Enter Trade Mark Registry ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display: block;">
+                                                                    <mat-label> Country </mat-label>
+                                                                    <mat-select>
+                                                                        <mat-option value="Mumbai"> Mumbai</mat-option>
+                                                                        <mat-option value="New Delhi"> New Delhi</mat-option>
+                                                                        <mat-option value="Kolkata"> Kolkata </mat-option>
+                                                                        <mat-option value="Chennai">Chennai</mat-option>
+                                                                        <mat-option value="Ahmedabad">Ahmedabad</mat-option>
+                                                                    </mat-select>
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <mat-form-field appearance="legacy" style="display: block;">
+                                                                    <mat-label>Address</mat-label>
+                                                                    <textarea matInput readonly></textarea >
+                                                                  </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display:block;">
+                                                                    <mat-label at-label> Trading As </mat-label>
+                                                                    <input matInput placeholder="Enter Company Name ">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy" style="display: block;">
+                                                                    <mat-label> Business Category </mat-label>
+                                                                    <mat-select multiple>
+                                                                        <mat-option value="Salon"> Salon </mat-option>
+                                                                        <mat-option value="Spa"> Spa </mat-option>
+                                                                        <mat-option value="Nail Salon"> Nail Salon </mat-option>
+                                                                        <mat-option value="Barber"> Barber </mat-option>
+                                                                        <mat-option value="Beauty Parlour"> Beauty Parlour </mat-option>
+                                                                    </mat-select>
+                                                                </mat-form-field>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    </div>
+                                                
+                                            </div>
+
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> Roles </h2>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <mat-list>
+                                                            <mat-list-item >
+                                                                Brand Owner (Super Admin) :  
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                Admin :
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                    <div class="col-4 offset-2">
+                                                        <mat-list>
+                                                            <mat-list-item>
+                                                                Editor :
+                                                                </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                View Only :
+                                                               </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                          
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> No. Of Outlets </h2>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <mat-list>
+                                                            <mat-list-item >
+                                                                No. Of Privately Owned Outlets :  
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                Franchisees Pending for approval:
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                    <div class="col-4 offset-2">
+                                                        <mat-list>
+                                                            <mat-list-item>
+                                                                No. Of Franchisee Outlets:
+                                                                </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                Unauthorised Franchisees:
+                                                               </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> Social Media </h2>
+                                                <div class="row">
+                                                   
+                                                    <div class="col-4">
+                                                        <mat-list>
+                                                            <mat-list-item >
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-facebook"></a>Facebook
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                               
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-google"></a> Google Business
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-youtube"></a> YouTube
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                          </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-twitter"></a> Twitter
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <mat-divider></mat-divider>
+                                                                </mat-list-item>
+                                                          </mat-list>
+                                                    </div>
+                                                    <div class="col-4 offset-2">
+                                                        <mat-list>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-instagram"></a>Instagram
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                
+                                                                </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-google"></a>Google Page
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                               </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item> 
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-linkedin"></a>LinkedIn
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </mat-card>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_9WJ7l1" data-qa="loader-spinner-container">
+                <div class="_1Xf8dA _1kSyd-" data-qa="loader-spinner"></div>
+            </div>
+        </div>
+
+    </section>
+
+</div>

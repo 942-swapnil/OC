@@ -1,0 +1,192 @@
+
+<div style="overflow: auto;height: 87vh;margin-left: 26px;margin-right: 2px;">
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+                               <p><b>Summary</b></p>
+                              
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+       
+                <div>
+            <div class="mat-elevation-z8" style="height: 233px; overflow: auto;" >
+                <table mat-table [dataSource]="dataSource1">
+                    <ng-container matColumnDef="label">
+                        <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Label</th>
+                        <td mat-cell *matCellDef="let element" [matTooltip]="element.label">
+                            <p class="asd" >{{element.label}}</p>
+                         </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d1">
+                        <th mat-header-cell *matHeaderCellDef style="width: 10%;">2000 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d2">
+                        <th mat-header-cell *matHeaderCellDef style="width: 10%;">500 </th>
+                        <td mat-cell *matCellDef="let element" style="height:55px" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d3">
+                        <th mat-header-cell *matHeaderCellDef style="width: 10%;">200 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d4">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">100 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d5">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">50 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d6">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">20</th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d7">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">10 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d8">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">5 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d9">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">2 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="d10">
+                        <th mat-header-cell *matHeaderCellDef style="width: 7%;">1 </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="total">
+                        <th mat-header-cell *matHeaderCellDef style="width: 9%;">Total </th>
+                        <td mat-cell *matCellDef="let element" >  </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef style="width: 2px;text-align: end;">
+                        </th>
+
+                        <td mat-cell *matCellDef="let element" class="hidd">
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns1">
+                    </tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+                </table>
+                <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+            </div> 
+        
+        </div>
+    
+      </mat-expansion-panel>
+    
+        <mat-panel-title>
+          <div class="_297iDr _37zdEz _2BxTkW"  >
+            <div class="xveDbv _38CYLo">
+                <div></div>
+                <div class="_18j6NR" >
+                        <div >
+                        <table mat-table [dataSource]="dataSource" >
+                           
+                            <ng-container matColumnDef="bill">
+                                <th mat-header-cell *matHeaderCellDef style="width: 8%;"> Bill No.</th>
+                                <td mat-cell *matCellDef="let element" [matTooltip]="element.bill">
+                                    <p class="asd" >{{element.bill}}</p>
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="type">
+                                <th mat-header-cell *matHeaderCellDef style="width: 8%;"> Type</th>
+                                <td mat-cell *matCellDef="let element"  [matTooltip]="element.type">  
+                                    <p class="asd" >{{element.type}}</p>
+                                 </td>
+                            </ng-container>
+                            <ng-container matColumnDef="client">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">Client </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="mode">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">Mode </th>
+                                <td mat-cell *matCellDef="let element" > {{element.mode}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c1">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">2000 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c2">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">500 </th>
+                                <td mat-cell *matCellDef="let element" style="height:55px" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c3">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">200 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c4">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">100 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c5">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">50 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c6">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">20</th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c7">
+                                <th mat-header-cell *matHeaderCellDef style="width: 7%;">10 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c8">
+                                <th mat-header-cell *matHeaderCellDef style="width: 6%;">5 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c9">
+                                <th mat-header-cell *matHeaderCellDef style="width: 6%;">2 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="c10">
+                                <th mat-header-cell *matHeaderCellDef style="width: 5%;">1 </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="total">
+                                <th mat-header-cell *matHeaderCellDef style="width: 4%;">Total </th>
+                                <td mat-cell *matCellDef="let element" >  </td>
+                            </ng-container>
+                            <ng-container matColumnDef="id">
+                                <th mat-header-cell *matHeaderCellDef style="width:2px; text-align: end;">
+                                </th>
+
+                                <td mat-cell *matCellDef="let element" class="hidd">
+                                </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns">
+                            </tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+
+                        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="_9WJ7l1" data-qa="loader-spinner-container">
+                <div class="_1Xf8dA _1kSyd-" data-qa="loader-spinner">
+                </div>
+            </div>
+        </div>
+        </mat-panel-title>
+     
+
+</div>

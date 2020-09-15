@@ -1,0 +1,85 @@
+.material-icons{
+  color: darkgrey;
+}
+
+.hh1 {
+  display: flex;
+  align-items: center;
+}
+
+.mat-dialog-container {
+  border-radius: 10px;
+  font-weight: 500;
+  color: #67768c;
+  font-family: Roboto, sans-serif;
+}
+
+.cla{
+  margin: 0px;
+}
+
+.col-4{
+font-size: 14px;
+color: #67768c;
+font-family: Roboto, sans-serif;
+}
+
+.fws{
+  font-size: 14px;
+color: #67768c;
+font-family: Roboto, sans-serif;
+}
+.ogh{
+  color: red;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+
+.ngx-timepicker[_ngcontent-ysu-c96] {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: none !important;
+}
+.padOption{padding-left: 50px;}
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+display: none;
+}
+
+input.example-right-align {
+-moz-appearance: textfield;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+justify-content: space-between;
+align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+margin-left: 8px;
+}
+.example-headers-align{
+width: 100%;
+}
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {width: 18px !important;height: 18px !important;}
+::ng-deep.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+padding-left: 44px !important;
+
+}
+.example-margin {
+margin: 0 10px;
+}

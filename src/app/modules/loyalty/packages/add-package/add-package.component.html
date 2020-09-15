@@ -1,0 +1,517 @@
+<!-- <section>
+    <div class="container">
+        <mat-card >
+            <h1 style="text-align: center;">Form</h1> -->
+            <!-- <div class="col-12">
+                <div class="row">
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Package Name</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="margin-left: 96px;">
+                            <mat-label>Choose Services</mat-label>
+                            <mat-select multiple>
+                              <mat-option  *ngFor="let serv of servicelist" [value]='serv'>{{serv}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <mat-divider></mat-divider> -->
+
+            <!-- <div class="col-12">
+                <div class="row" style="margin-top: 13px;">
+                    <span style="margin-top: 22px; margin-left: 13px;">Applied In:</span>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Brand</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>   
+                    </div>  
+                </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>Country</mat-label>
+                                  <mat-select (selectionChange)='countryId($event)'>
+                                    <mat-option *ngFor="let country of countryList" [value]='country.id'>{{country.name}}</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-3">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>State</mat-label>
+                                  <mat-select (selectionChange)='stateId($event)'>
+                                    <mat-option *ngFor="let state of stateList" [value]='state.id'>{{state.name}}</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-3">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>City</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let city of cityList"[value]='city.id'>{{city.name}}</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Outlet</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>
+                        </div>
+                </div>
+            </div> -->
+            
+            <!-- <div class="col-12">
+                <div class="row">
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Overlapped</mat-label>
+                            <mat-select>
+                                <mat-option value='yes'>Yes</mat-option>
+                                <mat-option value='no'>No</mat-option>
+                            </mat-select>
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Loyalty Program</mat-label>
+                            <mat-select>
+                                <mat-option value='no'>No</mat-option>
+                                <mat-option value='memberships'>Memberships</mat-option>
+                                <mat-option value='offers'>Offers</mat-option>
+                                <mat-option value='packages'>Packages</mat-option>
+                                <mat-option value='social'>Social Media</mat-option>
+                                <mat-option value='voucher'>Voucher</mat-option>
+                            </mat-select>
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Gender</mat-label>
+                            <mat-select>
+                                <mat-option value='male'>Male</mat-option>
+                                <mat-option value='female'>Female</mat-option>
+                                <mat-option value='third'>Third Gender</mat-option>
+                            </mat-select>
+                            </mat-form-field>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-12">
+                <div class="row">
+                        <div class="col-3">
+                            <mat-form-field appearance="legacy">
+                                <mat-label  at-label>Redemption To</mat-label>
+                                  <input matInput placeholder="">
+                                </mat-form-field>
+                            </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Status</mat-label>
+                            <mat-select>
+                                <mat-option value='active'>Active</mat-option>
+                                <mat-option value='non'>Non-Active</mat-option>
+                            </mat-select>
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-6" >
+                        <mat-form-field appearance="legacy" style="width: 452px;margin-top: -12px;">
+                          <mat-label>Terms And Conditions</mat-label>
+                          <textarea matInput></textarea>
+                        </mat-form-field>
+                        <span class="material-icons" style="color: rgb(26, 214, 26);">
+                          add_circle_outline
+                          </span>
+                      </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-12">
+                <div class="row">
+                  <div class="col-6 offset-6">
+                    <button  mat-flat-button style="margin-left: 350px; color: blue;margin-top: 13px;">Cancle</button>
+                    <button  mat-flat-button style="color: blue;">Save</button>
+                  </div>
+                </div>
+            </div> -->
+<!-- 
+        </mat-card>
+    </div>
+</section> -->
+
+<div >
+    <div style="    display: flex;
+  align-items: flex-start;">
+        <h3 mat-dialog-title>Package</h3>
+        <button mat-stroked-button style="margin: 0px 13px;
+    border-radius: 25px;" [matMenuTriggerFor]="menu1"><span class="material-icons">
+                label
+            </span> No Label </button>
+        <mat-menu #menu1="matMenu">
+            <p>Add to label</p>
+            <button>
+                <mat-icon>label</mat-icon>
+                <span>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="New Label">
+                    </mat-form-field>
+                </span>
+            </button>
+        </mat-menu>
+    </div>
+    <form [formGroup]="PackageForm">
+        <mat-dialog-content class="mat-typography" style="border-top:1px solid lightgray;">
+        <div class="container-fluid">
+            <div class="col-12">
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Package Name</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label>Choose Services</mat-label>
+                            <mat-select multiple>
+                              <mat-option  *ngFor="let serv of servicelist" [value]='serv'>{{serv}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <!-- <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Total Price</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Amount</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>         
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-12">
+
+                <h4>Discount:</h4>
+                <div class="row">
+                    <!-- <mat-label style="margin-top: 23px;"></mat-label> -->
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Discount %</mat-label>
+                              <input matInput placeholder="" (input)="onKey2($event)">
+                            </mat-form-field>
+                    </div> 
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Discount Amount</mat-label>
+                              <!-- <input matInput placeholder="" [value]="valve" readonly> -->
+                              <input matInput placeholder="" [value]="val5" readonly>
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Discount/Pre GST</mat-label>
+                              <input matInput placeholder="" [value]="val6" readonly> 
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>GST: 18%</mat-label>
+                              <input matInput placeholder="" readonly>
+                            </mat-form-field>
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>GST ₹</mat-label>
+                              <input matInput placeholder="" [value]="val8">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Selling Price</mat-label>
+                              <input matInput placeholder="" [value]="valve">
+                            </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2" style="margin-top: 24px;">
+                        Actual Price:
+                    </div>
+                    <div class="col-2 offset-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Total Rate</mat-label>
+                              <input matInput placeholder="" [value]="sww"> 
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>GST: 18%</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>GST ₹</mat-label>
+                              <input matInput placeholder="" [value]="v13">
+                            </mat-form-field>
+                    </div>
+                    <div class="col-2">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Selling Price</mat-label>
+                              <input matInput placeholder="" [value]="v14">
+                            </mat-form-field>
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12" style="display: flex;align-items: flex-end;justify-content: space-around;">
+                        <input class="_3RKzT9 _2vdwSO"  placeholder=" Search "autocomplete="off" value="" style="border-radius: 10px;width: 200px; margin-top: 20px;">
+                        <span class="material-icons" style="color: green;">
+                            add_circle_outline
+                            </span>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-4">
+                                Action
+                            </div>
+                            <div class="col-8">
+                                Services
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-2" style="">
+                                Duration
+                            </div>
+                            <div class="col-2"style="text-align: center;">
+                                Rate
+                            </div>
+                            <div class="col-2" style="text-align: center;">
+                                GST %
+                            </div>
+                            <div class="col-2" style="text-align: center;">
+                                Rate ₹
+                            </div>
+                            <div class="col-3" style="text-align: center;">
+                                Selling Price
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                        <div class="col-4"  style="display: flex;align-items: center;">
+                            <span class="material-icons" style="color: red; margin-top: 16px;">
+                                remove_circle_outline
+                                </span>
+                        </div>
+                        <div class="col-8" style="margin-top: 17px;">
+                            Hair Cut
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput type="number" style="text-align: center;"><span matSuffix> Min </span>
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput placeholder="" (input)="onKey($event)" style="text-align: center;">
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput placeholder="18%" readonly style="text-align: center;">
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                            <input matInput placeholder="" [value]="walues" style="text-align: center;">
+                        </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput placeholder="" [value]="val2" style="text-align: center;" readonly><span matPrefix>₹</span>
+                                    </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                        <div class="col-4"  style="display: flex;align-items: center;">
+                            <span class="material-icons" style="color: red; margin-top: 16px;">
+                                remove_circle_outline
+                                </span>
+                        </div>
+                        <div class="col-8" style="margin-top: 17px;">
+                            Pedicure
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput type="number" style="text-align: center;" ><span matSuffix> Min </span>
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput placeholder="" (input)="onIn($event)" style="text-align: center;">
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput placeholder="18%" readonly style="text-align: center;">
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-2">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                            <input matInput placeholder="" [value]="v11" style="text-align: center;">
+                        </mat-form-field>
+                            </div>
+                            <div class="col-3">
+                                <mat-form-field appearance="legacy" style="display: block;">
+                                      <input matInput placeholder="" [value]="v12" style="text-align: center;" readonly><span matPrefix>₹</span>
+                                    </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <mat-divider style="margin-top: 5px;"></mat-divider>
+
+                <div class="row" style="margin-top: 11px;">
+                    <div class="col-6">
+                        <span>Applied In</span>
+                    </div>
+                  </div>
+                    <div class="row">
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label>Country</mat-label>
+                              <mat-select (selectionChange)='countryId($event)'>
+                                <mat-option *ngFor="let country of countryList" [value]='country.id'>{{country.name}}</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label>State</mat-label>
+                              <mat-select (selectionChange)='stateId($event)'>
+                                <mat-option *ngFor="let state of stateList" [value]='state.id'>{{state.name}}</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label>City</mat-label>
+                              <mat-select>
+                                <mat-option *ngFor="let city of cityList"[value]='city.id'>{{city.name}}</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                    <mat-form-field appearance="legacy" style="display: block;">
+                        <mat-label  at-label>Outlet</mat-label>
+                          <input matInput placeholder="">
+                        </mat-form-field>
+                    </div>
+                </div>
+              
+                <div class="row">
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Overlapped</mat-label>
+                            <mat-select formControlName="overlap">
+                                <mat-option value='No'>No</mat-option>
+                                <mat-option value='Yes'>Yes</mat-option>
+                            </mat-select>
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Loyalty Program</mat-label>
+                            <mat-select>
+                                <mat-option value='no'>No</mat-option>
+                                <mat-option value='memberships'>Memberships</mat-option>
+                                <mat-option value='offers'>Offers</mat-option>
+                                <mat-option value='packages'>Packages</mat-option>
+                                <mat-option value='social'>Social Media</mat-option>
+                                <mat-option value='voucher'>Voucher</mat-option>
+                            </mat-select>
+                            </mat-form-field> 
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Gender</mat-label>
+                            <mat-select>
+                                <mat-option value='male'>Male</mat-option>
+                                <mat-option value='female'>Female</mat-option>
+                                <mat-option value='third'>Third Gender</mat-option>
+                            </mat-select>
+                            </mat-form-field>
+                    </div>
+                </div>
+             
+                <div class="row">
+                    <div class="col-3">
+                        <mat-form-field appearance="legacy">
+                            <mat-label  at-label>Redemption To</mat-label>
+                              <input matInput placeholder="">
+                            </mat-form-field>
+                        </div>
+                <div class="col-3">
+                    <mat-form-field appearance="legacy">
+                        <mat-label  at-label>Status</mat-label>
+                        <mat-select>
+                            <mat-option value='active'>Active</mat-option>
+                            <mat-option value='non'>Non-Active</mat-option>
+                        </mat-select>
+                        </mat-form-field> 
+                </div>
+                <div class="col-6" >
+                    <mat-form-field appearance="legacy" style="width: 452px;margin-top: -12px;">
+                      <mat-label>Terms And Conditions</mat-label>
+                      <textarea matInput></textarea>
+                    </mat-form-field>
+                    <span class="material-icons" style="color: rgb(26, 214, 26);">
+                      add_circle_outline
+                      </span>
+                  </div>
+                </div>
+
+              <div class="row">
+                <div class="col-6 offset-6">
+                  <button  mat-flat-button style="margin-left: 250px; color: blue;" mat-dialog-close>Cancel</button>
+                  <button  mat-flat-button style="color: blue;">Save</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+    </form>
+  </div>

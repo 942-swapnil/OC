@@ -1,0 +1,368 @@
+<div class="_2k68E6 _260Y5f" data-qa="scrollable-content" style="display: flex; flex-direction: column;">
+    <div class="_40Cdqw _2GGotC" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <div class="W-6apQ">
+                <div class="t6USZF"><a class="_2qhTFB _2nu1E8 _13c7RA " [routerLink]="['/setup']"><span
+                            class="_3Q2N2k _30vxLD _3s37z7 _2zhJTq _3N7UZQ"><svg viewBox="0 0 18 18"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.80367158,16.7638261 C9.06544281,17.0467987 9.06544281,17.5049548 8.80367158,17.7879275 C8.54229164,18.0704815 8.11774488,18.0709001 7.85597365,17.7879275 L0.196328421,9.51223382 C-0.0654428068,9.22926119 -0.0654428068,8.77068646 0.196328421,8.48771383 L7.85577801,0.212229473 C8.11754924,-0.0707431577 8.54170471,-0.0707431577 8.80347594,0.212229473 C9.06524716,0.495202104 9.06524716,0.953567534 8.80406287,1.23633087 L1.81841007,9.00007847 L8.80367158,16.7638261 Z">
+                                </path>
+                            </svg></span>Back to Setup</a></div>
+                <div class="_9t1fKU dcmmPd zLWpM8">Taxes</div>
+                <div class="_9t1fKU _62dXJY">Add your tax rates and use groups for multiple taxes, for example combining
+                    city and state taxes</div>
+            </div><button class="_3ySuQR _2nu1E8 _1O2-GF _2P5TQK _1qADt0" data-qa="add-new-dropdown"
+                style="flex-basis: 128px;" (click)="droup()"><span class="_3Q2N2k _30vxLD _3s37z7 _3coDyr LnBSH4" ><svg
+                        viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.762 6.684l-.48-.458c-.168-.15-.362-.226-.585-.226-.227 0-.42.075-.578.226L9 9.196l-3.12-2.97C5.723 6.076 5.53 6 5.304 6c-.223 0-.417.075-.584.226l-.476.458C4.08 6.84 4 7.024 4 7.24c0 .22.08.404.244.55l4.178 3.978c.154.155.347.232.578.232.227 0 .422-.077.584-.232l4.178-3.978c.16-.15.238-.334.238-.55 0-.21-.08-.397-.238-.556z">
+                        </path>
+                    </svg></span>
+                <div class="_10jmov">
+                    <div>Add New</div>
+
+                </div>
+
+            </button>
+            <div class="_2nu1E8 _1Y9UDj _1ns_c0" data-qa="drop-down-menu-popup"
+                style="position: absolute; right: 159px; top: 199.416px; opacity: 1; transform: translateY(0px); width: 130px; height: 86px; transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms, transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;"
+                *ngIf="disp">
+                <button class="_2E0-X_ _1Cp5sB _2nu1E8 _1jiWG4 _2P5TQK" (click)="showopen()">New tax</button><button
+                    class="_2E0-X_ _1Cp5sB _2nu1E8 _1jiWG4 _2P5TQK">New tax group</button></div>
+        </div>
+
+        <div class="_2dr0s1" style="">
+            <div class="_9t1fKU _1P8_io JGqfjk _3NJRG1">Tax Rates</div>
+            <div class="_3M5s17" style="display: flex; flex-direction: column; align-content: center;">
+                <div class="_2L0SCf" data-qa="placeholder-container" style="padding-top: 0px; padding-bottom: 0px;">
+                    <div class="_35ChFg"><span class="_3Q2N2k _30vxLD ftFjVi" data-qa="placeholder-icon"><svg
+                                viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" fill-rule="evenodd">
+                                    <circle cx="45" cy="45" r="45" fill="#EBF5FD"></circle>
+                                    <path fill="#A4ADBA" fill-rule="nonzero" d="M61.3636 79.7727V71.591h8.1819z"></path>
+                                    <path fill="#FFF" fill-rule="nonzero"
+                                        d="M17.3864 7.159h52.159v61.3637H59.1137V78.75H17.3864V50.625z"></path>
+                                    <g fill="#DCDDDE" fill-rule="nonzero">
+                                        <path
+                                            d="M54.8182 25.5682h7.5682v7.159h-7.5682zM39.6819 25.5682H47.25v7.159h-7.5682zM24.5455 25.5682h7.5682v7.159h-7.5682z">
+                                        </path>
+                                    </g>
+                                    <g fill="#0C3847" fill-rule="nonzero">
+                                        <path
+                                            d="M54.9716 34.7727h10.483v-9.2045h-10.483v9.2045zm2.6207-6.5746h5.2415v3.9448h-5.2415V28.198zM39.2472 25.5682v9.2045h10.483v-9.2045h-10.483zm7.8622 6.5747h-5.2415V28.198h5.2415v3.9448zM34.0057 25.5682h-10.483v9.2045h10.483v-9.2045zm-2.6208 6.5747h-5.2414V28.198h5.2414v3.9448z">
+                                        </path>
+                                    </g>
+                                    <g fill="#0C3847" fill-rule="nonzero">
+                                        <path
+                                            d="M23.5227 41.9318h37.841v2.63h-37.841zM23.5227 47.1915H50.642v2.63H23.5227zM23.5227 52.4513h33.4261v2.63h-33.426zM23.5227 57.711H48.75v2.63H23.5227z">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="M15.4983 51.1364v30.6818h45.97l11.1453-10.9764V5.1136H15.4983v46.0228zM62.229 77.4537v-5.8628h5.953l-5.953 5.8628zM18.0944 7.6705h51.923V69.034H59.633v10.2273H18.0944V7.6704z"
+                                        fill="#101928" fill-rule="nonzero"></path>
+                                    <g transform="translate(54.2045 53.1818)">
+                                        <circle stroke="#101928" stroke-width="3" fill="#DEE3E7" fill-rule="nonzero"
+                                            cx="16.3636" cy="16.3636" r="16.3636"></circle>
+                                        <g transform="translate(8.1818 6.1364)">
+                                            <ellipse stroke="#101928" stroke-width="2.5" cx="3.1361" cy="4.3243"
+                                                rx="2.3764" ry="3.5647"></ellipse>
+                                            <rect fill="#101928" transform="rotate(38 8.3517 10.0597)" x="6.8176"
+                                                y="-.6789" width="3.0682" height="21.4773" rx="1.5341"></rect>
+                                            <ellipse stroke="#101928" stroke-width="2.5" cx="12.6418" cy="16.8006"
+                                                rx="2.3764" ry="3.5647"></ellipse>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg></span>
+                        <p class="_9t1fKU _62dXJY _2NlRUj" data-qa="placeholder-body">Add your tax rates and use groups
+                            for multiple taxes, for example combining city and state taxes</p>
+                    </div>
+                    <div class="_2AAL0z"></div>
+                </div><button class="_2nu1E8 _1O2-GF _2P5TQK" data-qa="add-tax-button"
+                    style="margin-top: 24px; margin-left: auto; margin-right: auto;" (click)="showopen()">Add Tax</button>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <div class="JGqfjk"
+                    style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; flex-direction: column; flex-basis: 60%;">
+                        <div class="_3vD6kg">
+                            <div class="_9t1fKU _1P8_io">Tax Defaults</div>
+                        </div>
+                        <div class="_9t1fKU _62dXJY">Setup the default taxes for your business, you can still override
+                            defaults in the settings of individual products and services</div>
+                    </div><button class="_2nu1E8 _1jiWG4 _2P5TQK" data-qa="tax-defaults-menu" (click)="dada()">Apply
+                        defaults</button>
+                </div>
+                <div class="_2qkqg2 _3Id4cx">
+                    <div class="_1QDRC6 _3uHQdZ _1h1QLA _2nu1E8" suffixclassname="gKBfNX"
+                        data-qa="list-item-row-button-a"
+                        style="display: flex; flex-direction: row; flex-grow: 1; align-items: center;">
+                        <div class="wPHQml"
+                            style="display: flex; flex-direction: row; flex-grow: 1; align-items: center;">
+                            <div class="_45ZmlC" style="display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div class="_9t1fKU wiy4G4 _2EdZEl">A</div>
+                                    <div class="_9t1fKU wiy4G4 _3Nqrz3">
+                                        <div class="_3eT_8x">
+                                            <div class="_9t1fKU wiy4G4 nQKxyv">Products Default: No tax</div>
+                                            <div> ・ </div>
+                                            <div class="_9t1fKU wiy4G4 nQKxyv">Services Default: No tax</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_1QDRC6 _3uHQdZ _1h1QLA _2nu1E8" suffixclassname="gKBfNX"
+                        data-qa="list-item-row-button-arihant"
+                        style="display: flex; flex-direction: row; flex-grow: 1; align-items: center;">
+                        <div class="wPHQml"
+                            style="display: flex; flex-direction: row; flex-grow: 1; align-items: center;">
+                            <div class="_45ZmlC" style="display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div class="_9t1fKU wiy4G4 _2EdZEl">Arihant</div>
+                                    <div class="_9t1fKU wiy4G4 _3Nqrz3">
+                                        <div class="_3eT_8x">
+                                            <div class="_9t1fKU wiy4G4 nQKxyv">Products Default: No tax</div>
+                                            <div> ・ </div>
+                                            <div class="_9t1fKU wiy4G4 nQKxyv">Services Default: No tax</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_2_XCHl _2dcsYp">
+                <div class="_2D2Sll _3yeUuz" style="display: flex; flex-direction: row;">
+                    <div data-qa="note-description"
+                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                        <div class="_9t1fKU _62dXJY MDlUvL _2rMCU9">Tax Calculation</div>
+                        <div class="_9t1fKU _3giDm2 MDlUvL R7gsjN">Your retail prices are including taxes. <a
+                                class="_2nu1E8 _13c7RA  _2wuT_9" 
+                                data-qa="change-tax-calculation-link" (click)="kal()" style="color:blue">Change this setting</a></div>
+                    </div><span class="_3Q2N2k _30vxLD _1t1fP1 T67NqU" style="margin-left: 0px;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <g fill="none" fill-rule="evenodd" stroke="#2B72BD" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path fill="#FFF" stroke-width="2"
+                                    d="M22.78 7.22A11 11 0 1 1 7.23 22.78 11 11 0 0 1 22.78 7.22z"></path>
+                                <path fill="#FFF" stroke-width="4"
+                                    d="M24.2 5.8A13 13 0 1 1 5.8 24.2 13 13 0 0 1 24.2 5.8zm0 0z" opacity=".32"></path>
+                                <g stroke-width="2">
+                                    <path
+                                        d="M15.04 14.15v4.16M15.04 14.15H14M15.38 10.7a.7.7 0 1 1-1.38 0 .7.7 0 0 1 1.38 0zM16.41 18.3h-1.37">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal-->
+<div class="_3vtwrU _3XtDVr _2H1Euj" style="left:25%" *ngIf="dakh">
+    <div class="_2vCLkQ" style="display: flex; flex-direction: column; flex-shrink: 1; flex-grow: 1;">
+        <header class="PkFIdA _33T8Oc" data-qa="modal-header">
+            <div class="izfMlp _1HQM0r">
+                <h2 class="_9t1fKU _3XK9dh _2AVm3L _3bMN68 _1T_y7I _1j68JW">New Tax</h2>
+                <div role="button" class="_2y31id _2PFOGx _3pAZyb _3d4M2L _2nu1E8" data-qa="header-close-button">
+                    <div class="_10jmov" (click)="showopen()">
+                        <div><span class="_3Q2N2k _30vxLD _3s37z7 _3gU_Sq XuZows"><svg viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17 1.914L16.086 1 9 8.086 1.914 1 1 1.914 8.086 9 1 16.086l.914.914L9 9.914 16.086 17l.914-.914L9.914 9z">
+                                    </path>
+                                </svg></span></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="_1AL6HX" data-qa="modal-content" style="display: flex; flex-direction: column;">
+            <div class="xPg8Rs" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+                <div class="_2F29qu">
+                    <div class="_9t1fKU _62dXJY _26CnlC">Set the tax name and percentage rate. To apply this to your
+                        products and services, adjust your tax defaults settings.</div>
+                </div>
+                <div class="_3NVDUN _2ODZzb _1oGsUL _1Y7EpU" style="display: flex; flex-direction: row;"><label
+                        class="B4ufiE _3J2MMS A7zEIf" style="display: flex; flex-direction: column-reverse;">
+                        <div class="qyGFie" style="display: flex; flex-direction: row;"><input class="_3RKzT9"
+                                name="name" autocomplete="off" value=""></div><span class="_9t1fKU _14bPpn _3jwCpY"
+                            data-qa="label-name">Tax name</span>
+                    </label><label class="B4ufiE _3J2MMS _1TXbU0"
+                        style="display: flex; flex-direction: column-reverse;">
+                        <div class="qyGFie" style="display: flex; flex-direction: row;">
+                            <div class="_1zc-_F">%</div><input class="_3RKzT9 _2vdwSO" name="rate" type="number"
+                                autocomplete="off" value="" style="padding-left: 2ch;">
+                        </div><span class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Tax rate</span>
+                    </label></div>
+            </div>
+        </div>
+        <div class="">
+            <div class="_1sJ5gi _1G31AL"><button class="_2nu1E8 _1O2-GF _2P5TQK" data-qa="save-tax-button">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal second-->
+<div class="_3vtwrU Doid-g _3XtDVr _2H1Euj" style="left:30%" *ngIf="adad">
+    <div class="_2vCLkQ" style="display: flex; flex-direction: column; flex-shrink: 1; flex-grow: 1;">
+        <header class="PkFIdA _33T8Oc" data-qa="modal-header">
+            <div class="izfMlp _1HQM0r">
+                <h2 class="_9t1fKU _3XK9dh _2AVm3L _3bMN68 _1T_y7I _1j68JW">Apply Default Taxes To All</h2>
+                <div role="button" class="_2y31id _2PFOGx _3pAZyb _3d4M2L _2nu1E8" data-qa="header-close-button">
+                    <div class="_10jmov" (click)="dada()">
+                        <div><span class="_3Q2N2k _30vxLD _3s37z7 _3gU_Sq XuZows"><svg viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17 1.914L16.086 1 9 8.086 1.914 1 1 1.914 8.086 9 1 16.086l.914.914L9 9.914 16.086 17l.914-.914L9.914 9z">
+                                    </path>
+                                </svg></span></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="_1AL6HX dn0kkN" data-qa="modal-content" style="display: flex; flex-direction: column;">
+            <div class="xPg8Rs" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+                <div class="_3NVDUN _2ODZzb" style="display: flex; flex-direction: column;">
+                    <div class="_9t1fKU _62dXJY">Are you sure? You have <span class="_9t1fKU _62dXJY _3XaYbu">2
+                            Services</span> without default taxes, this action will update their settings to apply
+                        default taxes instead</div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="_1sJ5gi _1G31AL"><button class="_2nu1E8 _1O2-GF _2P5TQK" data-qa="apply-to-all-button"
+                    style="flex-basis: 100%;">Apply</button></div>
+        </div>
+    </div>
+</div>
+
+
+<!--modal seting change-->
+<div class="_3vtwrU _3XtDVr _2H1Euj" *ngIf="kals">
+    <div class="_2vCLkQ" style="display: flex; flex-direction: column; flex-shrink: 1; flex-grow: 1;">
+        <header class="PkFIdA _33T8Oc" data-qa="modal-header">
+            <div class="izfMlp _1HQM0r">
+                <h2 class="_9t1fKU _3XK9dh _2AVm3L _3bMN68 _1T_y7I _1j68JW">Change Tax Calculation</h2>
+                <div role="button" class="_2y31id _2PFOGx _3pAZyb _3d4M2L _2nu1E8" data-qa="header-close-button">
+                    <div class="_10jmov">
+                        <div><span class="_3Q2N2k _30vxLD _3s37z7 _3gU_Sq XuZows"><svg viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg" (click)="kal()">
+                                    <path
+                                        d="M17 1.914L16.086 1 9 8.086 1.914 1 1 1.914 8.086 9 1 16.086l.914.914L9 9.914 16.086 17l.914-.914L9.914 9z">
+                                    </path>
+                                </svg></span></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="_1AL6HX _3xWuXS" data-qa="modal-content" style="display: flex; flex-direction: column;">
+            <div class="xPg8Rs _1Yiagb" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+                <div class="_2_XCHl">
+                    <div class="_2D2Sll _1T6inm" style="display: flex; flex-direction: row;">
+                        <div data-qa="note-description"
+                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                            <div class="_9t1fKU _62dXJY MDlUvL _2rMCU9">This change will have a big impact on your
+                                sales. Make sure you understand all implications</div>
+                        </div><span class="_3Q2N2k _30vxLD _3gU_Sq" style="margin-left: 21px;"><svg viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill-rule="nonzero" fill="none">
+                                    <path
+                                        d="M12.053 1.955c3.875.372 6.118 2.394 6.731 6.064.613 3.67-.51 6.06-3.365 7.17l-.45 5.064-.42 1.842-1.656 1.033h-2.476l-1.219-1.66v-3.727l-.787-2.552-2.432-2.648-1.147-3.603L5.979 6.06l.98-2.165L9.2 2.53l2.854-.574z"
+                                        fill="#FFF"></path>
+                                    <path d="M22.615.646a.5.5 0 0 1 .707.708l-2 2a.5.5 0 0 1-.707-.708l2-2z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M22.615.646a.5.5 0 0 1 .707.708l-2 2a.5.5 0 0 1-.707-.708l2-2zM23.322 17.646a.5.5 0 0 1-.707.708l-2-2a.5.5 0 0 1 .707-.708l2 2z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M23.322 17.646a.5.5 0 0 1-.707.708l-2-2a.5.5 0 0 1 .707-.708l2 2zM22.969 8.5a.5.5 0 1 1 0 1h-1a.5.5 0 1 1 0-1h1z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M22.969 8.5a.5.5 0 1 1 0 1h-1a.5.5 0 1 1 0-1h1zM1.322 18.354a.5.5 0 0 1-.707-.708l2-2a.5.5 0 0 1 .707.708l-2 2z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M1.322 18.354a.5.5 0 0 1-.707-.708l2-2a.5.5 0 0 1 .707.708l-2 2zM.615 1.354a.5.5 0 0 1 .707-.708l2 2a.5.5 0 1 1-.707.708l-2-2z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M.615 1.354a.5.5 0 0 1 .707-.708l2 2a.5.5 0 1 1-.707.708l-2-2zM.969 10.5a.5.5 0 1 1 0-1h1a.5.5 0 0 1 0 1h-1z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M.969 10.5a.5.5 0 1 1 0-1h1a.5.5 0 0 1 0 1h-1zM9.469 16.864a.5.5 0 1 1-1 0c0-.05-.005-.152-.019-.285a3.314 3.314 0 0 0-.129-.645c-.08-.254-.188-.45-.316-.573a.5.5 0 1 1 .693-.721c.265.254.45.592.576.992.147.464.195.915.195 1.232zM15.467 16.92a.5.5 0 0 1-1 0c0-.083.006-.217.022-.386a4.65 4.65 0 0 1 .153-.832c.128-.443.32-.81.605-1.071a.5.5 0 0 1 .675.738c-.127.116-.238.327-.319.609a3.674 3.674 0 0 0-.119.653 3.357 3.357 0 0 0-.017.29z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M8.643 14.594a.5.5 0 0 1-.583.812c-2.291-1.647-3.591-3.837-3.591-6.404A7.5 7.5 0 0 1 11.968 1.5a.5.5 0 1 1 0 1 6.5 6.5 0 0 0-6.5 6.502c0 2.22 1.13 4.122 3.175 5.592z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M15.877 15.406a.5.5 0 0 1-.584-.812c2.046-1.47 3.176-3.373 3.176-5.592A6.501 6.501 0 0 0 11.968 2.5a.5.5 0 1 1 0-1 7.501 7.501 0 0 1 7.501 7.502c0 2.567-1.3 4.757-3.592 6.404zM11.968 22.5a.5.5 0 1 1 0 1c-1.316 0-2.272-.468-2.888-1.25a2.87 2.87 0 0 1-.611-1.368V16.92a.5.5 0 1 1 1 0l-.007 3.882c.03.188.15.508.403.83.428.542 1.095.868 2.103.868z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M11.968 23.5a.5.5 0 1 1 0-1c1.008 0 1.675-.326 2.103-.869.253-.32.372-.64.396-.749V16.92a.5.5 0 1 1 1 0l-.007 4.042c-.055.341-.23.815-.604 1.289-.616.781-1.572 1.249-2.888 1.249z"
+                                        fill="#101928"></path>
+                                    <path
+                                        d="M8.729 17.939a.5.5 0 1 1 .48-.878c.142.078.421.203.808.33 1.526.503 3.141.51 4.645-.293l.065-.036a.5.5 0 0 1 .483.876l-.076.041c-1.78.952-3.667.942-5.43.362a6.124 6.124 0 0 1-.975-.402z"
+                                        fill="#101928"></path>
+                                    <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#FFDE78"></path>
+                                    <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                        fill="#101928"></path>
+                                </g>
+                            </svg></span>
+                    </div>
+                </div>
+                <div class="_3H7ZtF"><label class="B4ufiE _2WRqSc _3_NKFH mVXRl2 UUQryC"
+                        data-qa="pricesIncludeTax-label"><input class="_3RKzT9" type="radio" name="pricesIncludeTax"
+                            value="exclude"><span class="_3Q2N2k _30vxLD _3s37z7 I_L1Tc"><svg viewBox="0 0 10 8"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.732.273c-.358-.364-.937-.364-1.295 0L2.99 5.808 1.543 4.544c-.352-.36-.924-.36-1.277 0-.353.358-.353.94 0 1.298l2.163 1.89c.35.358.922.358 1.275 0 .035-.037.065-.077.093-.117l.015-.013L9.73 1.588c.358-.363.358-.952 0-1.315z">
+                                </path>
+                            </svg></span>
+                        <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Retail Prices Exclude Tax</span>
+                            <div class="_9t1fKU _2IkPd8 _3f9x22">
+                                <div>
+                                    <div class="_9t1fKU _62dXJY">If selected, all taxes will be calculated using this
+                                        formula:</div>
+                                    <div class="_9t1fKU _62dXJY _3XaYbu DUwO9R">Tax = Retail * Tax</div>
+                                    <div class="_9t1fKU _62dXJY">For example: 20% tax on a $10.00 item comes to $2.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </label></div>
+                <div class="_3H7ZtF"><label class="B4ufiE _2WRqSc _3_NKFH mVXRl2 _300KJR UUQryC"
+                        data-qa="pricesIncludeTax-label"><input class="_3RKzT9" type="radio" name="pricesIncludeTax"
+                            value="include" checked=""><span class="_3Q2N2k _30vxLD _3s37z7 I_L1Tc"><svg
+                                viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.732.273c-.358-.364-.937-.364-1.295 0L2.99 5.808 1.543 4.544c-.352-.36-.924-.36-1.277 0-.353.358-.353.94 0 1.298l2.163 1.89c.35.358.922.358 1.275 0 .035-.037.065-.077.093-.117l.015-.013L9.73 1.588c.358-.363.358-.952 0-1.315z">
+                                </path>
+                            </svg></span>
+                        <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Retail Prices Include Tax</span>
+                            <div class="_9t1fKU _2IkPd8 _3f9x22">
+                                <div>
+                                    <div class="_9t1fKU _62dXJY">If selected, all taxes will be calculated using this
+                                        formula:</div>
+                                    <div class="_9t1fKU _62dXJY _3XaYbu DUwO9R">Tax = (Tax Rate * Retail Price) / (1 +
+                                        Tax Rate)</div>
+                                    <div class="_9t1fKU _62dXJY">For example: 20% tax on a $10.00 item comes to $1.67
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </label></div>
+            </div>
+        </div>
+        <div class="">
+            <div class="_1sJ5gi _1G31AL"><button class="_2nu1E8 _1O2-GF _2P5TQK"
+                    data-qa="save-tax-calculation-button">Save</button></div>
+        </div>
+    </div>
+</div>

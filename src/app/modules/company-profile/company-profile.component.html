@@ -1,0 +1,1664 @@
+<div class="_2k68E6 _260Y5f _1qUHUs" data-qa="scrollable-content" style="display: flex; flex-direction: column;">
+    <section>
+        <div class="_297iDr _37zdEz _2BxTkW" style="">
+            <div class="xveDbv _38CYLo">
+                <div></div>
+                <div class="_18j6NR" style="display: flex; flex-direction: column;">
+                    <div novalidate="" data-qa="form-client-list-filter">
+                        <div class="hEORB6" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="container">
+                                <form [formGroup]="CompanyProfile">
+                                    <mat-card class="example-card" style="margin-left: 7px;">
+                                        <div class="row">
+                                            <div class="col-12 bg" style="height: 200px;">
+                                                <div class="imag" >
+                                                    <img src="../../../assets/images/dumy1.png" class="imag1" >
+                                                    <span class="imag2" >
+                                                       <span class="imag3" >
+                                                        <mat-icon style="font-size: 38px;height: 38px;
+                                                        width: 38px;color:gold ;cursor: pointer;" (click)="contactImage.click()"> camera </mat-icon>
+                                                        </span>
+                                                         <input type="file" #contactImage  name="avatar" (click)="browser1($event)" style="display: none;">
+                                                    </span>
+                                                </div>
+
+                                                <!-- <div class="row hove">
+                                                    <span class="hove1" style="position: relative;top: 85px;left:25px">
+                                                        <img class="img-fluid img-thumbnail" src="../../../assets/images/dumy1.png"
+                                                            style="width:150px;height:150px;border-radius: 50%;">
+                                                    </span>
+                                                    <span class="hove2">
+                                                        <span style="width: 100px;">
+                                                            <span class="material-icons" style="position: absolute;position: absolute; height: 100%; display: flex;font-size: 50px; justify-content: center; align-items: center; width: 100%;">
+                                                                control_camera
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div> -->
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <div class="row">
+                                                    <div class="col-4 offset-2">
+                                                        <mat-form-field appearance="legacy" style="display:block;">
+                                                            <mat-label at-label> Company Name </mat-label>
+                                                            <input matInput placeholder="Enter Company Name" formControlName="CompanyName" >
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-4 ">
+                                                        <mat-form-field appearance="legacy" style="display: block;">
+                                                            <mat-label> Company Type </mat-label>
+                                                            <mat-select formControlName="CompanyType" >
+                                                                <mat-option value="Sole Proprietorship">Sole
+                                                                    Proprietorship</mat-option>
+                                                                <mat-option value="Partnership Firms">Partnership Firms
+                                                                </mat-option>
+                                                                <mat-option value="Private Limited Company (Pvt. Ltd.)">
+                                                                    Private Limited Company (Pvt. Ltd.)</mat-option>
+                                                                <mat-option value="Limited Liability Partnership (LLP)">
+                                                                    Limited Liability Partnership (LLP)</mat-option>
+                                                                <mat-option value="Public Limited Company.">Public
+                                                                    Limited Company.</mat-option>
+                                                                <mat-option value="One Person Company (OPC)">One Person
+                                                                    Company (OPC)</mat-option>
+                                                                <mat-option value="Section 8 Company">Section 8 Company
+                                                                </mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- <div class="col-12" style="margin-top: 30px;">
+                                                <h2> Owner </h2>
+                                                <div class="row">
+                                                    <div class="col-11">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy"
+                                                                    style="display:block;">
+                                                                    <mat-label at-label> Search Contact </mat-label>
+                                                                    <input matInput placeholder="Enter Contact Name">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3 ">
+                                                                <mat-form-field appearance="legacy"
+                                                                    style="display: block;">
+                                                                    <mat-label>Company Type</mat-label>
+                                                                    <mat-select>
+                                                                        <mat-option value="Sole Proprietorship">Sole
+                                                                            Proprietorship</mat-option>
+                                                                        <mat-option value="Partnership Firms">
+                                                                            Partnership Firms</mat-option>
+                                                                        <mat-option
+                                                                            value="Private Limited Company (Pvt. Ltd.)">
+                                                                            Private Limited Company (Pvt. Ltd.)
+                                                                        </mat-option>
+                                                                        <mat-option
+                                                                            value="Limited Liability Partnership (LLP)">
+                                                                            Limited Liability Partnership (LLP)
+                                                                        </mat-option>
+                                                                        <mat-option value="Public Limited Company.">
+                                                                            Public Limited Company.</mat-option>
+                                                                        <mat-option value="One Person Company (OPC)">One
+                                                                            Person Company (OPC)</mat-option>
+                                                                        <mat-option value="Section 8 Company">Section 8
+                                                                            Company</mat-option>
+                                                                    </mat-select>
+                                                                </mat-form-field>
+
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <mat-form-field appearance="legacy"
+                                                                    style="display:block;">
+                                                                    <mat-label at-label> Share Occupy (%)</mat-label>
+                                                                    <input matInput placeholder="Enter Share Percentage"
+                                                                        type="text">
+                                                                </mat-form-field>
+                                                            </div>
+                                                            <div class="col-3 ">
+                                                                <mat-form-field appearance="legacy"
+                                                                    style="display: block;">
+                                                                    <mat-label> Designation </mat-label>
+                                                                    <mat-select>
+                                                                        <mat-option value="Proprietor">Proprietor
+                                                                        </mat-option>
+                                                                        <mat-option value="Owner">Owner</mat-option>
+                                                                        <mat-option value="Founder">Founder</mat-option>
+                                                                        <mat-option value="Managing Director"> Managing
+                                                                            Director</mat-option>
+                                                                        <mat-option value="Chairperson">Chairperson
+                                                                        </mat-option>
+                                                                        <mat-option value="Chairman">Chairman
+                                                                        </mat-option>
+                                                                        <mat-option value="Section 8 Company">Section 8
+                                                                            Company</mat-option>
+                                                                    </mat-select>
+                                                                </mat-form-field>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1">
+                                                        <div class="row">
+                                                            <div class="col-6" style="display: flex;align-items: center;
+                                            justify-content: center;">
+                                                                <span class="material-icons" style="color: red;">
+                                                                    remove_circle_outline
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-6" style="display: flex;align-items: center;
+                                            justify-content: center;">
+                                                                <span class="material-icons" style="color: green;">
+                                                                    add_circle_outline
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <div class="row">
+                                                  <div class="col-3">
+                                                    <mat-form-field appearance="legacy" style="display: block;">
+                                                        <mat-label> Nature Of Businesss </mat-label>
+                                                          <mat-select>
+                                                            <mat-option value="Salon">Salon</mat-option>
+                                                            <mat-option value="Spa">Spa</mat-option>
+                                                            <mat-option value="Nail Salon">Nail Salon</mat-option>
+                                                            <mat-option value="Barber">Barber</mat-option>
+                                                            <mat-option value="Beauty Parlour">Beauty Parlour</mat-option>
+                                                          </mat-select>
+                                                      </mat-form-field>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <div class="row">
+                                                  <div class="col-2">
+                                                    <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                        <div style="height: 50px;">
+                                                          <p style="margin-bottom: 0px;"> COI (Certificate Of Documentation) </p>
+                                                        </div>
+                                                        <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 200px;">
+                                                        <mat-card-content>
+                                                            <mat-form-field appearance="legacy" style="display:block;">
+                                                                <mat-label at-label> COI No. </mat-label>
+                                                                <input matInput placeholder="Enter COI No.">
+                                                            </mat-form-field>
+                                                        </mat-card-content>
+                                                    </mat-card>
+                                                  </div>
+                                                  <div class="col-2">
+                                                    <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                        <div style="height: 50px;">
+                                                          <p style="margin-bottom: 0px;"> MOA (Memorandum Of Association) </p>
+                                                        </div>
+                                                        <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 200px;">
+                                                        <mat-card-content>
+                                                            <mat-form-field appearance="legacy" style="display:block;">
+                                                                <mat-label at-label> Files Count </mat-label>
+                                                                <input matInput placeholder="Enter Count">
+                                                            </mat-form-field>
+                                                        </mat-card-content>
+                                                    </mat-card>
+                                                  </div>
+                                                  <div class="col-2">
+                                                    <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                        <div style="height: 50px;">  
+                                                        <p style="margin-bottom: 29px;"> Udyog Aadhaar ID </p>
+                                                        </div>
+                                                        <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 200px;">
+                                                        <mat-card-content>
+                                                            <mat-form-field appearance="legacy" style="display:block;">
+                                                                <mat-label at-label> UAID No. </mat-label>
+                                                                <input matInput placeholder="Enter UAID No">
+                                                            </mat-form-field>
+                                                        </mat-card-content>
+                                                    </mat-card>
+                                                  </div>
+                                                  <div class="col-2">
+                                                    <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                        <div style="height: 50px;"> 
+                                                        <p style="margin-bottom: 29px;">Goods & Service Tax </p>
+                                                        </div>
+                                                        <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 200px;">
+                                                        <mat-card-content>
+                                                            <mat-form-field appearance="legacy" style="display:block;">
+                                                                <mat-label at-label> GST No. </mat-label>
+                                                                <input matInput placeholder="Enter GST No.">
+                                                            </mat-form-field>
+                                                        </mat-card-content>
+                                                    </mat-card>
+                                                  </div>
+                                                  <div class="col-2">
+                                                    <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                        <div style="height: 50px;">   
+                                                        <p >Tax Deducted at Source (TDS) </p>
+                                                        </div>
+                                                        <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 200px;">
+                                                        <mat-card-content>
+                                                            <mat-form-field appearance="legacy" style="display:block;">
+                                                                <mat-label at-label> TDS No. </mat-label>
+                                                                <input matInput placeholder="Enter TDS No.">
+                                                            </mat-form-field>
+                                                        </mat-card-content>
+                                                    </mat-card>
+                                                  </div>
+                                                  <div class="col-2" >
+                                                      <div style="height: 100%;width:100%;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                                                        <h2 style="margin-bottom: 0px;">Other Documents </h2>
+                                                        <span class="material-icons" style="color: green;font-size: 30px;">
+                                                            add_circle_outline
+                                                        </span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <mat-divider></mat-divider>
+                                              </div> -->
+
+                                              
+                                              <!-- expansion pannel start here -->
+
+                                              <mat-accordion class="example-headers-align" style="width: 100%;">
+                                                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title  style="display: flex;justify-content: space-between;align-items: center;" >
+                                                          <h3 style="margin:0px"> Owner </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                          </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                
+                                                    <div class="col-12" style="margin-top: 30px;" formArrayName="CompanyDetails">
+                                                        <div class="row" *ngFor="let quantity of CompanyDetails().controls; let i=index" [formGroupName]="i">
+                                                            <div class="col-11">
+                                                                <div class="row">
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy"
+                                                                            style="display:block;">
+                                                                            <mat-label at-label> Search Contact </mat-label>
+                                                                            <input matInput placeholder="Enter Contact Name" formControlName="contactPerson">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3 ">
+                                                                        <mat-form-field appearance="legacy"
+                                                                            style="display: block;">
+                                                                            <mat-label>Company Type</mat-label>
+                                                                            <mat-select formControlName="TypeCompany">
+                                                                                <mat-option value="Sole Proprietorship">Sole
+                                                                                    Proprietorship</mat-option>
+                                                                                <mat-option value="Partnership Firms">
+                                                                                    Partnership Firms</mat-option>
+                                                                                <mat-option
+                                                                                    value="Private Limited Company (Pvt. Ltd.)">
+                                                                                    Private Limited Company (Pvt. Ltd.)
+                                                                                </mat-option>
+                                                                                <mat-option
+                                                                                    value="Limited Liability Partnership (LLP)">
+                                                                                    Limited Liability Partnership (LLP)
+                                                                                </mat-option>
+                                                                                <mat-option value="Public Limited Company.">
+                                                                                    Public Limited Company.</mat-option>
+                                                                                <mat-option value="One Person Company (OPC)">One
+                                                                                    Person Company (OPC)</mat-option>
+                                                                                <mat-option value="Section 8 Company">Section 8
+                                                                                    Company</mat-option>
+                                                                            </mat-select>
+                                                                        </mat-form-field>
+        
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <mat-form-field appearance="legacy"
+                                                                            style="display:block;">
+                                                                            <mat-label at-label> Share Occupy (%)</mat-label>
+                                                                            <input matInput placeholder="Enter Share Percentage" type="text" formControlName="ShareOccupy">
+                                                                        </mat-form-field>
+                                                                    </div>
+                                                                    <div class="col-3 ">
+                                                                        <mat-form-field appearance="legacy"
+                                                                            style="display: block;" >
+                                                                            <mat-label> Designation </mat-label>
+                                                                            <mat-select formControlName="Designation">
+                                                                                <mat-option value="Proprietor">Proprietor
+                                                                                </mat-option>
+                                                                                <mat-option value= "Owner" > Owner </mat-option>
+                                                                                <mat-option value="Founder">Founder</mat-option>
+                                                                                <mat-option value="Managing Director"> Managing
+                                                                                    Director</mat-option>
+                                                                                <mat-option value="Chairperson">Chairperson
+                                                                                </mat-option>
+                                                                                <mat-option value="Chairman">Chairman
+                                                                                </mat-option>
+                                                                                <mat-option value="Section 8 Company">Section 8
+                                                                                    Company</mat-option>
+                                                                            </mat-select>
+                                                                        </mat-form-field>
+        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-1">
+                                                                <div class="row">
+                                                                    <div class="col-6" style="display: flex;align-items: center; justify-content: center;">
+                                                                        <span class="material-icons" style="color: red;" (click)="removeCompanyDetails(i)" *ngIf="i > 0">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                   
+                                                                        <span class="material-icons" style="color: green;" (click)="addCompanyDetails()" *ngIf="i == 0">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12" style="margin-top: 30px;">
+                                                        <div class="row">
+                                                          <div class="col-3">
+                                                            <mat-form-field appearance="legacy" style="display: block;">
+                                                                <mat-label> Nature Of Businesss </mat-label>
+                                                                  <mat-select formControlName="businessNature">
+                                                                    <mat-option value="Salon">Salon</mat-option>
+                                                                    <mat-option value="Spa">Spa</mat-option>
+                                                                    <mat-option value="Nail Salon">Nail Salon</mat-option>
+                                                                    <mat-option value="Barber">Barber</mat-option>
+                                                                    <mat-option value="Beauty Parlour">Beauty Parlour</mat-option>
+                                                                  </mat-select>
+                                                              </mat-form-field>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    <div class="col-12" style="margin-top: 30px;">
+                                                        <div class="row">
+                                                          <div class="col-2">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;">
+                                                                  <p style="margin-bottom: 0px;"> COI (Certificate Of Documentation) </p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                    <img mat-card-image src="../../../assets/images/bgimage.jpeg"  style="height: 200px;">
+                                                                        <span  class="imma1" >
+                                                                            <mat-icon  class="imma2"  (click)="COIImage.click()"> camera </mat-icon>
+                                                                        </span>
+                                                                        <input type="file" #COIImage  name="COIImage" (click)="browserCOI($event)" style="display: none;">
+                                                                    </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> COI No. </mat-label>
+                                                                        <input matInput placeholder="Enter COI No." formControlName="COINumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div>
+                                                          <div class="col-2">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;">
+                                                                  <p style="margin-bottom: 0px;"> MOA (Memorandum Of Association) </p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                    <img mat-card-image src="../../../assets/images/bgimage.jpeg"  style="height: 200px;">
+                                                                        <span  class="imma1" >
+                                                                            <mat-icon  class="imma2"  (click)="MOAImage.click()"> camera </mat-icon>
+                                                                        </span>
+                                                                        <input type="file" #MOAImage  name="MOAImage" (click)="browserMOA($event)" style="display: none;">
+                                                                    </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> Files Count </mat-label>
+                                                                        <input matInput placeholder="Enter Count" formControlName="FilesCountNumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div>
+                                                          <div class="col-2">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;">  
+                                                                <p style="margin-bottom: 29px;"> Udyog Aadhaar ID </p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                    <img mat-card-image src="../../../assets/images/bgimage.jpeg"  style="height: 200px;">
+                                                                        <span  class="imma1" >
+                                                                            <mat-icon  class="imma2"  (click)="UAIDImage.click()"> camera </mat-icon>
+                                                                        </span>
+                                                                        <input type="file" #UAIDImage  name="UAIDImage" (click)="browserUAID($event)" style="display: none;">
+                                                                    </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> UAID No. </mat-label>
+                                                                        <input matInput placeholder="Enter UAID No" formControlName="UAIDNumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div>
+                                                          <div class="col-2">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;"> 
+                                                                <p style="margin-bottom: 29px;">Goods & Service Tax </p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                    <img mat-card-image src="../../../assets/images/bgimage.jpeg"  style="height: 200px;">
+                                                                        <span  class="imma1" >
+                                                                            <mat-icon  class="imma2"  (click)="GSTImage.click()"> camera </mat-icon>
+                                                                        </span>
+                                                                        <input type="file" #GSTImage name="GSTImage" (click)="browserGST($event)" style="display: none;">
+                                                                    </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> GST No. </mat-label>
+                                                                        <input matInput placeholder="Enter GST No." formControlName="GSTNumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div>
+                                                         
+                                                          <div class="col-2">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;">   
+                                                                <p >Tax Deducted at Source (TDS) </p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                <img mat-card-image src="../../../assets/images/bgimage.jpeg"  style="height: 200px;">
+                                                                    <span  class="imma1" >
+                                                                        <mat-icon  class="imma2"  (click)="TDSImage.click()"> camera </mat-icon>
+                                                                    </span>
+                                                                    <input type="file" #TDSImage  name="TDSImage" (click)="browserTDS($event)" style="display: none;">
+                                                                </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> TDS No. </mat-label>
+                                                                        <input matInput placeholder="Enter TDS No." formControlName="TDSNumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div>
+
+
+                                                          <!-- <div class="col-2" ngfor="let image for ImageArray">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;">   
+                                                                <p >{{image.Name}}</p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                <img mat-card-image src="../../../assets/images/bgimage.jpeg"  style="height: 200px;">
+                                                                    <span  class="imma1" >
+                                                                        <mat-icon  class="imma2"  (click)="TDSImage.click()"> camera </mat-icon>
+                                                                    </span>
+                                                                    <input type="file" #TDSImage  name="TDSImage" (click)="browserTDS($event)" style="display: none;">
+                                                                </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> TDS No. </mat-label>
+                                                                        <input matInput placeholder="Enter TDS No." formControlName="TDSNumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div> -->
+
+
+                                                          <div class="col-2" *ngFor="let item of selectImage1">
+                                                            <mat-card class="example-card" style="margin-left: 0px;margin-bottom: 10px;">
+                                                                <div style="height: 50px;">   
+                                                                <p >Other Document  </p>
+                                                                </div>
+                                                                <div class="imma">
+                                                                <img mat-card-image src="../../../assets/images/bgimage.jpeg" style="height: 200px;">
+                                                                    <span  class="imma1" >
+                                                                      <mat-icon  class="imma2"  (click)="TDSImage.click()"> camera </mat-icon>
+                                                                    </span>
+                                                                    <input type="file" #TDSImage  name="TDSImage" (click)="browserTDS($event)" style="display: none;">
+                                                                </div>
+                                                                <mat-card-content>
+                                                                    <mat-form-field appearance="legacy" style="display:block;">
+                                                                        <mat-label at-label> TDS No. </mat-label>
+                                                                        <input matInput placeholder="Enter TDS No." formControlName="TDSNumber">
+                                                                    </mat-form-field>
+                                                                </mat-card-content>
+                                                            </mat-card>
+                                                          </div>
+
+                                                          <div class="col-2" >
+                                                              <div style="height: 100%;width:100%;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                                                                <h2 style="margin-bottom: 0px;"> Other Documents </h2>
+                                                                <span class="material-icons" style="color: green;font-size: 30px;" (click)="OTHImage.click()">
+                                                                    add_circle_outline
+                                                                </span>
+                                                                <input type="file" #OTHImage  name="TDSImage" (click)="browserOTHER($event)" style="display: none;">
+                                                                
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    <mat-action-row>
+                                                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+
+
+
+
+
+                                                <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                                                  <mat-expansion-panel-header>
+
+                                                    <mat-panel-title  style="display: flex;justify-content: space-between;align-items: center;" >
+                                                        <h3 style="margin:0px"> Office </h3>
+                                                        <span class="material-icons">
+                                                            keyboard_arrow_down
+                                                            </span>
+                                                    </mat-panel-title>
+                                                    <!-- <mat-panel-description style="float: right;">
+                                                      <span class="material-icons">
+                                                        keyboard_arrow_down
+                                                        </span>
+                                                    </mat-panel-description> -->
+                                                  </mat-expansion-panel-header>
+
+                                                  <div class="mat-elevation-z8">
+                                                    <table mat-table [dataSource]="dataSource22">
+                                                      
+                                                      <ng-container matColumnDef="position">
+                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Action </th>
+                                                        <td mat-cell *matCellDef="let element"> 
+                                                         <span style="display: flex;align-items: center;">
+                                                        <span class="material-icons" style="color: red;">
+                                                            remove_circle_outline
+                                                        </span>
+                                                        <span class="material-icons" style="color: green;">
+                                                            add_circle_outline
+                                                        </span>
+                                                    </span>   
+                                                    </td>
+                                                      </ng-container>
+                                                  
+                                                      <ng-container matColumnDef="Address">
+                                                        <th mat-header-cell *matHeaderCellDef style="width:30%"> Address </th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.Address}} </td>
+                                                      </ng-container>
+                                                  
+                                                      <ng-container matColumnDef="label">
+                                                        <th mat-header-cell *matHeaderCellDef style="width:20%">label </th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.label}} </td>
+                                                      </ng-container>
+                                                  
+                                                      <ng-container matColumnDef="PeopleNo">
+                                                        <th mat-header-cell *matHeaderCellDef style="width:10%;text-align: center;"> No. of People </th>
+                                                        <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.PeopleNo}} </td>
+                                                      </ng-container>
+                                                  
+                                                      <ng-container matColumnDef="Time">
+                                                        <th mat-header-cell *matHeaderCellDef style="width:30%; text-align: center;">Time </th>
+                                                        <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.TimeFrom}} To {{element.TimeTo}} </td>
+                                                      </ng-container>
+
+                                                      <tr mat-header-row *matHeaderRowDef="displayedColumns22"></tr>
+                                                      <tr mat-row *matRowDef="let row; columns: displayedColumns22;"></tr>
+                                                    </table>
+                                                  </div>
+                                                  <mat-action-row>
+                                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                  </mat-action-row>
+                                                </mat-expansion-panel>
+                                              
+                                                <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+                                                  <mat-expansion-panel-header>
+                                                    <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                        <h3 style="margin:0px"> Brand </h3>
+                                                        <span class="material-icons">
+                                                            keyboard_arrow_down
+                                                            </span>
+                                                    </mat-panel-title>
+                                                  </mat-expansion-panel-header>
+                                                  <div class="row">
+                                                    <div class="col-12">
+                                                        <div novalidate="" data-qa="form-client-list-filter">
+                                                            <div class="hEORB6" style="display: flex; justify-content: center; align-items: center;margin-bottom: 0px; max-width: 100% !important;">
+                                                                <label class="B4ufiE _3J2MMS _5rpFbc _2tXpf4 _3Oe3sQ"
+                                                                        style="display: flex; flex-direction: column-reverse;max-width: 100% !important;">
+                                                                        <div class="qyGFie" style="display: flex; flex-direction: row;">
+                                                                            <input class="_3RKzT9 _2vdwSO"  placeholder=" Add A Brand" autocomplete="off" value="" style="padding-left: 15px !important;    min-width: 700px !important;">
+                                                                        </div>
+                                                                    </label>
+                                                                <div style="display: flex; justify-content: space-between;align-items: center; ">
+                                                                    <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0"
+                                                                        data-qa="mobile-clients-dropdown" >
+                                                                            <div class="flecs1" style="    display: flex; align-items: center;"> 
+                                                                                <span class="material-icons">
+                                                                                    add
+                                                                                </span> Brand </div>
+                                                                     </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <span style="color:red;text-align: center;display: block;">Can't Find? Create A New and let us know if you are a brand owner / franchisor</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="col-8 offset-2">
+                                                            <div class="mat-elevation-z8">
+                                                                <table mat-table [dataSource]="dataSource">
+                                                                  
+                                                                  <ng-container matColumnDef="position">
+                                                                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                                                                    <td mat-cell *matCellDef="let element"> <span class="material-icons" style="color: red;">
+                                                                        remove_circle_outline
+                                                                    </span> </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="name">
+                                                                    <th mat-header-cell *matHeaderCellDef> Brand Name </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="type">
+                                                                    <th mat-header-cell *matHeaderCellDef>Type </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="outlet">
+                                                                    <th mat-header-cell *matHeaderCellDef> Outlet No. </th>
+                                                                    <td mat-cell *matCellDef="let element"> Outlet {{element.outlet}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                                                </table>
+                                                                <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              
+                                                  <mat-action-row>
+                                                    <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                  </mat-action-row>
+                                                </mat-expansion-panel>
+
+                                                <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                          <h3 style="margin:0px"> Outlets </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                              </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div novalidate="" data-qa="form-client-list-filter">
+                                                                <div class="hEORB6" style="display: flex; justify-content: center; align-items: center;margin-bottom: 0px; max-width: 100% !important;">
+                                                                    <label class="B4ufiE _3J2MMS _5rpFbc _2tXpf4 _3Oe3sQ"
+                                                                            style="display: flex; flex-direction: column-reverse;max-width: 100% !important;">
+                                                                            <div class="qyGFie" style="display: flex; flex-direction: row;">
+                                                                                <input class="_3RKzT9 _2vdwSO"  placeholder="Search Your Outlet Here..." autocomplete="off" value="" style="padding-left: 15px !important;    min-width: 700px !important;">
+                                                                            </div>
+                                                                        </label>
+                                                                    <div style="display: flex; justify-content: space-between;align-items: center; ">
+                                                                        <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0"
+                                                                            data-qa="mobile-clients-dropdown" >
+                                                                                <div class="flecs1" style="    display: flex; align-items: center;"> 
+                                                                                    <span class="material-icons">
+                                                                                        add
+                                                                                    </span> Outlet </div>
+                                                                         </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <span style="color:red;text-align: center;display: block;">Can't Find? Create A New and let us know if you are a brand owner / franchisor</span>
+                                                        </div>
+    
+                                                        <div class="col-12">
+                                                            <div class="col-8 offset-2">
+                                                                <div class="mat-elevation-z8">
+                                                                    <table mat-table [dataSource]="dataSource1">
+                                                                      
+                                                                      <ng-container matColumnDef="position">
+                                                                        <th mat-header-cell *matHeaderCellDef> Action </th>
+                                                                        <td mat-cell *matCellDef="let element"> <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span> </td>
+                                                                      </ng-container>
+                                                                  
+                                                                      <ng-container matColumnDef="name">
+                                                                        <th mat-header-cell *matHeaderCellDef> Outlet Name </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                        
+                                                                      <ng-container matColumnDef="type">
+                                                                        <th mat-header-cell *matHeaderCellDef>Type </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                           
+                                                                      
+                                                                  
+                                                                      <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                                                                      <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+                                                                    </table>
+                                                                    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <mat-action-row>
+                                                      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+
+
+                                                  <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                          <h3 style="margin:0px"> Bank </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                              </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                                <div class="mat-elevation-z8">
+                                                                    <table mat-table [dataSource]="dataSource12">
+                                                                      
+                                                                      <ng-container matColumnDef="position">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Action </th>
+                                                                        <td mat-cell *matCellDef="let element"> 
+                                                                         <span style="display: flex;align-items: center;">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </span>   
+                                                                    </td>
+                                                                      </ng-container>
+                                                                  
+                                                                      <ng-container matColumnDef="Account Holder">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Account Holder </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.AccountHolder}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                        
+                                                                      <ng-container matColumnDef="Bank">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%">Bank </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.Bank}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                           
+                                                                      <ng-container matColumnDef="Account Type">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Account Type </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.AccountType}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                                      <ng-container matColumnDef="IFSC">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%">IFSC </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.IFSC}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                           
+                                                                      <ng-container matColumnDef="Branch">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%">Branch </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.Branch}} </td>
+                                                                      </ng-container>
+    
+    
+                                                                      <ng-container matColumnDef="Account No">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Account No. </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.AccountNo}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                                      <ng-container matColumnDef="Swift Code">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Swift Code </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.SwiftCode}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                           
+                                                                      <ng-container matColumnDef="Office / Outlets">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%">Office / Outlets </th>
+                                                                        <td mat-cell *matCellDef="let element">{{element.Office}} </td>
+                                                                      </ng-container>
+    
+                                                                      <ng-container matColumnDef="Pan Card">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%">Pan Card </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.pancard}} </td>
+                                                                      </ng-container>
+    
+                                                                      <tr mat-header-row *matHeaderRowDef="displayedColumns12"></tr>
+                                                                      <tr mat-row *matRowDef="let row; columns: displayedColumns12;"></tr>
+                                                                    </table>
+                                                                    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+                                                                  </div>
+                                                        </div>
+                                                    </div>
+                                                    <mat-action-row>
+                                                      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+
+                                                  <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                          <h3 style="margin:0px"> Social Media </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                              </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                    <div class="row">
+                                                   
+                                                        <div class="col-4">
+                                                            <mat-list>
+                                                                <mat-list-item >
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-facebook"></a> <span>Facebook </span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- <div style="display: flex;align-items: center;justify-content: space-between;">
+                                                                        <span>
+                                                                    <a href="#" class="fa fa-facebook"></a>Facebook</span>
+                                                                    <span style="display: flex;align-items: center;">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                        </span>
+                                                                    </div> -->
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-google"></a><span> Google Business </span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+    
+    
+    
+    
+                                                                    <!-- <div style="display: flex;align-items: center;justify-content: space-between;">
+                                                                        <span>
+                                                                            <a href="#" class="fa fa-google"></a> Google Business</span>
+                                                                    <span style="display: flex;align-items: center;">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                        </span>
+                                                                    </div> -->
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-youtube"></a><span> YouTube </span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                              </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-twitter"></a> <span>Twitter </span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <mat-divider></mat-divider>
+                                                                    </mat-list-item>
+                                                              </mat-list>
+                                                        </div>
+                                                        <div class="col-4 offset-2">
+                                                            <mat-list>
+                                                                <mat-list-item>
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-instagram"></a><span>Instagram </span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    
+                                                                    </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-google"></a><span>Google Page </span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                   </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item> 
+                                                                    <div class="row" style="display: contents;">
+                                                                        <div class="col-9">
+                                                                            <a href="#" class="fa fa-linkedin"></a> <span>LinkedIn</span>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <span class="material-icons" style="color: red;">
+                                                                                remove_circle_outline
+                                                                            </span>
+                                                                            <span class="material-icons" style="color: green;">
+                                                                                add_circle_outline
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    </mat-list-item>
+                                                                    <mat-divider></mat-divider>
+                                                              </mat-list>
+                                                        </div>
+                                                    </div>
+                                                    <mat-action-row>
+                                                      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+
+                                                  <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                          <h3 style="margin:0px"> No. Of Outlets </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                              </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                   
+                                                    <div class="row">
+                                                   
+                                                        <div class="col-4">
+                                                            <mat-list>
+                                                                <mat-list-item >
+                                                                   <span> No. Of Privately Owned Outlets : </span> 
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <span>Franchisees Pending for approval: </span>
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                              </mat-list>
+                                                        </div>
+                                                        <div class="col-4 offset-2">
+                                                            <mat-list>
+                                                                <mat-list-item>
+                                                                   <span> No. Of Franchisee Outlets: </span>
+                                                                    </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <span>Unauthorised Franchisees: </span>
+                                                                   </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                              </mat-list>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <mat-action-row>
+                                                      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+
+                                                  <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                          <h3 style="margin:0px"> Teammate </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                              </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                   
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <p style="text-align: right;">No. of People : 5</p>
+                                                                <div class="mat-elevation-z8">
+                                                                    <table mat-table [dataSource]="dataSource32">
+    
+                                                                      <ng-container matColumnDef="Profile">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:10%"> Profile </th>
+                                                                        <td mat-cell *matCellDef="let element"> 
+                                                                            <img src="../../../assets/images/dumy1.png" style="height:50px; width:50px;border-radius: 50%;">
+                                                                        </td>
+                                                                      </ng-container>
+                                                                  
+                                                                      <ng-container matColumnDef="Name">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:20%">Name </th>
+                                                                        <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                                      <ng-container matColumnDef="Job Title">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:20%;text-align: center;"> Job Title </th>
+                                                                        <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.JobTitle}} </td>
+                                                                      </ng-container>
+                                                                  
+                                                                       <ng-container matColumnDef="Outlets">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:20%; text-align: center;"> Outlets </th>
+                                                                        <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Outlets}} </td>
+                                                                      </ng-container>
+    
+                                                                      <ng-container matColumnDef="City">
+                                                                        <th mat-header-cell *matHeaderCellDef style="width:30%; text-align: center;"> City </th>
+                                                                        <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.City}} </td>
+                                                                      </ng-container>
+    
+                                                                      <tr mat-header-row *matHeaderRowDef="displayedColumns32"></tr>
+                                                                      <tr mat-row *matRowDef="let row; columns: displayedColumns32;"></tr>
+                                                                    </table>
+                                                                  </div>
+                                                        </div>
+                                                    </div>
+                                                    <mat-action-row>
+                                                      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                                                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+
+                                                  <mat-expansion-panel [expanded]="step === 8" (opened)="setStep(8)" hideToggle>
+                                                    <mat-expansion-panel-header>
+                                                      <mat-panel-title style="display: flex;justify-content: space-between;align-items: center;"  >
+                                                          <h3 style="margin:0px"> Roles </h3>
+                                                          <span class="material-icons">
+                                                              keyboard_arrow_down
+                                                              </span>
+                                                      </mat-panel-title>
+                                                    </mat-expansion-panel-header>
+                                                    <div class="row">
+                                                   
+                                                        <div class="col-8 offset-2">
+                                                            <mat-list>
+                                                                <mat-list-item >
+                                                                   <span> Brand Owner (Super Admin) : </span> 
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <span> Admin: </span>
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                                <mat-list-item>
+                                                                    <span> Editor: </span>
+                                                                     </mat-list-item>
+                                                                 <mat-divider></mat-divider>
+                                                                 <mat-list-item>
+                                                                     <span> View Only: </span>
+                                                                    </mat-list-item>
+                                                                 <mat-divider></mat-divider>
+                                                              </mat-list>
+                                                        </div>
+                                                    </div>
+                                                    <mat-action-row>
+                                                        <button mat-button color="warn" (click)="prevStep()"> Previous </button>
+                                                        <button mat-button color="primary"> Save </button>
+                                                    </mat-action-row>
+                                                  </mat-expansion-panel>
+                                              </mat-accordion>
+                                              
+
+                                              <!-- <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h3> Office </h3>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                            <div class="mat-elevation-z8">
+                                                                <table mat-table [dataSource]="dataSource22">
+                                                                  
+                                                                  <ng-container matColumnDef="position">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Action </th>
+                                                                    <td mat-cell *matCellDef="let element"> 
+                                                                     <span style="display: flex;align-items: center;">
+                                                                    <span class="material-icons" style="color: red;">
+                                                                        remove_circle_outline
+                                                                    </span>
+                                                                    <span class="material-icons" style="color: green;">
+                                                                        add_circle_outline
+                                                                    </span>
+                                                                </span>   
+                                                                </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="Address">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:30%"> Address </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.Address}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="label">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:20%">label </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.label}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="PeopleNo">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%;text-align: center;"> No. of People </th>
+                                                                    <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.PeopleNo}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="Time">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:30%; text-align: center;">Time </th>
+                                                                    <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.TimeFrom}} To {{element.TimeTo}} </td>
+                                                                  </ng-container>
+
+                                                                  <tr mat-header-row *matHeaderRowDef="displayedColumns22"></tr>
+                                                                  <tr mat-row *matRowDef="let row; columns: displayedColumns22;"></tr>
+                                                                </table>
+                                                              </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> Brands </h2>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div novalidate="" data-qa="form-client-list-filter">
+                                                            <div class="hEORB6" style="display: flex; justify-content: center; align-items: center;margin-bottom: 0px; max-width: 100% !important;">
+                                                                <label class="B4ufiE _3J2MMS _5rpFbc _2tXpf4 _3Oe3sQ"
+                                                                        style="display: flex; flex-direction: column-reverse;max-width: 100% !important;">
+                                                                        <div class="qyGFie" style="display: flex; flex-direction: row;">
+                                                                            <input class="_3RKzT9 _2vdwSO"  placeholder=" Add A Brand" autocomplete="off" value="" style="padding-left: 15px !important;    min-width: 700px !important;">
+                                                                        </div>
+                                                                    </label>
+                                                                <div style="display: flex; justify-content: space-between;align-items: center; ">
+                                                                    <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0"
+                                                                        data-qa="mobile-clients-dropdown" >
+                                                                            <div class="flecs1" style="    display: flex; align-items: center;"> 
+                                                                                <span class="material-icons">
+                                                                                    add
+                                                                                </span> Brand </div>
+                                                                     </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <span style="color:red;text-align: center;display: block;">Can't Find? Create A New and let us know if you are a brand owner / franchisor</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="col-8 offset-2">
+                                                            <div class="mat-elevation-z8">
+                                                                <table mat-table [dataSource]="dataSource">
+                                                                  
+                                                                  <ng-container matColumnDef="position">
+                                                                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                                                                    <td mat-cell *matCellDef="let element"> <span class="material-icons" style="color: red;">
+                                                                        remove_circle_outline
+                                                                    </span> </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="name">
+                                                                    <th mat-header-cell *matHeaderCellDef> Brand Name </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="type">
+                                                                    <th mat-header-cell *matHeaderCellDef>Type </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="outlet">
+                                                                    <th mat-header-cell *matHeaderCellDef> Outlet No. </th>
+                                                                    <td mat-cell *matCellDef="let element"> Outlet {{element.outlet}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                                                </table>
+                                                              
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2>Outlets</h2>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div novalidate="" data-qa="form-client-list-filter">
+                                                            <div class="hEORB6" style="display: flex; justify-content: center; align-items: center;margin-bottom: 0px; max-width: 100% !important;">
+                                                                <label class="B4ufiE _3J2MMS _5rpFbc _2tXpf4 _3Oe3sQ"
+                                                                        style="display: flex; flex-direction: column-reverse;max-width: 100% !important;">
+                                                                        <div class="qyGFie" style="display: flex; flex-direction: row;">
+                                                                            <input class="_3RKzT9 _2vdwSO"  placeholder="Search Your Outlet Here..." autocomplete="off" value="" style="padding-left: 15px !important;    min-width: 700px !important;">
+                                                                        </div>
+                                                                    </label>
+                                                                <div style="display: flex; justify-content: space-between;align-items: center; ">
+                                                                    <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0"
+                                                                        data-qa="mobile-clients-dropdown" >
+                                                                            <div class="flecs1" style="    display: flex; align-items: center;"> 
+                                                                                <span class="material-icons">
+                                                                                    add
+                                                                                </span> Outlet </div>
+                                                                     </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <span style="color:red;text-align: center;display: block;">Can't Find? Create A New and let us know if you are a brand owner / franchisor</span>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="col-8 offset-2">
+                                                            <div class="mat-elevation-z8">
+                                                                <table mat-table [dataSource]="dataSource1">
+                                                                  
+                                                                  <ng-container matColumnDef="position">
+                                                                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                                                                    <td mat-cell *matCellDef="let element"> <span class="material-icons" style="color: red;">
+                                                                        remove_circle_outline
+                                                                    </span> </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="name">
+                                                                    <th mat-header-cell *matHeaderCellDef> Outlet Name </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                                                  </ng-container>
+                                                              
+                                                    
+                                                                  <ng-container matColumnDef="type">
+                                                                    <th mat-header-cell *matHeaderCellDef>Type </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                                                  </ng-container>
+                                                              
+                                                       
+                                                                  
+                                                              
+                                                                  <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                                                                  <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+                                                                </table>
+                                                              
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> BANK </h2>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                            <div class="mat-elevation-z8">
+                                                                <table mat-table [dataSource]="dataSource12">
+                                                                  
+                                                                  <ng-container matColumnDef="position">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Action </th>
+                                                                    <td mat-cell *matCellDef="let element"> 
+                                                                     <span style="display: flex;align-items: center;">
+                                                                    <span class="material-icons" style="color: red;">
+                                                                        remove_circle_outline
+                                                                    </span>
+                                                                    <span class="material-icons" style="color: green;">
+                                                                        add_circle_outline
+                                                                    </span>
+                                                                </span>   
+                                                                </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="Account Holder">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Account Holder </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.AccountHolder}} </td>
+                                                                  </ng-container>
+                                                              
+                                                    
+                                                                  <ng-container matColumnDef="Bank">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%">Bank </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.Bank}} </td>
+                                                                  </ng-container>
+                                                              
+                                                       
+                                                                  <ng-container matColumnDef="Account Type">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Account Type </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.AccountType}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="IFSC">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%">IFSC </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.IFSC}} </td>
+                                                                  </ng-container>
+                                                              
+                                                       
+                                                                  <ng-container matColumnDef="Branch">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%">Branch </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.Branch}} </td>
+                                                                  </ng-container>
+
+
+                                                                  <ng-container matColumnDef="Account No">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Account No. </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.AccountNo}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="Swift Code">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Swift Code </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.SwiftCode}} </td>
+                                                                  </ng-container>
+                                                              
+                                                       
+                                                                  <ng-container matColumnDef="Office / Outlets">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%">Office / Outlets </th>
+                                                                    <td mat-cell *matCellDef="let element">{{element.Office}} </td>
+                                                                  </ng-container>
+
+                                                                  <ng-container matColumnDef="Pan Card">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%">Pan Card </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.pancard}} </td>
+                                                                  </ng-container>
+
+                                                                  <tr mat-header-row *matHeaderRowDef="displayedColumns12"></tr>
+                                                                  <tr mat-row *matRowDef="let row; columns: displayedColumns12;"></tr>
+                                                                </table>
+                                                               
+                                                              </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> Social Media  </h2>
+                                                <div class="row">
+                                                   
+                                                    <div class="col-4">
+                                                        <mat-list>
+                                                            <mat-list-item >
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-facebook"></a> <span>Facebook </span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-google"></a><span> Google Business </span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-youtube"></a><span> YouTube </span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                          </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-twitter"></a> <span>Twitter </span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <mat-divider></mat-divider>
+                                                                </mat-list-item>
+                                                          </mat-list>
+                                                    </div>
+                                                    <div class="col-4 offset-2">
+                                                        <mat-list>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-instagram"></a><span>Instagram </span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                
+                                                                </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-google"></a><span>Google Page </span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                               </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item> 
+                                                                <div class="row" style="display: contents;">
+                                                                    <div class="col-9">
+                                                                        <a href="#" class="fa fa-linkedin"></a> <span>LinkedIn</span>
+                                                                    </div>
+                                                                    <div class="col-3">
+                                                                        <span class="material-icons" style="color: red;">
+                                                                            remove_circle_outline
+                                                                        </span>
+                                                                        <span class="material-icons" style="color: green;">
+                                                                            add_circle_outline
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> No. Of Outlets </h2>
+                                                <div class="row">
+                                                   
+                                                    <div class="col-4">
+                                                        <mat-list>
+                                                            <mat-list-item >
+                                                               <span> No. Of Privately Owned Outlets : </span> 
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <span>Franchisees Pending for approval: </span>
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                    <div class="col-4 offset-2">
+                                                        <mat-list>
+                                                            <mat-list-item>
+                                                               <span> No. Of Franchisee Outlets: </span>
+                                                                </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <span>Unauthorised Franchisees: </span>
+                                                               </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2>Teammate</h2>
+                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p style="text-align: right;">No. of People : 5</p>
+                                                            <div class="mat-elevation-z8">
+                                                                <table mat-table [dataSource]="dataSource32">
+
+                                                                  <ng-container matColumnDef="Profile">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:10%"> Profile </th>
+                                                                    <td mat-cell *matCellDef="let element"> 
+                                                                        <img src="../../../assets/images/dumy1.png" style="height:50px; width:50px;border-radius: 50%;">
+                                                                    </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="Name">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:20%">Name </th>
+                                                                    <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                  <ng-container matColumnDef="Job Title">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:20%;text-align: center;"> Job Title </th>
+                                                                    <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.JobTitle}} </td>
+                                                                  </ng-container>
+                                                              
+                                                                   <ng-container matColumnDef="Outlets">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:20%; text-align: center;"> Outlets </th>
+                                                                    <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Outlets}} </td>
+                                                                  </ng-container>
+
+                                                                  <ng-container matColumnDef="City">
+                                                                    <th mat-header-cell *matHeaderCellDef style="width:30%; text-align: center;"> City </th>
+                                                                    <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.City}} </td>
+                                                                  </ng-container>
+
+                                                                  <tr mat-header-row *matHeaderRowDef="displayedColumns32"></tr>
+                                                                  <tr mat-row *matRowDef="let row; columns: displayedColumns32;"></tr>
+                                                                </table>
+                                                              </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12" style="margin-top: 30px;">
+                                                <mat-divider></mat-divider>
+                                                <h2> Roles</h2>
+                                                <div class="row">
+                                                   
+                                                    <div class="col-8 offset-2">
+                                                        <mat-list>
+                                                            <mat-list-item >
+                                                               <span> Brand Owner (Super Admin) : </span> 
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <span> Admin: </span>
+                                                            </mat-list-item>
+                                                            <mat-divider></mat-divider>
+                                                            <mat-list-item>
+                                                                <span> Editor: </span>
+                                                                 </mat-list-item>
+                                                             <mat-divider></mat-divider>
+                                                             <mat-list-item>
+                                                                 <span> View Only: </span>
+                                                                </mat-list-item>
+                                                             <mat-divider></mat-divider>
+                                                          </mat-list>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </mat-card>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_9WJ7l1" data-qa="loader-spinner-container">
+                <div class="_1Xf8dA _1kSyd-" data-qa="loader-spinner"></div>
+            </div>
+        </div>
+
+    </section>
+
+</div>

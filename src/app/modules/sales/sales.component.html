@@ -1,0 +1,322 @@
+<div class="_2k68E6 _260Y5f scrollable-content" style="display: flex; flex-direction: column;">
+    <div class="_5u-OWo" style="display: flex; flex-direction: column;">
+        <div class="_10GfAU">
+            <div class="_1IO1sh">
+                <div class="_1XZarc" style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div class="_2IE3Ux _2lB2nR" label="Date" style="display: flex; flex-direction: row;">
+                        <button class="_3YAFFf _2-75lJ _2nu1E8 _1jiWG4 _2P5TQK" data-qa="left-arrow-sign">
+                            <span class="_3Q2N2k _30vxLD _3s37z7 _3coDyr">
+                                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.316 13.762l.458-.48c.15-.168.226-.362.226-.585 0-.227-.075-.42-.226-.578L8.804 9l2.97-3.12c.15-.158.226-.35.226-.577 0-.223-.075-.417-.226-.584l-.458-.478C11.16 4.08 10.976 4 10.76 4c-.22 0-.404.08-.55.244L6.232 8.422C6.077 8.576 6 8.77 6 9c0 .227.077.422.232.584l3.978 4.178c.15.16.334.238.55.238.21 0 .397-.08.556-.238z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </button>
+                        <mat-form-field class="example-full-width callender-fixed">
+                            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <button class="_3YAFFf _3S3jtP _15TXvK _2nu1E8 _1jiWG4 _2P5TQK"
+                            data-qa="today-button">Today</button>
+                        <button class="_3YAFFf _9rGivM _2nu1E8 _1jiWG4 _2P5TQK" data-qa="date-button"
+                            style="flex-grow: 1;" (click)="picker.open()">Monday 6 Apr, 2020</button>
+                        <button class="_3YAFFf _33luXG _2lfiRx _1jiWG4 _1pjLcV _2P5TQK" disabled=""
+                            data-qa="right-arrow-sign">
+                            <span class="_3Q2N2k _30vxLD _3s37z7 _3coDyr">
+                                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.684 13.762l-.458-.48c-.15-.168-.226-.362-.226-.585 0-.227.075-.42.226-.578L9.196 9l-2.97-3.12C6.076 5.723 6 5.53 6 5.304c0-.223.075-.417.226-.584l.458-.476C6.84 4.08 7.024 4 7.24 4c.22 0 .404.08.55.244l3.978 4.178c.155.154.232.347.232.578 0 .227-.077.422-.232.584L7.79 13.762c-.15.16-.334.238-.55.238-.21 0-.397-.08-.556-.238z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div style="flex-grow: 1;"></div>
+                    <div class="_2lB2nR" style="display: flex; flex-direction: row; align-items: stretch;">
+                        <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0">
+                            <span class="_3Q2N2k _30vxLD _3s37z7 _3coDyr LnBSH4">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="M15.072 9.62c.506 0 .911.405.911.912v4.962a.908.908 0 0 1-.911.911H.962c-.506 0-.945-.405-.945-.911v-4.962c0-.507.439-.912.945-.912s.911.405.911.912v4.017H14.16v-4.017c0-.507.405-.912.912-.912z">
+                                        </path>
+                                        <path
+                                            d="M7.376 11.68L3.662 7.965a.878.878 0 0 1 0-1.282.878.878 0 0 1 1.283 0l2.16 2.126V.911c0-.506.406-.911.912-.911s.911.405.911.911v7.9l2.127-2.127a.917.917 0 0 1 1.316 0 .878.878 0 0 1 0 1.282L8.658 11.68a.922.922 0 0 1-.641.27.922.922 0 0 1-.641-.27z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                            <div class="_10jmov">
+                                <div>Export</div>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <button class="_2nu1E8 _1jiWG4 _2P5TQK _1qADt0">
+                        <span class="_3Q2N2k _30vxLD _2j9sAD _3s37z7 skx_qq LnBSH4">
+                            <svg viewBox="0 0 18 16">
+                                <path d="M0 2h15" stroke-linecap="round"></path>
+                                <circle cx="4" cy="2" r="2"></circle>
+                                <path d="M0 8h15" stroke-linecap="round"></path>
+                                <circle cx="9" cy="8" r="2"></circle>
+                                <path d="M0 14h15" stroke-linecap="round"></path>
+                                <circle cx="4" cy="14" r="2"></circle>
+                            </svg>
+                        </span>Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="_297iDr">
+            <div class="xveDbv">
+                <div data-qa="daily-sales" style="display: flex; flex-flow: row wrap;">
+                    <div class="_30KDED _3okMD5" style="display: flex; flex-flow: column nowrap; flex-basis: 50%;">
+                        <div class="_3NVDUN _1ayMtv O7sGW8">
+                            <div class="QjMPdd">Transaction Summary</div>
+                            <div class="_1E-eDm">
+                                <table class="_1kvpv- _2p5AvQ">
+                                    <colgroup>
+                                        <col style="width: 110px;">
+                                        <col style="width: 85px;">
+                                        <col style="width: 85px;">
+                                        <col style="width: 140px;">
+                                    </colgroup>
+                                    <thead class="uIOxJQ">
+                                        <tr class="_21MTdv">
+                                            <th class="_11CReE" width="110">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1b09d9" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Item type</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="_11CReE" width="85">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1FniE3" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Sales qty</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="_11CReE" width="85">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1FniE3" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Refund qty</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="_11CReE" width="140">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1FniE3" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Gross total</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Services</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Products</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Vouchers</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Late cancellation fees</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">No show fees</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _20co5r _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Total Sales</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div data-qa="integer:">0</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_30KDED _3okMD5" style="display: flex; flex-flow: column nowrap; flex-basis: 50%;">
+                        <div class="_3NVDUN _1ayMtv O7sGW8">
+                            <div class="QjMPdd">Cash Movement Summary</div>
+                            <div class="_1E-eDm">
+                                <table class="_1kvpv- _2p5AvQ">
+                                    <colgroup>
+                                        <col style="width: 116px;">
+                                        <col style="width: 140px;">
+                                        <col style="width: 140px;">
+                                    </colgroup>
+                                    <thead class="uIOxJQ">
+                                        <tr class="_21MTdv">
+                                            <th class="_11CReE" width="116">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1b09d9" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Payment type</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="_11CReE" width="140">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1FniE3" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Payments collected</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="_11CReE" width="140">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div class="_1FniE3" style="flex-grow: 1;">
+                                                        <div class="_39KpJm">Refunds paid</div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="">
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Cash</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Card</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Other</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Voucher Redemptions</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _20co5r _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Payments collected</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_22iOaY _20co5r _2diuxm">
+                                            <td class="_2qQKxu _4j7uOc">
+                                                <div data-qa="text:">Of which tips</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                            <td class="_2qQKxu _1iwiKG">
+                                                <div currency="₹" data-qa="money:">₹0.00</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_9WJ7l1 cgpBhs" data-qa="loader-spinner-container">
+                <div class="_1Xf8dA" data-qa="loader-spinner"></div>
+            </div>
+        </div>
+    </div>
+</div>

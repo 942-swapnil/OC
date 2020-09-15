@@ -1,0 +1,37 @@
+.modal .modal-header {
+    text-align: center;
+    border-bottom: 0;
+    padding: 25px 25px 0;
+    display: block;
+}
+
+.btn-success, .btn-success:focus {
+    color: #fff;
+    background-color: #24334A;
+    border-color: #24334A;
+    height: 40px;
+    line-height: 2;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 2.428571;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.label-success {
+    background-color: #10cfbd;
+    color: #fff;
+}
+.label {
+    padding: 3px 9px;
+    font-size: 11px;
+    text-shadow: none;
+    
+    font-weight: 600;
+   
+    text-transform: uppercase;
+    min-width: 90px;
+    display: inline-block;
+}

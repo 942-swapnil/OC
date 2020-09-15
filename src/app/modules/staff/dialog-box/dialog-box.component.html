@@ -1,0 +1,533 @@
+
+   <div *ngIf="given === 'view'">
+
+    <div  mat-dialog-title style="    display: flex;
+        align-items: center;    margin: 0px 0px 20px 0px; justify-content: space-between;">
+          <div class="hh1">
+            <div class="example-button-container">
+                <img src="../../../../assets/images/dumy1.png" style="width: 70px; height: 70px; border-radius: 50%;">
+              </div>
+              <div class="hh2">
+                <div style=" font-size: 20px;">
+                    Anjali Sharma
+                </div>
+                <div >
+                    <button mat-stroked-button style="margin: 0px 13px;
+        border-radius: 25px;" ><span class="material-icons">
+                label
+            </span> No Label </button>
+                </div>
+            </div>
+        </div>
+        <div class="hh3">
+            <span class="material-icons" style="margin: 0px 10px">
+                star_border
+            </span>
+            <span class="material-icons" style="margin: 0px 10px" >
+                create
+            </span>
+            <span class="material-icons" style="margin: 0px 10px; cursor: pointer;"  [matMenuTriggerFor]="menu">
+                more_vert
+            </span>
+            <span class="material-icons" style="margin: 0px 10px; cursor: pointer;" mat-dialog-close>
+                close
+            </span>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>print_outline</mat-icon>
+                  <span>Print</span>
+                </button>
+                <button mat-menu-item >
+                    <mat-icon>cloud_download_outline </mat-icon>
+                  <span>Export</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>visibility_off</mat-icon>
+                  <span>Hide from  contacts</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>delete_outline</mat-icon>
+                    <span>Delete</span>
+                  </button>
+              </mat-menu>
+    </div>
+    </div>
+    
+<mat-dialog-content class="mat-typography" style="width: 110vh;    border-top: 1px solid #dadada;">
+    <div class="container-fluid">
+        <h2 style="margin: 16px 0;font-size: 16px;font-weight: 500;">Personal Information </h2>
+        <div class="row" >
+            <div class="col-4">
+                <h3 class="cla"> Gender : Female  </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Designation : Hairdresser  </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Service : Haircut </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Experience : 5 Years </h3>
+            </div>
+            <div class="col-8 fws">
+                <h3 class="cla"> Employed Since: 12-May-2017 </h3>
+            </div>
+        </div>
+        <h2 style="margin: 16px 0;font-size: 16px;font-weight: 500;">Daily Information </h2>
+        <div class="row" style="font-size: 14px;">
+            <div class="col-4">
+                <h3 class="cla"> Attendance : Present  </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Entry : 9.00 am </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Morning Tea : 11.00 am </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> LunchTime : 2.00  </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Evening Tea : 4:00 pm </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Exit : 5:00 pm </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Week off : Monday </h3>
+            </div>
+           
+        </div>
+        <h2 style="margin: 16px 0;font-size: 16px;font-weight: 500;"> Performance Information </h2>
+        <div class="row" style="font-size: 14px;">
+    
+            <div class="col-4">
+                <h3 class="cla"> Rating: <span style="font-size: 14px; justify-content: center;    "> 
+                                                <mat-icon style="width: 20px;font-size: 16px;">star</mat-icon>
+                                                <mat-icon style="width: 20px;font-size: 16px;">star</mat-icon>
+                                                <mat-icon style="width: 20px;font-size: 16px;">star</mat-icon>
+                                                <mat-icon style="width: 20px;font-size: 16px;">star_half</mat-icon>
+                                                <mat-icon style="width: 20px;font-size: 16px;">star_border</mat-icon>
+                                        </span> 
+                                    </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Ranking : 23/50 </h3>
+            </div>
+            <div class="col-4">
+                <h3 class="cla"> Clients : 42 </h3>
+            </div>
+            
+            
+           
+        </div>
+        <h2 style="margin: 16px 0; font-size: 16px;"> Contact Details</h2>
+        <div class="row">
+            <div class="col-6 fws">
+                <h3 class="cla"> Mobile Number: 3669988552 </h3>
+            </div>
+            <div class="col-6 fws">
+                <h3 class="cla"> Email:  anjalisharma@gmail.com  </h3>
+            </div>
+            <div class="col-6 fws">
+                <h3 class="cla"> Facebook : Anjali Sharma </h3>
+            </div>
+            <div class="col-6 fws">
+                <h3 class="cla"> Twitter:  anjalisharma@gmail.com	  </h3>
+            </div>
+            <div class="col-6 fws">
+                <h3 class="cla"> Linkedin : anjalisharma@gmail.com </h3>
+            </div>
+            <div class="col-6 fws">
+                <h3 class="cla"> Whats App : Yes</h3>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+        
+</div>
+
+<div *ngIf="given === 'Details'">
+    <div   style="display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+ 
+    font-weight: 500; margin: 10px 0px; ">
+   
+        <span (click)="onDetails()"> DETAILS </span>
+        <span (click)="onlocation()"> LOCATIONS </span>
+        <span> SERVICES </span>
+        <span> REMUNERATION </span>
+        <span> ATTENDANCE </span>
+        <span> SETTING </span>
+    </div>
+  
+<mat-dialog-content class="mat-typography" style="width: 110vh;    border-top: 1px solid #dadada;">
+    <h3>Personal Details</h3>
+    <div class="row">
+        <div class="col-4" style="display: flex;justify-content: center;">
+           <img  src="../../../../assets/images/dumy1.png" style="width:100px; height: 100px;border-radius: 50%;">
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
+                    <mat-form-field appearance="legacy" style="display: block;">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput>
+                      </mat-form-field> 
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <mat-form-field appearance="legacy" style="display: block;">
+                                <mat-label>Gender</mat-label>
+                                <mat-select>
+                                  <mat-option value="option">-- Select Gender --</mat-option>
+                                  <mat-option value="Male">Male</mat-option>
+                                  <mat-option value="Male">Female</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-6">
+                            <mat-form-field appearance="legacy" style="display: block;">
+                                <mat-label>Designation</mat-label>
+                                <mat-select>
+                                  <mat-option value="option">-- Select Designation--</mat-option>
+                                  <mat-option value="Hair Dresser">Hair Dresser</mat-option>
+                                  <mat-option value="Hair Dresser">Hair Dresser</mat-option>
+                                  <mat-option value="Hair Dresser">Hair Dresser</mat-option>
+                                  <mat-option value="Hair Dresser">Hair Dresser</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <h3>Contact Details</h3>
+    <div class="row">
+        
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Mobile No.</mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Email Id</mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Twitter</mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Linkedin</mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Whats App</mat-label>
+                <mat-select>
+                  <mat-option value="option"> -- Select  -- </mat-option>
+                  <mat-option value="Male">Yes</mat-option>
+                  <mat-option value="Male">No</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        
+    </div>
+    <h3>Work Details</h3>
+    <div class="row">
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label> Experience </mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label> Working In </mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Services</mat-label>
+                <mat-select>
+                  <mat-option value="option"> -- Select  -- </mat-option>
+                  <mat-option value="Male">Hair Dresser</mat-option>
+                  <mat-option value="Male">Hair Dresser</mat-option>
+                  <mat-option value="Male">Hair Dresser</mat-option>
+                  <mat-option value="Male">Hair Dresser</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div>
+    <h3>Payment Details</h3>
+    <div class="row">
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label> Salary </mat-label>
+                <input matInput>
+              </mat-form-field> 
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Joinning Date</mat-label>
+                <input matInput [matDatepicker]="Joinpicker">
+                <mat-datepicker-toggle matSuffix [for]="Joinpicker"></mat-datepicker-toggle>
+                <mat-datepicker #Joinpicker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>Increment Date</mat-label>
+                <input matInput [matDatepicker]="Incrpicker">
+                <mat-datepicker-toggle matSuffix [for]="Incrpicker"></mat-datepicker-toggle>
+                <mat-datepicker #Incrpicker></mat-datepicker>
+              </mat-form-field>
+        </div>
+    </div>
+</mat-dialog-content>   
+</div>
+
+
+<div *ngIf="given === 'Location'">
+    <div   style="display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+ 
+    font-weight: 500; margin: 10px 0px; ">
+   
+        <span (click)="onDetails()"> DETAILS </span>
+        <span (click)="onlocation()"> LOCATIONS </span>
+        <span> SERVICES </span>
+        <span> REMUNERATION </span>
+        <span> ATTENDANCE </span>
+        <span> SETTING </span>
+    </div>
+  
+<mat-dialog-content class="mat-typography" style="width: 110vh;    border-top: 1px solid #dadada;">
+ 
+   
+ 
+    <div class="row" style="display: flex;align-items: baseline;">
+        
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label> Location </mat-label>
+                <mat-select>
+                  <mat-option value="option"> -- Select  -- </mat-option>
+                  <mat-option value="Male">Mumbai</mat-option>
+                  <mat-option value="Male">Hyadrabad</mat-option>
+                  <mat-option value="Male">Channie</mat-option>
+                  <mat-option value="Male">ColCutta</mat-option>
+                  <mat-option value="Male">Delhi</mat-option>
+                  <mat-option value="Male">Bangloar</mat-option>
+                </mat-select>
+              </mat-form-field> 
+        </div>
+        <div class="col-6">
+            <p>No. of Branches: 3</p>
+        </div>
+    </div>
+    <h3>Barnch Details</h3>
+    
+    <div class="" style="line-height: 27px;">
+        <div class="row">
+            <div class="col-3">
+               Banch Name
+            </div>
+            <div class="col-3">
+               Slots 
+            </div>
+            <div class="col-6">
+                Address
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                Tatya Tope Nagar
+            </div>
+            <div class="col-3">
+                10:00 - 12:00
+            </div>
+            <div class="col-6">
+                Address 1
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                Bhende Layout
+            </div>
+            <div class="col-3">
+                14:00 - 16:00
+            </div>
+            <div class="col-6">
+                Address 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                Wardhaman Nagar
+            </div>
+            <div class="col-3">
+                14:00 - 16:00
+            </div>
+            <div class="col-6">
+                Address 3
+            </div>
+        </div>
+    </div>
+    <h3>Date Slots</h3>
+    <div class="row">
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>From Date</mat-label>
+                <input matInput [matDatepicker]="Frompicker">
+                <mat-datepicker-toggle matSuffix [for]="Frompicker"></mat-datepicker-toggle>
+                <mat-datepicker #Frompicker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="col-4">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <mat-label>To Date</mat-label>
+                <input matInput [matDatepicker]="Topicker">
+                <mat-datepicker-toggle matSuffix [for]="Topicker"></mat-datepicker-toggle>
+                <mat-datepicker #Topicker></mat-datepicker>
+              </mat-form-field>
+        </div>
+    </div>
+    <h3>Time Slots</h3>
+    <div style="line-height: 26px;">
+    <div class="row">
+        <div class="col-3">
+           Date
+        </div>
+        <div class="col-3">
+            Tatya Tope Nagar
+        </div>
+        <div class="col-3">
+            Bhende Layout
+        </div>
+        <div class="col-3">
+            Wardhaman Nagar
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            17-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            18-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            19-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            20-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            21-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            22-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            23-June-2020
+        </div>
+        <div class="col-3">
+            10:00 - 12:00
+        </div>
+        <div class="col-3">
+            14:00 - 16:00
+        </div>
+        <div class="col-3">
+            16:30 - 21:00
+        </div>
+    </div>
+   
+
+       
+    </div>
+
+    
+</mat-dialog-content>   
+</div>

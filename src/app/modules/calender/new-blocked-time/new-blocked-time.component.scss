@@ -1,0 +1,82 @@
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88 {
+    color: #fff;
+    background: #222;
+    border: 1px solid transparent;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-top {
+    margin-top: -10px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-top::before {
+    border-top: 8px solid transparent;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-top::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -8px;
+    border-top-color: #222;
+    border-top-style: solid;
+    border-top-width: 6px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-bottom {
+    margin-top: 10px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-bottom::before {
+    border-bottom: 8px solid transparent;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-bottom::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    top: -6px;
+    left: 50%;
+    margin-left: -8px;
+    border-bottom-color: #222;
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-left {
+    margin-left: -10px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-left::before {
+    border-left: 8px solid transparent;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-left::after {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    right: -6px;
+    top: 50%;
+    margin-top: -4px;
+    border-left-color: #222;
+    border-left-style: solid;
+    border-left-width: 6px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-right {
+    margin-left: 10px;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-right::before {
+    border-right: 8px solid transparent;
+}
+
+.t6c39ba2c-a6e0-43df-852f-f3f615c7be88.place-right::after {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    left: -6px;
+    top: 50%;
+    margin-top: -4px;
+    border-right-color: #222;
+    border-right-style: solid;
+    border-right-width: 6px;
+}

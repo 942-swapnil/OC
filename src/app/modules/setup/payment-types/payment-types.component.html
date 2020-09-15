@@ -1,0 +1,197 @@
+<div class="shedul-app">
+    <section class="main-content">
+        <section class="page-wrapper">
+            <div class="row">
+                <div class="col-sm-12 col-ms-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4">
+                            <a data-qa="new-payment-link" class="pull-right event-link btn btn-success btn-plus"
+                                data-remote="true" (click)="funa()"><span class="visible-xs">
+                                    <i class="s-icon-plus-b"></i>
+                                </span>
+                                <span class="hidden-xs">New Payment Type</span>
+                            </a></div>
+                    </div>
+                    <div class="m-t-20">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-ui-sortable">
+                                <thead>
+                                    <tr>
+                                        <th style="width:72px"></th>
+                                        <th class="p-l-none" data-qa="payment-type-header">
+                                            Payment Type
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="payment-methods-container ui-sortable" style="">
+                                    <tr class="clickable-row payment_method" data-href="/payment_methods/994689/edit"
+                                        data-id="994689" data-remote="true" id="payment_method_994689" style="" (click)="show1()">
+                                        <td class="fa fa-bars" data-qa="icon-reorder-cash" style="width: 70px;"></td>
+                                        <td class="p-l-none" data-qa="payment-type-cash" style="width: 0px;">
+                                            Cash
+                                        </td>
+                                        <td class="text-right" style="width: 0px;">
+                                            <i class="fa fa-lock m-r-10" data-qa="payment-method-lock"
+                                                data-toggle="tooltip" title="This item can not be deleted"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row payment_method" data-href="/payment_methods/994687/edit"
+                                        data-id="994687" data-remote="true" id="payment_method_994687" style="" (click)="show2()">
+                                        <td class="fa fa-bars" data-qa="icon-reorder-card" style="width: 70px;"></td>
+                                        <td class="p-l-none" data-qa="payment-type-card" style="width: 0px;">
+                                            Card
+                                        </td>
+                                        <td class="text-right" style="width: 0px;">
+                                        </td>
+                                    </tr>
+                                    <tr class="clickable-row payment_method" data-href="/payment_methods/994688/edit"
+                                        data-id="994688" data-remote="true" id="payment_method_994688" style="">
+                                        <td class="fa fa-bars" data-qa="icon-reorder-other" style="width: 70px;"></td>
+                                        <td class="p-l-none" data-qa="payment-type-other" style="width: 0px;">
+                                            Other
+                                        </td>
+                                        <td class="text-right" style="width: 0px;">
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</div>
+
+<!--modal-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in" id="new-payment-method"
+    role="dialog" tabindex="-1" style="display: block;" *ngIf="do">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                <button aria-hidden="true" class="close" data-dismiss="modal" data-qa="payment-type-close-button"
+                    (click)="funa()">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h3 class="text-center">
+                    New Payment Type
+                </h3>
+            </div>
+            <div class="new-form">
+                <form novalidate="novalidate" class="simple_form new_payment_method" id="new_payment_method"
+                    action="/payment_methods" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8"
+                        type="hidden" value="✓">
+                    <div class="modal-body sm-padding-10">
+                        <div class="form-group">
+                            <div class="form-group string required payment_method_name"><label
+                                    class="control-label string required" for="payment_method_name"><abbr
+                                        title="required">*</abbr> Payment Type Name</label><input
+                                    class="form-control string required" value="" placeholder="e.g. Mastercard"
+                                    type="text" name="payment_method[name]" id="payment_method_name"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left">
+                        </div>
+                        <button aria-hidden="true" class="btn btn-default" data-dismiss="modal"
+                            data-qa="payment-type-cancel-button" type="button" (click)="funa()">
+                            Cancel
+                        </button>
+                        <input type="submit" name="commit" value="Save" class="btn btn-success"
+                            data-qa="payment-type-save-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal div-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in" id="edit-payment-method"
+    role="dialog" tabindex="-1" style="display: block;" *ngIf="shows1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+                <button aria-hidden="true" class="close" data-dismiss="modal" (click)="show1()">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h4 class="text-center">
+                    Edit Payment Type
+                </h4>
+            </div>
+            <div class="edit-form">
+                <form novalidate="novalidate" class="simple_form edit_payment_method" id="edit_payment_method_994689"
+                    action="/payment_methods/994689" accept-charset="UTF-8" data-remote="true" method="post"><input
+                        name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch">
+                    <div class="modal-body sm-padding-10">
+                        <div class="form-group">
+                            <div class="form-group string required readonly payment_method_name"><label
+                                    class="control-label string required" for="payment_method_name"><abbr
+                                        title="required">*</abbr> Payment Type Name</label><input
+                                    class="form-control string required readonly" value="Cash" readonly="readonly"
+                                    placeholder="e.g. Mastercard" type="text" name="payment_method[name]"
+                                    id="payment_method_name"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left">
+                        </div>
+                        <button aria-hidden="true" class="btn btn-default" data-dismiss="modal"
+                            data-qa="payment-type-cancel-button" type="button" (click)="show1()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal second div-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in" id="edit-payment-method"
+    role="dialog" tabindex="-1" style="display: block;" *ngIf="shows2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clearfix text-left" (click)="show2()">
+                <button aria-hidden="true" class="close" data-dismiss="modal">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h4 class="text-center">
+                    Edit Payment Type
+                </h4>
+            </div>
+            <div class="edit-form">
+                <form novalidate="novalidate" class="simple_form edit_payment_method" id="edit_payment_method_994687"
+                    action="/payment_methods/994687" accept-charset="UTF-8" data-remote="true" method="post"><input
+                        name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch">
+                    <div class="modal-body sm-padding-10">
+                        <div class="form-group">
+                            <div class="form-group string required payment_method_name"><label
+                                    class="control-label string required" for="payment_method_name"><abbr
+                                        title="required">*</abbr> Payment Type Name</label><input
+                                    class="form-control string required" value="Card" placeholder="e.g. Mastercard"
+                                    type="text" name="payment_method[name]" id="payment_method_name"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left">
+                            <a id="delete-payment-method" class="btn btn-danger" data-qa="payment-type-delete-button"
+                                data-remote="true" rel="nofollow" data-method="delete"
+                                href="/payment_methods/994687" style="background-color:#f55753;">Delete</a>
+                        </div>
+                        <button aria-hidden="true" class="btn btn-default" data-dismiss="modal"
+                            data-qa="payment-type-cancel-button" type="button" (click)="show2()">
+                            Cancel
+                        </button>
+                        <input type="submit" name="commit" value="Save" class="btn btn-success"
+                            data-qa="payment-type-save-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="_2k68E6 _260Y5f" data-qa="scrollable-content" style="display: flex; flex-direction: column;">
+    <div class="_40Cdqw _2GGotC" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+        <div class="W-6apQ">
+            <div class="t6USZF"><a class="_2qhTFB _2nu1E8 _13c7RA " style="color: #2b72bd"
+                    [routerLink]="['/setup']"><span class="_3Q2N2k _30vxLD _3s37z7 _2zhJTq _3N7UZQ"><svg
+                            viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.80367158,16.7638261 C9.06544281,17.0467987 9.06544281,17.5049548 8.80367158,17.7879275 C8.54229164,18.0704815 8.11774488,18.0709001 7.85597365,17.7879275 L0.196328421,9.51223382 C-0.0654428068,9.22926119 -0.0654428068,8.77068646 0.196328421,8.48771383 L7.85577801,0.212229473 C8.11754924,-0.0707431577 8.54170471,-0.0707431577 8.80347594,0.212229473 C9.06524716,0.495202104 9.06524716,0.953567534 8.80406287,1.23633087 L1.81841007,9.00007847 L8.80367158,16.7638261 Z">
+                            </path>
+                        </svg></span>Back to Setup</a></div>
+            <div class="_9t1fKU dcmmPd zLWpM8">Invoice Template</div>
+            <div class="_9t1fKU _62dXJY">Configure details displayed on invoices issued to your clients</div>
+        </div>
+        <form novalidate="" data-qa="form-invoices-formatting">
+            <div class="_3C5MvE">
+                <div class="_2OLDiA" style="display: flex; flex-direction: row; flex-shrink: 0;">
+                    <div class="_3ARuHb">
+                        <div class="_9t1fKU _1P8_io">Invoice Settings</div>
+                        <div class="_9t1fKU _62dXJY _2yueSh" style="margin-top: 16px;">Customize the content displayed
+                            on invoices issued to your clients</div>
+                    </div>
+                    <div class="_3NVDUN _1DPuwz" style="flex-shrink: 0; flex-basis: 560px;">
+                        <label
+                            class="B4ufiE _2WRqSc" data-qa="printReceipts-label">
+                            <div class="check-success checkbox no-margin">
+                                <input name="permissions[low_all_locations]" type="hidden" value="0"><input
+                                    class="boolean optional" type="checkbox" value="1" checked="checked"
+                                    name="permissions[low_all_locations]" id="permissions_low_all_locations">
+                                <label for="permissions_low_all_locations"></label>
+                            </div>
+                            <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                    class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Automatically print receipts upon sale
+                                    completion</span></div>
+                        </label>
+                        <label class="B4ufiE _2WRqSc _300KJR" data-qa="saleShowCustomerInfo-label">
+                            <div class="check-success checkbox no-margin">
+                                <input name="permissions[medium_all_locations]" type="hidden" value="0"><input
+                                    class="boolean optional" type="checkbox" value="1" checked="checked"
+                                    name="permissions[medium_all_locations]"
+                                    id="permissions_medium_all_locations">
+                                    <label for="permissions_medium_all_locations"></label>
+                            </div>
+                            <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;">
+                                
+                                <span
+                                    class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Show client mobile and email on
+                                    invoices</span>
+                                </div>
+                        </label>
+                        <label class="B4ufiE _2WRqSc _300KJR" data-qa="saleShowCustomerAddress-label">
+                            <div class="check-success checkbox no-margin">
+                                <input name="permissions[high_all_locations]" type="hidden" value="0"><input
+                                    class="boolean optional" type="checkbox" value="1" checked="checked"
+                                    name="permissions[high_all_locations]" id="permissions_high_all_locations">
+                                <label for="permissions_high_all_locations"></label>
+                            </div>
+                            <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                    class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Show client address on invoices</span></div>
+                        </label><label class="B4ufiE _3J2MMS" style="display: flex; flex-direction: column-reverse;">
+                            <div class="qyGFie" style="display: flex; flex-direction: row;"><input class="_3RKzT9"
+                                    name="customInvoiceTitle" autocomplete="off" value="Invoice"></div><span
+                                class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Invoice Title</span>
+                        </label><label class="B4ufiE _3J2MMS A7zEIf"
+                            style="display: flex; flex-direction: column-reverse;">
+                            <div class="qyGFie" style="display: flex; flex-direction: row;"><input class="_3RKzT9"
+                                    name="saleCustomHeader1" autocomplete="off" value=""></div><span
+                                class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Receipt Custom Line 1</span>
+                        </label><label class="B4ufiE _3J2MMS A7zEIf"
+                            style="display: flex; flex-direction: column-reverse;">
+                            <div class="qyGFie" style="display: flex; flex-direction: row;"><input class="_3RKzT9"
+                                    name="saleCustomHeader2" autocomplete="off" value=""></div><span
+                                class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Receipt Custom Line 2</span>
+                        </label><label class="B4ufiE _3J2MMS A7zEIf"
+                            style="display: flex; flex-direction: column-reverse;">
+                            <div class="qyGFie" style="display: flex; flex-direction: row;"><input class="_3RKzT9"
+                                    name="receiptMessage" autocomplete="off" value=""></div><span
+                                class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Receipt Footer</span>
+                        </label></div>
+                </div>
+            </div>
+        </form><button class="_2nu1E8 _1O2-GF _2P5TQK" data-qa="invoices-form-submit"
+            style="align-self: flex-end;">Save</button>
+    </div>
+</div>

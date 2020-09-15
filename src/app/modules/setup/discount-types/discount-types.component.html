@@ -1,0 +1,132 @@
+<div class="_2k68E6 _260Y5f" data-qa="scrollable-content" style="display: flex; flex-direction: column;">
+    <div class="_40Cdqw _2GGotC" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <div class="W-6apQ">
+                <div class="t6USZF"><a class="_2qhTFB _2nu1E8 _13c7RA " [routerLink]="['/setup']" style="color:  #2b72bd;;"><span
+                            class="_3Q2N2k _30vxLD _3s37z7 _2zhJTq _3N7UZQ"><svg viewBox="0 0 18 18"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.80367158,16.7638261 C9.06544281,17.0467987 9.06544281,17.5049548 8.80367158,17.7879275 C8.54229164,18.0704815 8.11774488,18.0709001 7.85597365,17.7879275 L0.196328421,9.51223382 C-0.0654428068,9.22926119 -0.0654428068,8.77068646 0.196328421,8.48771383 L7.85577801,0.212229473 C8.11754924,-0.0707431577 8.54170471,-0.0707431577 8.80347594,0.212229473 C9.06524716,0.495202104 9.06524716,0.953567534 8.80406287,1.23633087 L1.81841007,9.00007847 L8.80367158,16.7638261 Z">
+                                </path>
+                            </svg></span>Back to Setup</a></div>
+                <div class="_9t1fKU dcmmPd zLWpM8">Discount Types</div>
+                <div class="_9t1fKU _62dXJY">Set up manual discount types for use during checkout</div>
+            </div><button class="_2nu1E8 _1O2-GF _2P5TQK" data-qa="floating-menu-button" (click)="display()">New Discount</button>
+        </div>
+        <div class="_30Ea0c _1tuFvU" data-qa="discount-list-container">
+            <div class="_3MuDMc" data-qa="discount-placeholder"
+                style="display: flex; flex-direction: column; align-content: center;">
+                <div class="_2L0SCf qe4GSo" data-qa="placeholder-container">
+                    <div class="_35ChFg"><span class="_3Q2N2k _30vxLD _1d3jRi ftFjVi" data-qa="placeholder-icon"><svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 51">
+                                <g fill="none" fill-rule="evenodd">
+                                    <g fill="#101928" fill-rule="nonzero">
+                                        <path
+                                            d="M60.2 0v13.64h-1a6.78 6.78 0 00-5.62 10.5c-.63.25-1.23.55-1.81.88A8.79 8.79 0 0158.2 11.7V2H2v9.7a8.79 8.79 0 017.76 8.7c0 4.48-3.4 8.2-7.76 8.7v9.7h41.97c.02.68.07 1.35.17 2H0V27.16h1a6.78 6.78 0 006.76-6.76A6.78 6.78 0 001 13.64H0V0h60.2z">
+                                        </path>
+                                        <path
+                                            d="M21.1 30.8l19.4-19.4a1 1 0 00-1.4-1.4L19.7 29.4a1 1 0 101.4 1.4zM22.34 17.52a4.88 4.88 0 100-9.76 4.88 4.88 0 000 9.76zm0-2a2.88 2.88 0 110-5.76 2.88 2.88 0 010 5.76zM37.86 33.04a4.88 4.88 0 100-9.76 4.88 4.88 0 000 9.76zm0-2a2.88 2.88 0 110-5.76 2.88 2.88 0 010 5.76z">
+                                        </path>
+                                    </g>
+                                    <path fill="#101928" fill-rule="nonzero"
+                                        d="M59.49 50.16a11.67 11.67 0 100-23.34 11.67 11.67 0 000 23.34zm0-2a9.67 9.67 0 110-19.34 9.67 9.67 0 010 19.34z">
+                                    </path>
+                                    <path fill="#101928" fill-rule="nonzero"
+                                        d="M54.9 35.32l7.76 7.76a1 1 0 001.42-1.42l-7.76-7.76a1 1 0 00-1.42 1.42z">
+                                    </path>
+                                    <path fill="#101928" fill-rule="nonzero"
+                                        d="M62.66 33.9l-7.76 7.76a1 1 0 001.42 1.42l7.76-7.76a1 1 0 00-1.42-1.42z">
+                                    </path>
+                                </g>
+                            </svg></span>
+                        <h3 class="_9t1fKU _2IXhvS _18TSrK" data-qa="placeholder-header">No discount</h3>
+                        <p class="_9t1fKU _62dXJY _2NlRUj" data-qa="placeholder-body">You do not have any discounts yet,
+                            create new discount to apply it on checkout</p>
+                    </div>
+                    <div class="_2AAL0z"></div>
+                </div><button class="kWE3LT _2nu1E8 _1O2-GF _2P5TQK" data-qa="add-discount-button" (click)="display()">Add Discount</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal-->
+<div class="_3vtwrU _3XtDVr _2H1Euj" *ngIf="done" style="left: 25%;">
+    <div class="_2vCLkQ" style="display: flex; flex-direction: column; flex-shrink: 1; flex-grow: 1;">
+        <header class="PkFIdA _33T8Oc" data-qa="modal-header">
+            <div class="izfMlp _1HQM0r">
+                <h2 class="_9t1fKU _3XK9dh _2AVm3L _3bMN68 _1T_y7I _1j68JW">New discount type</h2>
+                <div role="button" class="_2y31id _2PFOGx _3pAZyb _3d4M2L _2nu1E8" data-qa="header-close-button" (click)="display()">
+                    <div class="_10jmov">
+                        <div><span class="_3Q2N2k _30vxLD _3s37z7 _3gU_Sq XuZows"><svg viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17 1.914L16.086 1 9 8.086 1.914 1 1 1.914 8.086 9 1 16.086l.914.914L9 9.914 16.086 17l.914-.914L9.914 9z">
+                                    </path>
+                                </svg></span></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="_1AL6HX" data-qa="modal-content" style="display: flex; flex-direction: column;">
+            <div class="xPg8Rs" style="display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 1;">
+                <form novalidate="" data-qa="form-discount-type-edit">
+                    <div class="_2WfRP7"><label class="B4ufiE _3J2MMS"
+                            style="display: flex; flex-direction: column-reverse;">
+                            <div class="qyGFie" style="display: flex; flex-direction: row;"><input class="_3RKzT9"
+                                    placeholder="e.g. Senior Citizens" name="name" autocomplete="off" value=""></div>
+                            <span class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Discount name</span>
+                        </label>
+                        <div class="_2Xfi0D" style="display: flex; flex-flow: row nowrap;"><label
+                                class="B4ufiE _3J2MMS _1TXbU0"
+                                style="display: flex; flex-direction: column-reverse; flex-grow: 1;">
+                                <div class="qyGFie" style="display: flex; flex-direction: row;">
+                                    <div class="_1zc-_F _1Go2E1">%</div><input class="_3RKzT9 _2vdwSO _1aYQt8"
+                                        name="value" type="number" autocomplete="off" value="">
+                                </div><span class="_9t1fKU _14bPpn _3jwCpY" data-qa="label-name">Discount value</span>
+                            </label><label class="B4ufiE _2QEs_o _3Y8oe1">
+                                <div class="qyGFie _2ln2_c"><button value="fixed" class="utKykQ _2vIWwW _2nu1E8"
+                                        style="flex-basis: 50%;">INR</button><button value="percentage"
+                                        class="utKykQ _2vIWwW _2nu1E8 _3q9dlt" style="flex-basis: 50%;">%</button></div>
+                            </label></div><label class="B4ufiE _2WRqSc _300KJR"
+                            data-qa="enabledForServices-label"><input class="_3RKzT9" type="checkbox"
+                                name="enabledForServices" value="true" checked=""><span
+                                class="_3Q2N2k _30vxLD _3s37z7 I_L1Tc" style="align-self: center;"><svg
+                                    viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.732.273c-.358-.364-.937-.364-1.295 0L2.99 5.808 1.543 4.544c-.352-.36-.924-.36-1.277 0-.353.358-.353.94 0 1.298l2.163 1.89c.35.358.922.358 1.275 0 .035-.037.065-.077.093-.117l.015-.013L9.73 1.588c.358-.363.358-.952 0-1.315z">
+                                    </path>
+                                </svg></span>
+                            <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                    class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Enable for service sales</span></div>
+                        </label><label class="B4ufiE _2WRqSc _300KJR" data-qa="enabledForProducts-label"><input
+                                class="_3RKzT9" type="checkbox" name="enabledForProducts" value="true" checked=""><span
+                                class="_3Q2N2k _30vxLD _3s37z7 I_L1Tc" style="align-self: center;"><svg
+                                    viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.732.273c-.358-.364-.937-.364-1.295 0L2.99 5.808 1.543 4.544c-.352-.36-.924-.36-1.277 0-.353.358-.353.94 0 1.298l2.163 1.89c.35.358.922.358 1.275 0 .035-.037.065-.077.093-.117l.015-.013L9.73 1.588c.358-.363.358-.952 0-1.315z">
+                                    </path>
+                                </svg></span>
+                            <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                    class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Enable for product sales</span></div>
+                        </label><label class="B4ufiE _2WRqSc _300KJR" data-qa="enabledForVouchers-label"><input
+                                class="_3RKzT9" type="checkbox" name="enabledForVouchers" value="true" checked=""><span
+                                class="_3Q2N2k _30vxLD _3s37z7 I_L1Tc" style="align-self: center;"><svg
+                                    viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.732.273c-.358-.364-.937-.364-1.295 0L2.99 5.808 1.543 4.544c-.352-.36-.924-.36-1.277 0-.353.358-.353.94 0 1.298l2.163 1.89c.35.358.922.358 1.275 0 .035-.037.065-.077.093-.117l.015-.013L9.73 1.588c.358-.363.358-.952 0-1.315z">
+                                    </path>
+                                </svg></span>
+                            <div class="_3mW9s7" style="display: flex; flex-direction: column; flex-grow: 1;"><span
+                                    class="_9t1fKU _1CyHRZ _2qZbk3 _2F-VVa">Enable for voucher sales</span></div>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="">
+            <div class="_1sJ5gi _1G31AL"><button class="_2nu1E8 _1O2-GF _2P5TQK" data-qa="discount-type-save"
+                    style="align-self: stretch;">Save</button></div>
+        </div>
+    </div>
+</div>

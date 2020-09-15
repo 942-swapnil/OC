@@ -1,0 +1,204 @@
+<div class="shedul-app">
+    <section class="main-content">
+        <section class="page-wrapper">
+            <div class="cancellation-reasons-list">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-4"></div>
+                            <div class="col-xs-8 text-right">
+                                <a class="btn btn-success event-link btn-plus" data-remote="true" (click)="dum()"><span
+                                        class="visible-xs">
+                                        <i class="s-icon-plus-b"></i>
+                                    </span>
+                                    <span class="" style="float: right;color: white;">New Cancellation Reason</span>
+                                </a></div>
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-sm-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-ui-sortable">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:70px;"></th>
+                                                <th class="p-l-none">Name</th>
+                                                <th colspan="2">Date Added</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cancellation-reasons-container ui-sortable" style="">
+                                            <tr class="clickable-row" data-href="/cancellation_reasons/972154/edit"
+                                                data-id="972154" data-remote="true" id="cancellation_reason_972154"
+                                                style="" (click)="disp()">
+                                                <td class="fa fa-bars" style="width: 70px;"></td>
+                                                <td class="p-l-none" style="width: 0px;">
+                                                    Duplicate appointment
+                                                </td>
+                                                <td style="width: 0px;">
+                                                    Monday, 3 Feb 2020
+                                                </td>
+                                                <td style="width: 0px;">
+                                                </td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href="/cancellation_reasons/972153/edit"
+                                                data-id="972153" data-remote="true" id="cancellation_reason_972153"
+                                                style="" (click)="disp1()">
+                                                <td class="fa fa-bars" style="width: 70px;"></td>
+                                                <td class="p-l-none" style="width: 0px;">
+                                                    Appointment made by mistake
+                                                </td>
+                                                <td style="width: 0px;">
+                                                    Monday, 3 Feb 2020
+                                                </td>
+                                                <td style="width: 0px;">
+                                                    <i class="fa fa-lock m-r-10" data-toggle="tooltip"
+                                                        title="This item can not be deleted"></i>
+                                                </td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href="/cancellation_reasons/972152/edit"
+                                                data-id="972152" data-remote="true" id="cancellation_reason_972152"
+                                                style="">
+                                                <td class="fa fa-bars" style="width: 70px;"></td>
+                                                <td class="p-l-none" style="width: 0px;">
+                                                    Client not available
+                                                </td>
+                                                <td style="width: 0px;">
+                                                    Monday, 3 Feb 2020
+                                                </td>
+                                                <td style="width: 0px;">
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</div>
+<!--modal-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in"
+    id="cancellation-reasons-modal" role="dialog" tabindex="-1" style="display: block;" *ngIf="mud">
+    <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-center">
+                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button" (click)="dum()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <h4>New Cancellation Reason</h4>
+                </div>
+                <form novalidate="novalidate" class="simple_form new_cancellation_reason" id="new_cancellation_reason"
+                    action="/cancellation_reasons" accept-charset="UTF-8" data-remote="true" method="post"><input
+                        name="utf8" type="hidden" value="✓">
+                    <div class="modal-body sm-padding-10">
+                        <div class="form-group">
+                            <div class="form-group string required cancellation_reason_name"><label
+                                    class="control-label string required" for="cancellation_reason_name"><abbr
+                                        title="required">*</abbr> Name</label><input
+                                    class="form-control string required" placeholder="e.g. Client unavailable"
+                                    type="text" name="cancellation_reason[name]" id="cancellation_reason_name"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left">
+                        </div>
+                        <button aria-hidden="true" class="btn btn-default" data-dismiss="modal" type="button"
+                            (click)="dum()">
+                            Cancel
+                        </button>
+                        <input type="submit" name="commit" value="Save" class="btn btn-success">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--modal second-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in"
+    id="cancellation-reasons-modal" role="dialog" tabindex="-1" style="display: block;" *ngIf="display">
+    <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-center">
+                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button" (click)="disp()">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h4>Edit Cancellation Reason</h4>
+                </div>
+                <form novalidate="novalidate" class="simple_form edit_cancellation_reason"
+                    id="edit_cancellation_reason_972154" action="/cancellation_reasons/972154" accept-charset="UTF-8"
+                    data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden"
+                        name="_method" value="patch">
+                    <div class="modal-body sm-padding-10">
+                        <div class="form-group">
+                            <div class="form-group string required cancellation_reason_name"><label
+                                    class="control-label string required" for="cancellation_reason_name"><abbr
+                                        title="required">*</abbr> Name</label><input
+                                    class="form-control string required" placeholder="e.g. Client unavailable"
+                                    type="text" value="Duplicate appointment" name="cancellation_reason[name]"
+                                    id="cancellation_reason_name"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left">
+                            <a id="delete-cancellation-reason" class="btn btn-danger" data-remote="true" rel="nofollow"
+                                data-method="delete" href="/cancellation_reasons/972154">Delete</a>
+                        </div>
+                        <button aria-hidden="true" class="btn btn-default" data-dismiss="modal" type="button"
+                            (click)="disp()">
+                            Cancel
+                        </button>
+                        <input type="submit" name="commit" value="Save" class="btn btn-success">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal three-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in"
+    id="cancellation-reasons-modal" role="dialog" tabindex="-1" style="display: block;" *ngIf="display1">
+    <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-center">
+                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button" (click)="disp1()">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h4>Edit Cancellation Reason</h4>
+                </div>
+                <form novalidate="novalidate" class="simple_form edit_cancellation_reason"
+                    id="edit_cancellation_reason_972153" action="/cancellation_reasons/972153" accept-charset="UTF-8"
+                    data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden"
+                        name="_method" value="patch">
+                    <div class="modal-body sm-padding-10">
+                        <div class="form-group">
+                            <div class="form-group string required readonly cancellation_reason_name"><label
+                                    class="control-label string required" for="cancellation_reason_name"><abbr
+                                        title="required">*</abbr> Name</label><input
+                                    class="form-control string required readonly" readonly="readonly"
+                                    placeholder="e.g. Client unavailable" type="text"
+                                    value="Appointment made by mistake" name="cancellation_reason[name]"
+                                    id="cancellation_reason_name"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left">
+                        </div>
+                        <button aria-hidden="true" class="btn btn-default" data-dismiss="modal" type="button" (click)="disp1()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

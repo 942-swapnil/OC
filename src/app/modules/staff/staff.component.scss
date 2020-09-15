@@ -1,0 +1,84 @@
+.btn-success, .btn-success:focus {
+  color: #fff;
+  background-color: #24334A;
+  border-color: #24334A;
+}
+
+
+.modal .modal-header {
+  text-align: center;
+  border-bottom: 0;
+  padding: 25px 25px 0;
+  display: block;
+}
+._2k68E6 {
+  flex: 1 1;
+  width: 100%;
+  height: 100vh;
+  overflow-y: none !important ;  
+  /* overflow-x: hidden; */
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff !important;
+}
+._21MUG4 {
+  background: none !important;
+  flex-shrink: 0;
+  padding: 8px;
+}
+.checkbox input[type="checkbox"]:checked + label:after {
+  font-family: "FontAwesome";
+  content: "\F00C";
+  color: #fff;
+}
+.select-wrapper:after {
+  content: "";
+  font-family: "FontAwesome" !important;
+  position: absolute;
+  top: 52%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 25px;
+  width: 0;
+  height: initial;
+  z-index: 2;
+  pointer-events: none;
+  color: #2c2c2c;
+}
+// .js-break-hint {
+// >.text-center{
+// text-align: center !important;
+// }
+// }
+
+
+.second-lvl-nav-container .page-wrapper {
+  overflow-y: auto;
+  height: 100%;
+  padding-top: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-content {
+  margin-left: 0px;
+}
+
+.schedule-employees--with-closed-dates {
+  margin-top: 32px;
+}
+
+.select-wrapper {
+  display: flex !important;
+}
+
+
+
+._3d4M2L svg path, ._3d4M2L svg circle {
+  fill: #757575 !important;
+}
+
+.chan {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

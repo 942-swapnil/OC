@@ -1,0 +1,1356 @@
+<mat-card-title> Product </mat-card-title>
+
+<mat-dialog-content
+  class="mat-typography"
+  style="width: 100%; border-top: 1px solid #dadada"
+>
+  <!-- <h3>Service Deatils</h3> -->
+
+  <div class="row" [formGroup]="AddProduct" style="margin-top: 20px">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-label>Product</mat-label>&nbsp;
+          <img
+            src="../../../../../assets/img/Albea-strengthens-manufacturing-capabilities-in-China-to-tackle-opportunities-in-new-retail_wrbm_large.jpg"
+            style="
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              border: 1px solid;
+            "
+          />
+          <input type="file" style="display: none" />
+        </div>
+
+        <div class="col-4">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Product Name</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+
+        <div class="col-4">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label> Product Sub Name</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="row">
+        <div class="col-4"></div>
+
+        <div class="col-4">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Inventory Type</mat-label>
+            <mat-select>
+              <mat-option
+                matTooltip="Accessories such as; hairpins, hair clips, necklace, eyelashes, nail extensions for sale or rent."
+                value="Accessories" (click)="onClickAccessories('Accessories')"
+              >
+                Accessories
+              </mat-option>
+              <mat-option
+                matTooltip="Cosmetics that are consumable and/or sale."
+                value="Cosmetic" (click)="onClickCosmetic('Cosmetic')"
+              >
+                Cosmetic
+              </mat-option>
+
+              <mat-option
+                matTooltip="Tools Such as scissors, combs, nail cutters, etc. to be used while serving custmers"
+                value="Tools" (click)="onClickTools('Tools')"
+              >
+                Tools
+              </mat-option>
+              <mat-option
+                matTooltip="Appliances used for services such as; blowdryers, trimmers, hot irons, tongs, clamozone, perming machine, SHR (Super Hair Removal ) machine, IPL (Intense Pulse Light), PDT (Photo Dynamic Therapy), RF (Radio Frequency), etc."
+                value="Equipments " (click)="onClickEquipments('Equipments')"
+              >
+                Equipments
+              </mat-option>
+              <mat-option
+                matTooltip="Supplies for cleaning & toilet use."
+                value="Toiletries "
+              >
+                Toiletries
+              </mat-option>
+              <mat-option matTooltip="Ration,Supplies For Pantry" value="grocery ">
+                grocery
+              </mat-option>
+              <mat-option
+                matTooltip="Appliances and Fixtures that are not directly used in rendering spa / salon services such as; generator, air- conditioner, lights, fans, television, computers, music system, wires, cords, switches, Vaccum cleaner, dispensers, coffee machine, etc."
+                value="Appliances & Fixtures "
+              >
+                Appliances & Fixtures
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-4">
+          <!-- <h4 CLASS="strong">Shelf Life</h4> -->
+
+          <mat-form-field appearance="legacy" style="display: block" *ngIf="Accessories || Cosmetic || Tools || Equipments ">
+            <mat-label>Integument</mat-label>
+            <mat-select multiple>
+              <mat-option  (click)="onClickSkin('Skin')" value="Skin">Skin </mat-option>
+              <mat-option (click)="onClickHair('Hair')" value="Hair">Hair </mat-option>
+              <mat-option  (click)="onClickNail('Nail')" value="Nail">Nail </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <mat-accordion style="margin-top: 1em;">
+      <mat-expansion-panel hideToggle >
+        <mat-expansion-panel-header style="width: 78em;height:3em">
+          <mat-panel-title>
+            Function
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+        
+    <div class="col-12" style="margin-top: 10px">
+      
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Function 1</mat-label>
+            <textarea matInput style="width:80%;"></textarea>
+          </mat-form-field>
+        </div>
+
+        <span class="material-icons" style="margin: 10px; color: red">
+          add_circle
+        </span>
+      </div>
+    </div>
+
+    
+        
+  
+ 
+</mat-expansion-panel>
+
+</mat-accordion>
+
+
+<mat-accordion style="margin-top: 1em;">
+  <mat-expansion-panel hideToggle >
+    <mat-expansion-panel-header style="width: 78em;height:3em">
+      <mat-panel-title>
+        Function
+      </mat-panel-title>
+     
+    </mat-expansion-panel-header>
+
+    <div class="col-12">
+      <div class="row">
+        
+          <table >
+            <tr>
+              <!-- <th style="width: 10em;">Substance</th>
+              <th>Shade</th>
+              <th>Shade Name</th>
+              <th>Shade No.</th>
+              <th>Hex Code</th>
+              <th>Quantity(ml)</th>
+              <th>Quantity(g)</th>
+              <th>Rate</th>
+              <th>GST (%)</th>
+              <th>GST (₹)</th>
+              <th>Price (₹)</th> -->
+              </tr>
+             
+             
+
+              <tr>
+                <td>
+                  
+                  <select style="border:none;" (click)="selection($event)">
+                    <option value="">Substance</option> 
+                    <option *ngFor="let datas of datad" value="{{datas}}">{{datas}}</option>
+                  </select>
+                </td>
+                <td >
+                  
+                  <input type="text" style="border:none;" placeholder="shade type" *ngIf="colorshow" />
+                </td>
+                <td >
+                  
+                  <input type="text" style="border:none;" placeholder="Shade Name" *ngIf="colorshow" />
+                </td>
+                <td >
+                  
+                  <input type="text" style="border:none;" placeholder="Shade No."  *ngIf="colorshow"/>
+                </td>
+                <td>
+                 
+                  <input type="text" style="border:none;" placeholder="Hex Code" *ngIf="colorshow"/>
+                </td>
+                <td >
+                  
+                  <input type="number" style="border:none;" placeholder="Quantity(ml)" />
+                </td>
+                <td >
+                  
+                  <input type="number" style="border:none;" placeholder="Quantity(g)" />
+                </td>
+                <td>
+                  
+                  <input type="number" style="border:none;" placeholder="Rate (₹)" />
+                </td>
+                <td >
+                  
+                  <input type="number" style="border:none;" placeholder="GST (%)" />
+                </td>
+                <td > 
+                 
+                  <input type="number"  style="border:none;" placeholder="GST (₹)" />
+                </td>
+                <td >
+                  
+                  <input type="number" style="border:none;" placeholder="Price (₹)" />
+                </td>
+              </tr>    
+              
+          </table>
+
+      </div>
+    </div>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+                  <!-- <mat-label> Substance </mat-label>
+                  <mat-select formControlName="Substance">
+                    <mat-option
+                      *ngFor="let foody1 of element.Substance"
+                      [value]="foody1"
+                    >
+                      {{ foody1 }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </ng-container>
+<div *ngIf="SelectedSubstance=='Color'">Color</div>
+
+            <ng-container matColumnDef="shade">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element" style="width: 8%">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label> Shade </mat-label>
+
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="shadeName" style="width: 8%">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>Shade Name</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="shadeNo" style="width: 8%">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>Shade No.</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="hexcode" style="width: 8%">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>Hex Code</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="input1" style="width: 8%">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>Quantity(ml)</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="input2" style="width: 8%">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>Quantity(g)</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Rate1">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element" style="width: 8%">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>Rate</mat-label>
+                  <input
+                    matInput
+                    placeholder="Rate"
+                    (input)="onKey11($event)"
+                  />
+                </mat-form-field>
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="RateGst1">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element" style="width: 8%">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>GST (%)</mat-label>
+                  <input
+                    matInput
+                    placeholder="Gst Rate"
+                    (input)="onKey112($event)"
+                  />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="GstPrice1">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element" style="width: 8%">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label>GST (₹)</mat-label>
+                  <input matInput placeholder="Gst Price" [value]="value22" />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="RateTotal1">
+              <th mat-header-cell *matHeaderCellDef style="width: 8%"></th>
+              <td mat-cell *matCellDef="let element" style="width: 8%">
+                <mat-form-field
+                  appearance="legacy"
+                  style="display: block; width: 100px"
+                >
+                  <mat-label> Price (₹)</mat-label>
+                  <input
+                    matInput
+                    placeholder="Price (₹)"
+                    [value]="val22"
+                    readonly
+                  />
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="input3">
+              <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+              <td mat-cell *matCellDef="let element">
+                <span class="material-icons" style="color: red; margin: 10px">
+                  remove_circle_outline</span
+                >
+                <span class="material-icons" style="margin: 10px; color: green">
+                  add_circle
+                </span>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
+          </table>
+        </div>
+      </div>
+    </div> -->
+    <mat-accordion style="margin-top: 1em;">
+      <mat-expansion-panel hideToggle >
+        <mat-expansion-panel-header style="width: 78em;height:3em">
+          <mat-panel-title>
+            Brand 
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Brand</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Brand Range</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Gender</mat-label>
+            <mat-select>
+              <mat-option value="men"> Male </mat-option>
+              <mat-option value="female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Stage</mat-label>
+            <mat-select>
+              <mat-option value="Newborns"> Newborns (0-3 months) </mat-option>
+
+              <mat-option value="Infants"> Infants (4-11 months) </mat-option>
+
+              <mat-option value="Toddlers"> Toddlers (1-3) Years) </mat-option>
+
+              <mat-option value="Preschoolers">
+                Preschoolers (3-5) Years)
+              </mat-option>
+
+              <mat-option value="Gradeschoolers">
+                Gradeschoolers (6-12) Years)</mat-option
+              >
+
+              <mat-option value="Teenagers">
+                Teenagers (13-19 Years +)
+              </mat-option>
+              <mat-option value="Adults"> Adults (18 Years +) </mat-option>
+
+              <mat-option value="Senior Citizens"> Senior Citizens </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+
+<mat-accordion style="margin-top: 1em;">
+  <mat-expansion-panel hideToggle >
+    <mat-expansion-panel-header style="width: 78em;height:3em">
+      <mat-panel-title>
+        Vendors 
+      </mat-panel-title>
+     
+    </mat-expansion-panel-header>
+    <div class="col-12">
+    <div class="row">
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block">
+        <mat-label>Vendors</mat-label>
+        <mat-select>
+        <mat-option value="vendor1"> vendor1 </mat-option>
+      <mat-option value="vendor2"> vendor2 </mat-option>
+      <mat-option value="vendor3"> vendor3 </mat-option>
+      <mat-option value="vendor4"> vendor4 </mat-option>
+      <mat-option value="vendor5"> vendor5 </mat-option>
+      <mat-option value="vendor6"> vendor6 </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+  <div class="col-3">
+    <mat-form-field appearance="legacy" style="display: block">
+      <mat-label>Priority</mat-label>
+      <mat-select>
+      <mat-option value="Primery"> Primery </mat-option>
+    <mat-option value="Secondary"> Secondary </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+    </div>
+
+    </div>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+    <mat-accordion style="margin-top: 1em;" >
+      <mat-expansion-panel hideToggle >
+        <mat-expansion-panel-header style="width: 78em;">
+          <mat-panel-title>
+            Product Packaging 
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+    <div class="col-12">
+     
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" style="width: 100%">
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%">
+              <span class="material-icons" style="color: green; margin: 10px">
+                add_circle_outline
+              </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.position }}
+              <span
+                *ngIf="element.position"
+                class="material-icons"
+                style="color: red; margin: 10px"
+              >
+                remove_circle_outline
+              </span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%">
+              <span class="material-icons" style="color: green; margin: 10px">
+                add_circle
+              </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.name }}
+              <span class="material-icons" style="color: green; margin: 10px">
+                add_circle
+              </span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label> Select </mat-label>
+                <mat-select>
+                  <mat-option
+                    *ngFor="let food of element.weight"
+                    [value]="food"
+                  >
+                    {{ food }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="input1" style="width: 10%">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label>Quantity(ml)</mat-label>
+                <input matInput placeholder="Placeholder" />
+              </mat-form-field>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="input2">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label>Quantity(g)</mat-label>
+                <input matInput placeholder="Placeholder" />
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="input3">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element">
+              <span>
+                <span class="material-icons" style="margin: 10px; color: green">
+                  add_circle
+                </span>
+                <span
+                  class="material-icons"
+                  style="color: green; margin: 10px"
+                  *ngIf="element.position"
+                >
+                  add_circle
+                </span>
+              </span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%">
+              Product Type
+            </th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label> Select </mat-label>
+                <mat-select multiple>
+                  <mat-option
+                    *ngFor="let foody of element.symbol"
+                    [value]="foody"
+                  >
+                    {{ foody }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Rate">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label>Rate</mat-label>
+                <input matInput placeholder="Rate" (input)="onKey($event)" />
+              </mat-form-field>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="RateGst">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label>GST (%)</mat-label>
+                <input
+                  matInput
+                  placeholder="Gst Rate"
+                  (input)="onKey1($event)"
+                />
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="GstPrice">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label>GST (₹)</mat-label>
+                <input matInput placeholder="Gst Price" [value]="values" />
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="RateTotal">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%"></th>
+            <td mat-cell *matCellDef="let element" style="width: 10%">
+              <mat-form-field
+                appearance="legacy"
+                style="display: block; width: 100px"
+              >
+                <mat-label> Price (₹)</mat-label>
+                <input
+                  matInput
+                  placeholder="Price (₹)"
+                  [value]="val2"
+                  readonly
+                />
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons
+        ></mat-paginator>
+      </div>
+    </div>
+  </mat-expansion-panel>
+    
+</mat-accordion>
+    <!--  //// new add product content   ////-->
+
+    
+      <mat-accordion style="margin-top: 1em;">
+        <mat-expansion-panel hideToggle >
+          <mat-expansion-panel-header style="width: 78em;">
+            <mat-panel-title>
+              Kit Type
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+      <div class="row">
+        <div class="col-3">
+         
+          <mat-form-field appearance="legacy" style="display: block">
+            
+            <mat-select>
+              <mat-option  (click)="onClickkit('kit')" value="kit"> Yes </mat-option>
+              <mat-option  (click)="onClickkino('kitno')"value="kitno"> No </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-3" *ngIf="kit == true && kitno==false ">
+          <h4 class="strong">Kit Name</h4>
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Kit Name</mat-label>
+            <mat-select>
+              <mat-option value="Kit 1"> Kit 1 </mat-option>
+              <mat-option value="Kit 2"> Kit 2 </mat-option>
+              <mat-option value="Kit 3"> Kit 3 </mat-option>
+              <mat-option value="Kit 4"> Kit 4 </mat-option>
+              <mat-option value="Kit 5"> Kit 5 </mat-option>
+              <mat-option value="Kit 6"> Kit 6 </mat-option>
+              <mat-option value="Kit 7"> Kit 7 </mat-option>
+              <mat-option value="Kit 8"> Kit 8 </mat-option>
+              <mat-option value="Kit 9"> Kit 9 </mat-option>
+              <mat-option value="Kit 10"> Kit 10 </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-3" *ngIf="kit == true && kitno==false">
+          <h4 CLASS="strong" matTooltip="Applied On Services">Applied On Services</h4>
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Only Consumable (Services)</mat-label>
+            <mat-select>
+              <mat-option value="Service 1"> Service 1 </mat-option>
+              <mat-option value="Service 2"> Service 2 </mat-option>
+              <mat-option value="Service 3"> Service 3 </mat-option>
+              <mat-option value="Service 4"> Service 4 </mat-option>
+              <mat-option value="Service 5"> Service 5 </mat-option>
+              <mat-option value="Service 6"> Service 6 </mat-option>
+              <mat-option value="Service 7"> Service 7 </mat-option>
+              <mat-option value="Service 8"> Service 8 </mat-option>
+              <mat-option value="Service 9"> Service 9 </mat-option>
+              <mat-option value="Service 10"> Service 10 </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-3" *ngIf="kit == true && kitno==false ">
+          <h4 CLASS="strong">Loyalty Programs Applied</h4>
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Loyalty</mat-label>
+            <mat-select>
+              <mat-option value="CONSUMABLES COUPON"
+                >CONSUMABLES COUPON</mat-option
+              >
+              <mat-option value="MEMBERSHIP"> MEMBERSHIP </mat-option>
+              <mat-option value="OFFERS"> OFFERS </mat-option>
+              <mat-option value="PACKAGES"> PACKAGES </mat-option>
+              <mat-option value="REFERRALS"> REFERRALS </mat-option>
+              <mat-option value="STYLLON OFFERS"> STYLLON OFFERS </mat-option>
+              <mat-option value="SOCIAL MEDIA"> SOCIAL MEDIA </mat-option>
+              <mat-option value="VOUCHERS"> VOUCHERS </mat-option>
+              <mat-option value="SALABLE">SALABLE</mat-option>
+              <mat-option value="RETAIL COUPON"> RETAIL COUPON </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    
+
+
+    <div class="col-12" style="margin-top: 10px">
+      <div class="row">
+        <div class="col-3">
+          <h4 CLASS="strong" matTooltip="Recommend Home Care services ">Home Care</h4>
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Only Salable (services)</mat-label>
+            <mat-select>
+              <mat-option value="Service 1"> Service 1 </mat-option>
+              <mat-option value="Service 2"> Service 2 </mat-option>
+              <mat-option value="Service 3"> Service 3 </mat-option>
+              <mat-option value="Service 4"> Service 4 </mat-option>
+              <mat-option value="Service 5"> Service 5 </mat-option>
+              <mat-option value="Service 6"> Service 6 </mat-option>
+              <mat-option value="Service 7"> Service 7 </mat-option>
+              <mat-option value="Service 8"> Service 8 </mat-option>
+              <mat-option value="Service 9"> Service 9 </mat-option>
+              <mat-option value="Service 10"> Service 10 </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12" style="margin-top: 10px">
+      <div class="row">
+        <div class="col-3">
+          <!-- <h4 CLASS="strong">Shelf Life</h4> -->
+          <!-- <mat-label>Shelf Life</mat-label> -->
+          <mat-form-field appearance="legacy" style="display: block">
+            <input matInput placeholder="Shelf Life" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-select placeholder=" Days/ weeks / Month / Year">
+              <mat-option value="Days"> Days </mat-option>
+              <mat-option value="Weeks"> Weeks </mat-option>
+              <mat-option value="Month "> Months </mat-option>
+              <mat-option value="Year "> Years </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-2" style="margin-left: 60px">
+          <h4>After</h4>
+        </div>
+
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-select placeholder=" Days/ weeks / Month / Year">
+              <mat-option value="Days"> Date Of Manufacturing</mat-option>
+              <mat-option value="Month "> Date Of Opening Seal </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+ 
+  </mat-expansion-panel>
+    
+</mat-accordion>
+     <!--  //// new add product content   ////-->
+    
+
+     <mat-accordion style="margin-top: 1em;" >
+      <mat-expansion-panel hideToggle >
+        <mat-expansion-panel-header style="width: 78em;">
+          <mat-panel-title>
+            Age
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+     <div class="col-12">
+      <h3>Age</h3>
+      <div class="row">
+        <div class="col-6" >
+          <mat-radio-group formControlName="AgeRbtn">
+            <mat-radio-button class="example-radio-button" value="Range">
+              <span style="font-weight:normal;">Range</span>   </mat-radio-button
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button class="example-radio-button" value="Specific">
+              <span style="font-weight:normal;">Specific</span>
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        
+      </div>
+      <div class="row" *ngIf="checkAge == 'Range'" style="margin-top: 1em;">
+        <div class="col-8">
+          <mat-radio-group formControlName="AgeRng">
+            <mat-radio-button (click)="onClick('t')" value="Below18Years">
+              <span style="font-weight:normal;">Below 18 Years</span> 
+              </mat-radio-button>&nbsp;&nbsp;
+            <mat-radio-button value="18Years&Above">
+              <span style="font-weight:normal;">18 Years & Above</span>
+              </mat-radio-button>&nbsp;&nbsp;
+            <mat-radio-button value="60Years&Above">
+              <span style="font-weight:normal;">60 Years & Above</span>
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="col-sm-3" *ngIf="checkAgerng == 'Below18Years' && checkAge == 'Range'" style="margin-top: -5em;">
+          <mat-form-field appearance="legacy" style="display: block">
+            <h3>Below 18 Years</h3>
+            <mat-select>
+              <mat-option value="1-3 month"> 1-3 month</mat-option>
+              <mat-option value="4-6 month"> 4-6 month</mat-option>
+              <mat-option value="7-9 month">7-9 month</mat-option>
+              <mat-option value="10-12 month"> 10-12 month</mat-option>
+              <mat-option value="1 year"> 1 year</mat-option>
+              <mat-option value="2 year"> 2 year</mat-option>
+              <mat-option value="3 year"> 3 year</mat-option>
+              <mat-option value="4 year"> 4 year</mat-option>
+              <mat-option value="5 year"> 5 year</mat-option>
+              <mat-option value="6 year"> 6 year</mat-option>
+              <mat-option value="7 year"> 7 year</mat-option>
+              <mat-option value="8 year"> 8 year</mat-option>
+              <mat-option value="9 year"> 9 year</mat-option>
+              <mat-option value="10 year"> 10 year</mat-option>
+              <mat-option value="11 year"> 11 year</mat-option>
+              <mat-option value="12 year"> 12 year</mat-option>
+              <mat-option value="13 year"> 13 year</mat-option>
+              <mat-option value="14 year"> 14 year</mat-option>
+              <mat-option value="15 year"> 15 year</mat-option>
+              <mat-option value="16 year"> 16 year</mat-option>
+              <mat-option value="17 year"> 17 year</mat-option>
+              <mat-option value="18 year"> 18 year</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row" *ngIf="checkAge == 'Specific'">
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <h3>Age Between</h3>
+            <mat-select>
+              <mat-option *ngFor="let item of ageupto; let i = index" [value]="i + 2">
+                {{ i + 1 }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <h3>Select Month / Year</h3>
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-select>
+              <mat-option value="Month">Month</mat-option>
+              <mat-option value="Year">Year</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <h3>And</h3>
+            <mat-select>
+              <mat-option
+                *ngFor="let item of ageupto; let i = index"
+                [value]="i + 2"
+              >
+                {{ i + 1 }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <h3>Select Month / Year</h3>
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-select>
+              <mat-option value="Month">Month</mat-option>
+              <mat-option value="Year">Year</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <hr>
+    </div>
+
+  </mat-expansion-panel>
+    
+</mat-accordion>
+
+    
+    <mat-accordion style="margin-top: 1em;" *ngIf="Skin == true">
+      <mat-expansion-panel hideToggle >
+        <mat-expansion-panel-header style="width: 78em;">
+          <mat-panel-title>
+            Skin Type
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+    <div class="row">
+      <div class="col-4">
+        <h4>Ethnicity</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox><span style="font-weight:normal;display: block;">North Indian</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">South indian</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">Black</span> </mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">Caucasian</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">East Asian</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">European</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">First Nations</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">Hispanic / Latino</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">Middle Eastern</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">Mixed</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">Pacific Islander</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;display: block;">South Asian</span></mat-checkbox>
+      </div>
+      </div>
+
+      <div class="col-4">
+        <h4 matTooltip="Skin Complexion"> Complexion</h4>
+        <div style="display: flex;flex-direction: column;">
+
+        <mat-checkbox matTooltip="Always Burns And Never Tans">
+          <span style="font-weight:normal;">Light Skin</span> </mat-checkbox
+        >
+        <mat-checkbox matTooltip=" Usually Burns, Then Tans">
+          <span style="font-weight:normal;">Fair Skin</span>
+        </mat-checkbox>
+        <mat-checkbox matTooltip="May Burn, But Tans Well"
+          ><span style="font-weight:normal;">Medium Skin</span>
+        </mat-checkbox>
+        <mat-checkbox matTooltip="Rarely Burns And Tans Well">
+          <span style="font-weight:normal;">Olive Skin</span> 
+        </mat-checkbox>
+        <mat-checkbox matTooltip="Very Rarely Burns And Tans Well">
+          <span style="font-weight:normal;">Tan brown Skin</span>
+        </mat-checkbox>
+        <mat-checkbox matTooltip="Never Burns And Tans Very Well">
+          <span style="font-weight:normal;">Black brown Skin</span>
+        </mat-checkbox>
+      </div>
+      </div>
+
+      <div class="col-4">
+        <h4 matTooltip="Skin Type">Type</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox> <span style="font-weight:normal;">Regular Skin</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Dry Skin</span> </mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Oily Skin</span>&nbsp;&nbsp;</mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;" matTooltip="Combination skin is simply having oily skin in some areas of your face and dry skin in other areas. Typically, there’s a mix of oily and dry areas on dif­ferent parts of your face, with the t-zone (forehead, nose, and chin) being slightly to very oily.">Combination Skin</span> </mat-checkbox>
+      </div>
+    </div>
+    </div>
+    </mat-expansion-panel>
+    
+  </mat-accordion>
+     
+
+      
+    
+   
+      <div class="col-12" style="margin-top: 1em;"></div>
+      
+      <mat-accordion *ngIf="Hair == true">
+        <mat-expansion-panel hideToggle >
+          <mat-expansion-panel-header style="width: 78em;">
+            <mat-panel-title>
+              Hair Type
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+    <div class="row">
+      <div class="col-3" style="width:10em;">
+        <h4 matTooltip="Hair Condition">Condition</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox> <span style="font-weight:normal;">Regular (Healthy)</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Dry Hair</span> </mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Frizzy Hair</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Chemically Sensitized Hair</span> &nbsp;</mat-checkbox>
+      </div>
+      </div>
+
+
+
+
+      <div class="col-3" style="width:10em;">
+        <h4 matTooltip="Natural Hair Colour">Hair Colour</h4>
+        <div style="display: flex;flex-direction: column;">
+
+        <mat-checkbox> <span style="font-weight:normal;">Black</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Brunette (Brown)</span> </mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Grey & White</span></mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">White</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox>
+        <mat-checkbox> <span style="font-weight:normal;">Blonde</span> </mat-checkbox>
+        <mat-checkbox
+          > <span style="font-weight:normal;">Auburn</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox> <span style="font-weight:normal;">Red</span> </mat-checkbox>
+        </div>
+      </div>
+      
+      
+      <div class="col-3">
+        <h4 matTooltip="Hair Texture"> Texture</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox
+          > <span style="font-weight:normal;">Fine</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          > <span style="font-weight:normal;">Medium</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox> <span style="font-weight:normal;">Thick</span></mat-checkbox>
+      </div>
+      </div>
+
+      <!-- <div class="col-12" style="margin-top: 2em;"></div> -->
+      <div class="col-2">
+        <h4 matTooltip="Hair Density"> Density</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox
+          > <span style="font-weight:normal;">Low</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          >
+           <span style="font-weight:normal;">Medium</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox> <span style="font-weight:normal;">High</span></mat-checkbox>
+      </div>
+      </div>
+         
+
+      <div class="col-12" style="margin-top:2em;"></div>
+      
+      <div class="col-2">
+        <h4>Porosity</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox
+           > <span style="font-weight:normal;" matTooltip="Lay a few strands of your hair in a bowl of water.
+           After a few minutes, take a look.
+           Hair that floats has low porosity">Low Porosity</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          > <span style="font-weight:normal;" matTooltip="Lay a few strands of your hair in a bowl of water.
+          After a few minutes, take a look. Hair that sinks has high porosity.">high Porosity</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        
+      </div>
+      </div>
+      
+      
+      <div class="col-2">
+        <h4 matTooltip="Hair Type">Type</h4>
+        <div style="display: flex;flex-direction: column;">
+   
+          <mat-checkbox
+            matTooltip="Hair Type-1-Straight &nbsp;&nbsp;&nbsp;
+            1- Straight hair has no natural curl. The individual strands may be fine or coarse, thick or thin, but they fall without waving from root to tip.
+        2- Straight hair has a tendency to become oily, so ensure that the product you’re using isn’t going to add extra oil to your hair.
+        3- Avoid heavy serums or butters. Dry Shampoos & Texture Sprays are recommended.
+        4- Washing your hair too often can cause your scalp to overproduce oils, so dry shampoo is a boon for people with straight, oily hair.
+        " value="Straight"
+            ><span style="font-weight:normal;">Straight</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox>
+          <mat-checkbox 
+          matTooltip="Hair Type-2-Wavy" (click)="onClickWavy('Wavy')" > <span style="font-weight:normal;">Wavy</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox>
+          <mat-checkbox
+          (click)="onClickCurly('Curly')"> <span style="font-weight:normal;"  matTooltip="Hair Type-3-Curly">Curly</span> &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox>
+          <mat-checkbox  (click)="onClickCoils('Coils')"> <span style="font-weight:normal;" matTooltip="Hair Type-4-Coils">Coils</span>
+        </mat-checkbox>
+      </div>
+      </div>
+
+
+
+      <div class="col-2" *ngIf="Wavy == true">
+        <h4 matTooltip="Hair Type - Wavy ">Wavy</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox
+          matTooltip="The natural state of type 2 hair is a gentle, tousled texture. From the roots to around eye level, your hair is fairly straight. And from eye level to the ends, you have a loose, undefined wave.
+        To keep from flattening out that wave, steer clear of oil-based or creamy products. Instead, stylists recommend that you boost the base with a light mousse or use a gel to define those waves.
+        "
+          ><span style="font-weight:normal;">Wavy-A</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          matTooltip="1- As with 'Wavy-A', type 'Wavy-B' hair curls from the midpoint to the ends. The curls have a more defined S shape. It may require a little more effort to straighten, but it’s easy to create that beachy look with a spritz of salt spray.
+        2 - Type 'Wavy-B' is ideal for the balayage trend, where stylists hand-paint color on the outer layer of hair. 
+        3 - When hair curls around, it’s getting dimension from the back side.
+        "><span style="font-weight:normal;">Wavy-B</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          matTooltip="1- The most well-defined S-shaped waves are type 'Wavy-C'. The wave pattern may begin close to the crown and tumble downward. Type 'Wavy-C' hair is often thick and can be prone to frizz in damp weather.
+        2- It is recommended to use a diffuser, a toothy device that snaps onto the end of your blow dryer and helps eliminate the frizz.
+        3- Avoid hard water and salt water and use anti-humidity products.
+        4- Daily straightening may  damage hair, so try to find ways to enhance and control the waves by  lightweight mousses that contain anti-humidity ingredients along with moisture.
+        "><span style="font-weight:normal;">Wavy-C</span></mat-checkbox
+        >
+      </div>
+      </div>
+
+      <div class="col-2" *ngIf="Curly == true">
+        <h4 matTooltip="Hair Type - Curly ">Curly</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox
+          matTooltip="Type 'Curly-A' hair, S-shaped curls form loose loops. The curls have a circumference a little wider than the large end of a taper candle. Brushing this type of hair can wreck curl definition and lead to a frizzy mane.
+        It is best to wear styles and use products that define natural curls. Lose the ponytail. 
+        Ponytail is okay for a short while for work but pulling your hair back into a ponytail causes curls to lose their formation. And if you keep pulling your hair back into a bun or ponytail, you will also start to see thinning and hair loss at your hairline. 
+        That hair loss happens because the weight of the ponytail pulls against the front of the hair for prolonged periods.
+        
+        "
+          ><span style="font-weight:normal;">Curly-A</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          matTooltip="Type 'Curly-B' curls have a circumference about as wide as the barrel of a Sharpie marker. Curls spring from the roots and have ample volume. To maintain their characteristic spiral shape, these ringlets generally need moisture. 
+        Avoid silicone and sulfates in your curl products, though. They may temporarily tame frizz, but they can dry hair over time and lead to breakage. 
+       "
+          ><span style="font-weight:normal;">Curly-B</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          matTooltip="These curls are tight and springy — they would coil perfectly around a drinking straw. To preserve the definition in these corkscrew curls, take a hands-on approach. 
+        Instead of combing, which can lead to frizz and breakage, use a leave-in conditioner and rake through wet hair with your fingertips. You should air-dry instead of using a blow dryer.
+       "><span style="font-weight:normal;">Curly-C</span></mat-checkbox
+        >
+      </div>
+      </div>
+
+      <div class="col-2" *ngIf="Coils == true">
+        <h4 matTooltip="Hair Type - Coils ">Coils</h4>
+        <div style="display: flex;flex-direction: column;">
+        <mat-checkbox
+          matTooltip="The curl pattern for 'Coils-A' hair is an S-shaped coil you could wrap around a chopstick. 
+        Type 'Coils-A' hair is the most delicate hair type. You have to be very gentle with it, and it needs a lot of moisture. Deep conditioning masques, butters, and creams instead of oils are good options for preserving hair health.
+        We recommend that people wear it loose in wash-and-go styles. Weaves and braids are not recommended.
+        Wear  styles that allow you to tuck away fragile ends to protect them while they grow out, Castillo says these styles often do more harm than good. While the hair is out of sight, it’s also out of reach for conditioning treatments.
+        Better to wear it in a style that lets you keep moisturizing."
+          ><span style="font-weight:normal;">Coils-A</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          matTooltip="The curls in 'Coils-B' hair zig-zag. One popular technique for defining and accentuating your curls is shingling.
+        Shingling begins with wet hair. Gently detangle with your fingertips, using liberal amounts of leave-in conditioner to moisturize and condition. Then separate your hair into four sections.
+        Work curling cream or gel down the length of each curl, twisting the strands around your index finger as you go."
+          ><span style="font-weight:normal;">Coils-B</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+        >
+        <mat-checkbox
+          matTooltip="Type 'Coils-C' coils are the tightest and most fragile. It’s really easy to break them if you comb roughly or too often, and it’s vital to frequently nourish the hair with rich conditioners.
+        Coconut oils are still popular, as are shea butter creams. More people are ditching shampoo for co-washing, or rinsing the hair with conditioners instead."
+          ><span style="font-weight:normal;">Coils-C</span></mat-checkbox
+        >
+      </div>
+      </div>
+    </div>
+       
+</mat-expansion-panel>
+
+  </mat-accordion>
+
+
+  <mat-accordion style="margin-top: 1em;" *ngIf="Nail == true">
+    <mat-expansion-panel hideToggle >
+      <mat-expansion-panel-header style="width: 78em;">
+        <mat-panel-title>
+          Nail Type
+        </mat-panel-title>
+       
+      </mat-expansion-panel-header>
+      <div class="col-12">
+      <div class="row">
+        <div class="col-2">
+          
+          <div style="display: flex;flex-direction: column;">
+          <mat-checkbox
+            > <span style="font-weight:normal;" matTooltip="They break easily before growing much
+            ">Thin </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+          >
+          <mat-checkbox
+            >
+             <span style="font-weight:normal;" matTooltip="Neither thick nor thin. Easy to cut file and style.
+             ">Medium</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-checkbox
+          >
+          <mat-checkbox> <span style="font-weight:normal;" matTooltip="Difficult to cut file and style. Often painful ingrowth">Thick </span></mat-checkbox>
+        </div>
+        </div>
+
+
+      </div>
+      
+      </div>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+    <mat-accordion style="margin-top: 1em;">
+      <mat-expansion-panel hideToggle >
+        <mat-expansion-panel-header style="width: 78em;height:3em">
+          <mat-panel-title>
+            Directions And Notes
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+        
+    <div class="col-12" style="margin-top: 10px">
+      <div class="row">
+          
+        <div class="col-6">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Directions For Use 1</mat-label>
+            <textarea matInput style="width:80%;"></textarea>
+          </mat-form-field>
+        </div>
+        
+        <span class="material-icons" style="margin: 10px; color: red">
+          add_circle
+        </span>
+      
+    </div>
+
+    
+
+    <!-- <div class="col-12" style="margin-top: 10px">
+      <h4>Functions</h4>
+      <div class="row">
+        <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Function 1</mat-label>
+            <textarea matInput style="width:50%;"></textarea>
+          </mat-form-field>
+        </div>
+
+        <span class="material-icons" style="margin: 10px; color: red">
+          add_circle
+        </span>
+      </div>
+    </div> -->
+
+    <div class="col-12" style="margin-top: 10px">
+      <h4>Notes</h4>
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="legacy" style="display: block">
+            <mat-label>Note 1</mat-label>
+            <textarea matInput style="width:80%;"></textarea>
+          </mat-form-field>
+        </div>
+
+        <span class="material-icons" style="margin: 10px; color: red">
+          add_circle
+        </span>
+      </div>
+    </div>
+        </div>
+  
+ 
+</mat-expansion-panel>
+
+</mat-accordion>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true">Save</button>
+</mat-dialog-actions>

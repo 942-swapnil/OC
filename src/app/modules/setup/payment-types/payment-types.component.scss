@@ -1,0 +1,39 @@
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 2.428571;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.btn-success, .btn-success:focus {
+    color: #fff !important;
+    background-color: #24334a;
+    border-color: #24334a;
+}
+
+.modal .modal-header {
+    text-align: center;
+    border-bottom: 0;
+    padding: 25px 25px 0;
+    display: block;
+}
+.modal .modal-footer {
+    border-top: 0;
+    box-shadow: none;
+    margin-top: 0;
+    padding: 25px;
+    padding-top: 0;
+    display: block;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}

@@ -1,0 +1,93 @@
+
+<section style="overflow: auto; height: 87vh; overflow-x: hidden;">
+    <mat-dialog-content class="mat-typography" style="border-top:1px solid lightgray;">
+        <h2 style="text-align: center;">Time To Refill The Loose Change</h2>
+        <div class="container-fluid">
+            <div class="col-12" >
+                <div class="row">
+                    <div class="col-4">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Terminal 1</mat-label>
+                              <input matInput type="" >
+                            </mat-form-field>                  
+                    </div>
+                    <div class="col-4">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>MAC ID</mat-label>
+                              <input matInput type="" >
+                            </mat-form-field>
+                    </div>
+                    <div class="col-4">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>IP Address</mat-label>
+                              <input matInput type="" >
+                            </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Users</mat-label>
+                              <input matInput type="" >
+                            </mat-form-field>                  
+                    </div>
+                    <div class="col-4">
+                        <mat-form-field appearance="legacy" style="display: block;">
+                            <mat-label  at-label>Alibi</mat-label>
+                              <input matInput type="" >
+                            </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+                        
+                        <ng-container matColumnDef="exchange" style="width: 15%;">
+                          <th mat-header-cell *matHeaderCellDef> For Cash Exchange </th>
+                          <td mat-cell *matCellDef="let element"> {{element.exchange}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="critical" style="width: 25%;">
+                          <th mat-header-cell *matHeaderCellDef> Critical </th>
+                          <td mat-cell *matCellDef="let element"> <input matInput type="" > </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="standard" style="width: 15%;">
+                          <th mat-header-cell *matHeaderCellDef> Standard </th>
+                          <td mat-cell *matCellDef="let element"> <input matInput type="" > </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="current" style="width: 15%;">
+                          <th mat-header-cell *matHeaderCellDef> Current </th>
+                          <td mat-cell *matCellDef="let element"> <input matInput type="" > </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="required" style="width: 15%;">
+                          <th mat-header-cell *matHeaderCellDef> Required </th>
+                          <td mat-cell *matCellDef="let element"> <input matInput type="" > </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="filling" style="width: 15%;">
+                            <th mat-header-cell *matHeaderCellDef> Filling </th>
+                            <td mat-cell *matCellDef="let element"> <input matInput type="" > </td>
+                          </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                      </table>
+                </div>
+
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-3 offset-9">
+                        <div style="float: right;">
+                            <button mat-button mat-dialog-close color="primary">Dismiss</button>
+                            <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">
+                                OK
+                            </button>
+                        </div> 
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+</section>

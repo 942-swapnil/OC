@@ -1,0 +1,293 @@
+
+<mat-toolbar>
+  <span>Attendance</span>
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+
+  <mat-form-field appearance="legacy" style="display: block;">
+      <mat-label>Month</mat-label>
+      <mat-select>
+          <mat-option value="January">January </mat-option>
+          <mat-option value="February">February </mat-option>
+          <mat-option value="March">March </mat-option>
+          <mat-option value="April">April </mat-option>
+          <mat-option value="May">May </mat-option>
+          <mat-option value="Jun">Jun </mat-option>
+          <mat-option value="July">July </mat-option>
+          <mat-option value="August">August </mat-option>
+          <mat-option value="September">September </mat-option>
+          <mat-option value="October">October </mat-option>
+          <mat-option value="November">November </mat-option>
+          <mat-option value="December">December </mat-option>
+          
+
+      </mat-select>
+  </mat-form-field>
+
+</div>
+<div class="col-sm-2"></div>
+  <div class="col-sm-3" style="float:right;">
+      <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0 addpro152" data-qa="mobile-clients-dropdown" (click)="openDialog('popup1')">
+  
+          <div class="">
+              <div class="flecs1"> <span class="material-icons">
+                  add
+                  </span> <span>Attendance </span></div>
+          </div>
+  
+      </button>
+  
+  </div>
+</mat-toolbar>
+
+<div class="col-sm-12">
+
+  <div class="mat-elevation-z8">
+      
+      <table mat-table [dataSource]="dataSource">
+    
+         
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef style="width:15%;"> Name </th>
+              
+              <td mat-cell *matCellDef="let element"><img src="../../../../../assets/img/5V8A2916_5x7_vert-1-214x300.jpg"
+                style="width:38px;height:38px;border-radius:50%;border:1px solid;">&nbsp;  {{element.name}} </td>
+            </ng-container>
+
+        <ng-container matColumnDef="a1">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 1 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons"  matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="a2">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 2 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a3">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 3 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a4">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 4 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a5">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 5 </th>
+          <td mat-cell *matCellDef="let element"><span class="material-icons" matTooltip="Present">
+              done
+              </span></td>
+        </ng-container>
+
+        <ng-container matColumnDef="a6">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 6 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a7">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 7 </th>
+          <td mat-cell *matCellDef="let element"><span class="material-icons" matTooltip="Absent">
+              clear
+              </span></td>
+        </ng-container>
+
+        <ng-container matColumnDef="a8">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 8 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a9">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 9 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a10">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 10 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a11">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 11 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a12">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 12 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a13">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 13 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a14">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 14 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a15">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 15 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a16">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 16 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a17">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 17 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        
+
+        <ng-container matColumnDef="a18">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 18 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a19">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 19 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a20">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 20 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Absent">
+              clear
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a21">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 21 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+       
+        <ng-container matColumnDef="a22">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 22 </th>
+          <td mat-cell *matCellDef="let element"><span class="material-icons" matTooltip="Absent">
+              clear
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a23">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 23 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a24">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 24 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a25">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 25 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a26">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 26 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a27">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 27</th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a28">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 28 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a29">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 29</th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a30">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 30 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Present">
+              done
+              </span> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="a31">
+          <th mat-header-cell *matHeaderCellDef style="width:2.5%;"> 31 </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons" matTooltip="Absent">
+              clear
+              </span> </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let element"> <span class="material-icons">
+              create
+              </span>&nbsp;<span class="material-icons">
+                  delete
+                  </span> </td>
+        </ng-container> 
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>

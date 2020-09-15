@@ -1,0 +1,2038 @@
+<div class="shedul-app">
+    <section class="main-content">
+    <div class="second-lvl-nav-container">
+        <script>
+            Shared.navTabs();
+        </script>
+    
+        <section class="page-wrapper">
+            <div class="row m-b-20">
+                <div class="col-lg-7 col-md-9 form-wrapper">
+                    <form novalidate="novalidate" class="simple_form new_permissions" id="new_permissions"
+                        action="/permissions" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden"
+                            value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden"
+                            name="authenticity_token"
+                            value="098M6SgE7DJPkKnw7icZ1RIOk/SMg1coJqWAYoXUsjcwEiKld+vdqaqQdnHcLmOs364knKBc5PveDbCdkAZfnQ=="><input
+                            type="hidden" name="source_action" id="source_action" value="permissions">
+                        <div class="row m-b-20">
+                            <div class="col-sm-12">
+                                <p>Setup which sections are accessible to each user permission level. All logged in staff
+                                    can access the calendar, and owner accounts have full system access.</p>
+                            </div>
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin"><span class="translation_missing"
+                                        title="translation missing: en.permissions.show.groups.locations">Locations</span></span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Access All Locations</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_locations" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_all_locations]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_all_locations]"
+                                                id="permissions_basic_all_locations">
+                                            <label for="permissions_basic_all_locations">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_locations" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_all_locations]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_all_locations]" id="permissions_low_all_locations">
+                                            <label for="permissions_low_all_locations">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_locations" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_all_locations]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_all_locations]"
+                                                id="permissions_medium_all_locations">
+                                            <label for="permissions_medium_all_locations">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_locations" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_all_locations]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_all_locations]" id="permissions_high_all_locations">
+                                            <label for="permissions_high_all_locations">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="all_locations"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_all_locations]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_all_locations]"
+                                                id="permissions_owner_all_locations">
+                                            <label for="permissions_owner_all_locations">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin">Bookings &amp; Clients</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Access Own Calendar</div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="own_calendar"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_own_calendar]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[basic_own_calendar]" id="permissions_basic_own_calendar">
+                                            <label for="permissions_basic_own_calendar">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="own_calendar" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_own_calendar]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_own_calendar]" id="permissions_low_own_calendar">
+                                            <label for="permissions_low_own_calendar">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="own_calendar"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_own_calendar]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_own_calendar]"
+                                                id="permissions_medium_own_calendar">
+                                            <label for="permissions_medium_own_calendar">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="own_calendar" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_own_calendar]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_own_calendar]" id="permissions_high_own_calendar">
+                                            <label for="permissions_high_own_calendar">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="own_calendar"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_own_calendar]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_own_calendar]" id="permissions_owner_own_calendar">
+                                            <label for="permissions_owner_own_calendar">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Access Other Staff Calendars</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_calendars" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_all_calendars]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[basic_all_calendars]"
+                                                id="permissions_basic_all_calendars">
+                                            <label for="permissions_basic_all_calendars">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_calendars" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_all_calendars]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_all_calendars]" id="permissions_low_all_calendars">
+                                            <label for="permissions_low_all_calendars">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_calendars" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_all_calendars]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_all_calendars]"
+                                                id="permissions_medium_all_calendars">
+                                            <label for="permissions_medium_all_calendars">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="all_calendars" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_all_calendars]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_all_calendars]" id="permissions_high_all_calendars">
+                                            <label for="permissions_high_all_calendars">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="all_calendars"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_all_calendars]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_all_calendars]"
+                                                id="permissions_owner_all_calendars">
+                                            <label for="permissions_owner_all_calendars">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Can Book Appointments</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_book_appointments"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_can_book_appointments]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_can_book_appointments]"
+                                                id="permissions_basic_can_book_appointments">
+                                            <label for="permissions_basic_can_book_appointments">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_book_appointments"
+                                    data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_can_book_appointments]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[low_can_book_appointments]"
+                                                id="permissions_low_can_book_appointments">
+                                            <label for="permissions_low_can_book_appointments">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_book_appointments"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_can_book_appointments]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[medium_can_book_appointments]"
+                                                id="permissions_medium_can_book_appointments">
+                                            <label for="permissions_medium_can_book_appointments">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_book_appointments"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_can_book_appointments]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_can_book_appointments]"
+                                                id="permissions_high_can_book_appointments">
+                                            <label for="permissions_high_can_book_appointments">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="can_book_appointments"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_can_book_appointments]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_can_book_appointments]"
+                                                id="permissions_owner_can_book_appointments">
+                                            <label for="permissions_owner_can_book_appointments">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Home</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="home" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_home]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_home]" id="permissions_basic_home">
+                                            <label for="permissions_basic_home">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="home" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_home]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_home]" id="permissions_low_home">
+                                            <label for="permissions_low_home">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="home" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_home]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_home]" id="permissions_medium_home">
+                                            <label for="permissions_medium_home">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="home" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_home]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_home]" id="permissions_high_home">
+                                            <label for="permissions_high_home">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="home" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_home]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked" name="permissions[owner_home]"
+                                                id="permissions_owner_home">
+                                            <label for="permissions_owner_home">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Clients</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="customers" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_customers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_customers]" id="permissions_basic_customers">
+                                            <label for="permissions_basic_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="customers" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_customers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_customers]" id="permissions_low_customers">
+                                            <label for="permissions_low_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="customers" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_customers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_customers]" id="permissions_medium_customers">
+                                            <label for="permissions_medium_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="customers" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_customers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_customers]" id="permissions_high_customers">
+                                            <label for="permissions_high_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="customers" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_customers]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_customers]" id="permissions_owner_customers">
+                                            <label for="permissions_owner_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Can see client contact info</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_see_customer_details"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_can_see_customer_details]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_can_see_customer_details]"
+                                                id="permissions_basic_can_see_customer_details">
+                                            <label for="permissions_basic_can_see_customer_details">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_see_customer_details"
+                                    data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_can_see_customer_details]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[low_can_see_customer_details]"
+                                                id="permissions_low_can_see_customer_details">
+                                            <label for="permissions_low_can_see_customer_details">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_see_customer_details"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_can_see_customer_details]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[medium_can_see_customer_details]"
+                                                id="permissions_medium_can_see_customer_details">
+                                            <label for="permissions_medium_can_see_customer_details">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_see_customer_details"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_can_see_customer_details]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_can_see_customer_details]"
+                                                id="permissions_high_can_see_customer_details">
+                                            <label for="permissions_high_can_see_customer_details">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="can_see_customer_details"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_can_see_customer_details]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_can_see_customer_details]"
+                                                id="permissions_owner_can_see_customer_details">
+                                            <label for="permissions_owner_can_see_customer_details">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Can download clients</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center disabled"
+                                    data-dependency="customers can_see_customer_details" data-locked="no"
+                                    data-permission="download_customers" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_download_customers]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_download_customers]"
+                                                id="permissions_basic_download_customers" disabled="">
+                                            <label for="permissions_basic_download_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="customers can_see_customer_details" data-locked="no"
+                                    data-permission="download_customers" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_download_customers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_download_customers]"
+                                                id="permissions_low_download_customers">
+                                            <label for="permissions_low_download_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="customers can_see_customer_details" data-locked="no"
+                                    data-permission="download_customers" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_download_customers]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[medium_download_customers]"
+                                                id="permissions_medium_download_customers">
+                                            <label for="permissions_medium_download_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="customers can_see_customer_details" data-locked="no"
+                                    data-permission="download_customers" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_download_customers]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_download_customers]"
+                                                id="permissions_high_download_customers">
+                                            <label for="permissions_high_download_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="customers can_see_customer_details" data-locked="locked"
+                                    data-permission="download_customers" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_download_customers]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_download_customers]"
+                                                id="permissions_owner_download_customers">
+                                            <label for="permissions_owner_download_customers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Messages</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="notifications" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_notifications]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_notifications]"
+                                                id="permissions_basic_notifications">
+                                            <label for="permissions_basic_notifications">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="notifications" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_notifications]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_notifications]" id="permissions_low_notifications">
+                                            <label for="permissions_low_notifications">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="notifications" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_notifications]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_notifications]"
+                                                id="permissions_medium_notifications">
+                                            <label for="permissions_medium_notifications">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="notifications" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_notifications]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_notifications]" id="permissions_high_notifications">
+                                            <label for="permissions_high_notifications">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="notifications"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_notifications]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_notifications]"
+                                                id="permissions_owner_notifications">
+                                            <label for="permissions_owner_notifications">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Services</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="services" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_services]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_services]" id="permissions_basic_services">
+                                            <label for="permissions_basic_services">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="services" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_services]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_services]" id="permissions_low_services">
+                                            <label for="permissions_low_services">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="services" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_services]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_services]" id="permissions_medium_services">
+                                            <label for="permissions_medium_services">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="services" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_services]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_services]" id="permissions_high_services">
+                                            <label for="permissions_high_services">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="services" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_services]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_services]" id="permissions_owner_services">
+                                            <label for="permissions_owner_services">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin">Sales</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Can check out sales</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_checkout_sales"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_can_checkout_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_can_checkout_sales]"
+                                                id="permissions_basic_can_checkout_sales">
+                                            <label for="permissions_basic_can_checkout_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_checkout_sales"
+                                    data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_can_checkout_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_can_checkout_sales]"
+                                                id="permissions_low_can_checkout_sales">
+                                            <label for="permissions_low_can_checkout_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_checkout_sales"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_can_checkout_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[medium_can_checkout_sales]"
+                                                id="permissions_medium_can_checkout_sales">
+                                            <label for="permissions_medium_can_checkout_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="can_checkout_sales"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_can_checkout_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_can_checkout_sales]"
+                                                id="permissions_high_can_checkout_sales">
+                                            <label for="permissions_high_can_checkout_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="can_checkout_sales"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_can_checkout_sales]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_can_checkout_sales]"
+                                                id="permissions_owner_can_checkout_sales">
+                                            <label for="permissions_owner_can_checkout_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Can edit prices at checkout</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center disabled"
+                                    data-dependency="can_checkout_sales" data-locked="no"
+                                    data-permission="can_edit_checkout_prices" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_can_edit_checkout_prices]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_can_edit_checkout_prices]"
+                                                id="permissions_basic_can_edit_checkout_prices" disabled="">
+                                            <label for="permissions_basic_can_edit_checkout_prices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="can_checkout_sales" data-locked="no"
+                                    data-permission="can_edit_checkout_prices" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_can_edit_checkout_prices]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_can_edit_checkout_prices]"
+                                                id="permissions_low_can_edit_checkout_prices">
+                                            <label for="permissions_low_can_edit_checkout_prices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="can_checkout_sales" data-locked="no"
+                                    data-permission="can_edit_checkout_prices" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_can_edit_checkout_prices]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[medium_can_edit_checkout_prices]"
+                                                id="permissions_medium_can_edit_checkout_prices">
+                                            <label for="permissions_medium_can_edit_checkout_prices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="can_checkout_sales" data-locked="no"
+                                    data-permission="can_edit_checkout_prices" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_can_edit_checkout_prices]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_can_edit_checkout_prices]"
+                                                id="permissions_high_can_edit_checkout_prices">
+                                            <label for="permissions_high_can_edit_checkout_prices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="can_checkout_sales" data-locked="locked"
+                                    data-permission="can_edit_checkout_prices" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_can_edit_checkout_prices]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_can_edit_checkout_prices]"
+                                                id="permissions_owner_can_edit_checkout_prices">
+                                            <label for="permissions_owner_can_edit_checkout_prices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Can void invoices</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="delete_and_refund_sales"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_delete_and_refund_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_delete_and_refund_sales]"
+                                                id="permissions_basic_delete_and_refund_sales">
+                                            <label for="permissions_basic_delete_and_refund_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="delete_and_refund_sales"
+                                    data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_delete_and_refund_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_delete_and_refund_sales]"
+                                                id="permissions_low_delete_and_refund_sales">
+                                            <label for="permissions_low_delete_and_refund_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="delete_and_refund_sales"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_delete_and_refund_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[medium_delete_and_refund_sales]"
+                                                id="permissions_medium_delete_and_refund_sales">
+                                            <label for="permissions_medium_delete_and_refund_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="delete_and_refund_sales"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_delete_and_refund_sales]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_delete_and_refund_sales]"
+                                                id="permissions_high_delete_and_refund_sales">
+                                            <label for="permissions_high_delete_and_refund_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="delete_and_refund_sales"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_delete_and_refund_sales]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_delete_and_refund_sales]"
+                                                id="permissions_owner_delete_and_refund_sales">
+                                            <label for="permissions_owner_delete_and_refund_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Daily Sales</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="daily_sales" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_daily_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_daily_sales]" id="permissions_basic_daily_sales">
+                                            <label for="permissions_basic_daily_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="daily_sales" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_daily_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_daily_sales]" id="permissions_low_daily_sales">
+                                            <label for="permissions_low_daily_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="daily_sales" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_daily_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_daily_sales]" id="permissions_medium_daily_sales">
+                                            <label for="permissions_medium_daily_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="daily_sales" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_daily_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_daily_sales]" id="permissions_high_daily_sales">
+                                            <label for="permissions_high_daily_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="daily_sales" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_daily_sales]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_daily_sales]" id="permissions_owner_daily_sales">
+                                            <label for="permissions_owner_daily_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Appointments</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="booking_sales" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_booking_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_booking_sales]"
+                                                id="permissions_basic_booking_sales">
+                                            <label for="permissions_basic_booking_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="booking_sales" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_booking_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_booking_sales]" id="permissions_low_booking_sales">
+                                            <label for="permissions_low_booking_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="booking_sales" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_booking_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_booking_sales]"
+                                                id="permissions_medium_booking_sales">
+                                            <label for="permissions_medium_booking_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="booking_sales" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_booking_sales]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_booking_sales]" id="permissions_high_booking_sales">
+                                            <label for="permissions_high_booking_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="booking_sales"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_booking_sales]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_booking_sales]"
+                                                id="permissions_owner_booking_sales">
+                                            <label for="permissions_owner_booking_sales">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Invoices</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="invoices" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_invoices]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_invoices]" id="permissions_basic_invoices">
+                                            <label for="permissions_basic_invoices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="invoices" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_invoices]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_invoices]" id="permissions_low_invoices">
+                                            <label for="permissions_low_invoices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="invoices" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_invoices]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_invoices]" id="permissions_medium_invoices">
+                                            <label for="permissions_medium_invoices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="invoices" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_invoices]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_invoices]" id="permissions_high_invoices">
+                                            <label for="permissions_high_invoices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="invoices" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_invoices]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_invoices]" id="permissions_owner_invoices">
+                                            <label for="permissions_owner_invoices">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Vouchers</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="vouchers" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_vouchers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_vouchers]" id="permissions_basic_vouchers">
+                                            <label for="permissions_basic_vouchers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="vouchers" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_vouchers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[low_vouchers]" id="permissions_low_vouchers">
+                                            <label for="permissions_low_vouchers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="vouchers" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_vouchers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_vouchers]" id="permissions_medium_vouchers">
+                                            <label for="permissions_medium_vouchers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="vouchers" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_vouchers]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_vouchers]" id="permissions_high_vouchers">
+                                            <label for="permissions_high_vouchers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="vouchers" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_vouchers]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_vouchers]" id="permissions_owner_vouchers">
+                                            <label for="permissions_owner_vouchers">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin">Staff</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Working Hours</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="roster" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_roster]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_roster]" id="permissions_basic_roster">
+                                            <label for="permissions_basic_roster">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="roster" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_roster]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_roster]" id="permissions_low_roster">
+                                            <label for="permissions_low_roster">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="roster" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_roster]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_roster]" id="permissions_medium_roster">
+                                            <label for="permissions_medium_roster">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="roster" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_roster]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_roster]" id="permissions_high_roster">
+                                            <label for="permissions_high_roster">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="roster" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_roster]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked" name="permissions[owner_roster]"
+                                                id="permissions_owner_roster">
+                                            <label for="permissions_owner_roster">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Closed Dates</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="closed_days" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_closed_days]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_closed_days]" id="permissions_basic_closed_days">
+                                            <label for="permissions_basic_closed_days">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="closed_days" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_closed_days]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_closed_days]" id="permissions_low_closed_days">
+                                            <label for="permissions_low_closed_days">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="closed_days" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_closed_days]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_closed_days]" id="permissions_medium_closed_days">
+                                            <label for="permissions_medium_closed_days">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="closed_days" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_closed_days]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_closed_days]" id="permissions_high_closed_days">
+                                            <label for="permissions_high_closed_days">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="closed_days" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_closed_days]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_closed_days]" id="permissions_owner_closed_days">
+                                            <label for="permissions_owner_closed_days">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Staff Members</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="employees" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_employees]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_employees]" id="permissions_basic_employees">
+                                            <label for="permissions_basic_employees">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="employees" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_employees]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_employees]" id="permissions_low_employees">
+                                            <label for="permissions_low_employees">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="employees" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_employees]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_employees]" id="permissions_medium_employees">
+                                            <label for="permissions_medium_employees">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="employees" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_employees]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_employees]" id="permissions_high_employees">
+                                            <label for="permissions_high_employees">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="employees" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_employees]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_employees]" id="permissions_owner_employees">
+                                            <label for="permissions_owner_employees">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Permission Levels</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="permissions" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_permissions]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_permissions]" id="permissions_basic_permissions">
+                                            <label for="permissions_basic_permissions">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="permissions" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_permissions]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_permissions]" id="permissions_low_permissions">
+                                            <label for="permissions_low_permissions">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="permissions" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_permissions]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_permissions]" id="permissions_medium_permissions">
+                                            <label for="permissions_medium_permissions">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="permissions" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_permissions]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_permissions]" id="permissions_high_permissions">
+                                            <label for="permissions_high_permissions">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="permissions" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_permissions]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_permissions]" id="permissions_owner_permissions">
+                                            <label for="permissions_owner_permissions">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin">Inventory</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Products</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="products" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_products]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_products]" id="permissions_basic_products">
+                                            <label for="permissions_basic_products">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="products" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_products]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_products]" id="permissions_low_products">
+                                            <label for="permissions_low_products">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="products" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_products]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[medium_products]" id="permissions_medium_products">
+                                            <label for="permissions_medium_products">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="products" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_products]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_products]" id="permissions_high_products">
+                                            <label for="permissions_high_products">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="products" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_products]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_products]" id="permissions_owner_products">
+                                            <label for="permissions_owner_products">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin">Reports</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">All Reports</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="reports" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_reports]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_reports]" id="permissions_basic_reports">
+                                            <label for="permissions_basic_reports">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="reports" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_reports]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_reports]" id="permissions_low_reports">
+                                            <label for="permissions_low_reports">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="reports" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_reports]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_reports]" id="permissions_medium_reports">
+                                            <label for="permissions_medium_reports">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="reports" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_reports]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_reports]" id="permissions_high_reports">
+                                            <label for="permissions_high_reports">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="reports" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_reports]" disabled="disabled" type="hidden"
+                                                value="0"><input disabled="disabled" class="boolean optional disabled"
+                                                type="checkbox" value="1" checked="checked"
+                                                name="permissions[owner_reports]" id="permissions_owner_reports">
+                                            <label for="permissions_owner_reports">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-xs-4">
+                                <span class="form-label no-margin">Setup</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">basic</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-p-l-10">
+                                <span class="form-label no-margin">low</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin hidden-xs">medium</span>
+                                <span class="form-label no-margin visible-xs">med</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">high</span>
+                            </div>
+                            <div class="col-xs-1_5 sm-no-padding">
+                                <span class="form-label no-margin">owner</span>
+                            </div>
+                        </div>
+                        <div class="attached-form-group permission-table">
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Account Setup</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="business_settings"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_business_settings]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_business_settings]"
+                                                id="permissions_basic_business_settings">
+                                            <label for="permissions_basic_business_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="business_settings" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_business_settings]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_business_settings]"
+                                                id="permissions_low_business_settings">
+                                            <label for="permissions_low_business_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="business_settings"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_business_settings]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_business_settings]"
+                                                id="permissions_medium_business_settings">
+                                            <label for="permissions_medium_business_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="business_settings"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_business_settings]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_business_settings]"
+                                                id="permissions_high_business_settings">
+                                            <label for="permissions_high_business_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="business_settings"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_business_settings]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_business_settings]"
+                                                id="permissions_owner_business_settings">
+                                            <label for="permissions_owner_business_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Point of Sale</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="point_of_sale_settings"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_point_of_sale_settings]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_point_of_sale_settings]"
+                                                id="permissions_basic_point_of_sale_settings">
+                                            <label for="permissions_basic_point_of_sale_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="point_of_sale_settings"
+                                    data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_point_of_sale_settings]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_point_of_sale_settings]"
+                                                id="permissions_low_point_of_sale_settings">
+                                            <label for="permissions_low_point_of_sale_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="point_of_sale_settings"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_point_of_sale_settings]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_point_of_sale_settings]"
+                                                id="permissions_medium_point_of_sale_settings">
+                                            <label for="permissions_medium_point_of_sale_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="point_of_sale_settings"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_point_of_sale_settings]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                checked="checked" name="permissions[high_point_of_sale_settings]"
+                                                id="permissions_high_point_of_sale_settings">
+                                            <label for="permissions_high_point_of_sale_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="point_of_sale_settings"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_point_of_sale_settings]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_point_of_sale_settings]"
+                                                id="permissions_owner_point_of_sale_settings">
+                                            <label for="permissions_owner_point_of_sale_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Client Settings</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="client_settings" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_client_settings]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_client_settings]"
+                                                id="permissions_basic_client_settings">
+                                            <label for="permissions_basic_client_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="client_settings" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_client_settings]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_client_settings]"
+                                                id="permissions_low_client_settings">
+                                            <label for="permissions_low_client_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="client_settings"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_client_settings]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_client_settings]"
+                                                id="permissions_medium_client_settings">
+                                            <label for="permissions_medium_client_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="client_settings" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_client_settings]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_client_settings]"
+                                                id="permissions_high_client_settings">
+                                            <label for="permissions_high_client_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="client_settings"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_client_settings]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_client_settings]"
+                                                id="permissions_owner_client_settings">
+                                            <label for="permissions_owner_client_settings">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Online Booking</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="online_booking" data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_online_booking]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_online_booking]"
+                                                id="permissions_basic_online_booking">
+                                            <label for="permissions_basic_online_booking">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="online_booking" data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_online_booking]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_online_booking]" id="permissions_low_online_booking">
+                                            <label for="permissions_low_online_booking">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="online_booking" data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_online_booking]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_online_booking]"
+                                                id="permissions_medium_online_booking">
+                                            <label for="permissions_medium_online_booking">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="" data-locked="no" data-permission="online_booking" data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_online_booking]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="permissions[high_online_booking]"
+                                                id="permissions_high_online_booking">
+                                            <label for="permissions_high_online_booking">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="" data-locked="locked" data-permission="online_booking"
+                                    data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_online_booking]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_online_booking]"
+                                                id="permissions_owner_online_booking">
+                                            <label for="permissions_owner_online_booking">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission-row">
+                                <div class="col-xs-4 no-padding permission-cell">
+                                    <div class="fs-14 permission-content">Billing and card processing</div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center disabled"
+                                    data-dependency="online_booking" data-locked="no" data-permission="edit_billing_info"
+                                    data-role="basic">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[basic_edit_billing_info]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[basic_edit_billing_info]"
+                                                id="permissions_basic_edit_billing_info" disabled="">
+                                            <label for="permissions_basic_edit_billing_info">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center disabled"
+                                    data-dependency="online_booking" data-locked="no" data-permission="edit_billing_info"
+                                    data-role="low">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[low_edit_billing_info]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[low_edit_billing_info]"
+                                                id="permissions_low_edit_billing_info" disabled="">
+                                            <label for="permissions_low_edit_billing_info">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center disabled"
+                                    data-dependency="online_booking" data-locked="no" data-permission="edit_billing_info"
+                                    data-role="medium">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[medium_edit_billing_info]" type="hidden"
+                                                value="0"><input class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[medium_edit_billing_info]"
+                                                id="permissions_medium_edit_billing_info" disabled="">
+                                            <label for="permissions_medium_edit_billing_info">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 text-center no-padding permission-cell justify-center"
+                                    data-dependency="online_booking" data-locked="no" data-permission="edit_billing_info"
+                                    data-role="high">
+                                    <div class="permission-content">
+                                        <div class="check-success checkbox no-margin">
+                                            <input name="permissions[high_edit_billing_info]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1"
+                                                name="permissions[high_edit_billing_info]"
+                                                id="permissions_high_edit_billing_info">
+                                            <label for="permissions_high_edit_billing_info">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1_5 disabled justify-center no-padding permission-cell text-center"
+                                    data-dependency="online_booking" data-locked="locked"
+                                    data-permission="edit_billing_info" data-role="owner">
+                                    <div class="permission-content">
+                                        <div class="attached-field-last check-success checkbox no-margin">
+                                            <input name="permissions[owner_edit_billing_info]" disabled="disabled"
+                                                type="hidden" value="0"><input disabled="disabled"
+                                                class="boolean optional disabled" type="checkbox" value="1"
+                                                checked="checked" name="permissions[owner_edit_billing_info]"
+                                                id="permissions_owner_edit_billing_info">
+                                            <label for="permissions_owner_edit_billing_info">&nbsp;</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="row m-b-20 m-t-20">
+                            <div class="col-sm-12">
+                                <input type="submit" name="commit" value="Save Changes" class="btn btn-success"
+                                    id="submit-button">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    </section>
+    </div>

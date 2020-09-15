@@ -1,0 +1,63 @@
+<mat-toolbar>
+    <span>Holidays</span>
+<div class="col-sm-8"></div>
+    <div class="col-sm-2" style="float:right;">
+        <button class="_3ySuQR _2nu1E8 _1jiWG4 _2P5TQK _1qADt0 addpro152" data-qa="mobile-clients-dropdown" >
+    
+            <div class="">
+                <div class="flecs1"> <span class="material-icons">
+                    add
+                    </span> <span>Holiday </span></div>
+            </div>
+    
+        </button>
+    
+    </div>
+  </mat-toolbar>
+
+<div class="col-sm-10">
+
+    <div class="mat-elevation-z8">
+
+        <table mat-table [dataSource]="dataSource">
+
+
+
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Title </th>
+
+                <td mat-cell *matCellDef="let element"><img
+                        src="../../../../../assets/img/5V8A2916_5x7_vert-1-214x300.jpg"
+                        style="width:38px;height:38px;border-radius:50%;border:1px solid;">&nbsp; {{element.title}}
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="holidaydate">
+                <th mat-header-cell *matHeaderCellDef> Holiday Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.holidaydate}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="day">
+                <th mat-header-cell *matHeaderCellDef> Day </th>
+                <td mat-cell *matCellDef="let element"> {{element.day}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Action </th>
+                <td mat-cell *matCellDef="let element"> <span class="material-icons">
+                        create
+                    </span>&nbsp;<span class="material-icons">
+                        delete
+                    </span> </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
+

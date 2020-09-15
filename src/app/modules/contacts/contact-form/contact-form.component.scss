@@ -1,0 +1,46 @@
+.material-icons{
+    color: darkgrey;
+}
+
+.hh1 {
+    display: flex;
+    align-items: center;
+}
+
+.mat-dialog-container {
+    border-radius: 10px;
+    font-weight: 500;
+    color: #67768c;
+    font-family: Roboto, sans-serif;
+}
+
+.cla{
+    margin: 0px;
+    font-size: 14px !important;
+}
+
+.fws{
+    font-size: 14px !important;
+  color: #67768c;
+  font-family: Roboto, sans-serif;
+}
+
+.mat-list-base {
+     padding-top: 0px;  
+}
+
+
+.mat-dialog-container#mat-dialog-0 {
+    width: 41% !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+// img:hover {
+//     display: none;
+// }
+
+// img:hover + span{
+//     display: block;
+// }

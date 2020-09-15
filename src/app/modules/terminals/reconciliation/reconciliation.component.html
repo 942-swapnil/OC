@@ -1,0 +1,223 @@
+<section style="overflow: auto; height: 87vh; overflow-x: hidden;">
+  <mat-dialog-content class="mat-typography" style="border-top:1px solid lightgray;">
+    <h2 style="text-align: center;">Cash Reconciliation</h2>
+<div class="container">
+  <div class="col-12">
+
+    <div class="row">
+      <div class="col-3 offset-9">
+        <mat-form-field appearance="legacy" style="display: block;">
+          <mat-label  at-label>Total:</mat-label>
+            <input matInput type="" [value]="total">
+          </mat-form-field> 
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <mat-form-field appearance="legacy" style="display: block;">
+                  <input matInput type="" value="2000" readonly >
+                </mat-form-field>
+        </div>
+        <span style="margin-top: 20px;">*</span>
+        <div class="col-3">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <input matInput type=""  (input)="changevalue($event,2000)">
+              </mat-form-field>
+            
+        </div>
+        <span style="margin-top: 20px;">=</span>
+        <div class="col-3">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <input matInput type="" [value]="vz1" readonly >
+              </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <mat-form-field appearance="legacy" style="display: block;">
+                  <input matInput type="" value="500" readonly >
+                </mat-form-field>
+        </div>
+        <span style="margin-top: 20px;">*</span>
+        <div class="col-3">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <input matInput type=""  (input)="changevalue($event,500)">
+              </mat-form-field>
+            
+        </div>
+        <span style="margin-top: 20px;">=</span>
+        <div class="col-3">
+            <mat-form-field appearance="legacy" style="display: block;">
+                <input matInput type="" [value]="vz2" readonly >
+              </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block;">
+                <input matInput type="" value="200" readonly >
+              </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block;">
+              <input matInput type=""  (input)="changevalue($event,200)">
+            </mat-form-field>
+          
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block;">
+              <input matInput type="" [value]="vz3" readonly >
+            </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block;">
+                <input matInput type="" value="100" readonly >
+              </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block;">
+              <input matInput type=""  (input)="changevalue($event,100)">
+            </mat-form-field>
+          
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+          <mat-form-field appearance="legacy" style="display: block;">
+              <input matInput type="" [value]="vz4" readonly >
+            </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <mat-form-field appearance="legacy" style="display: block;">
+              <input matInput type="" value="50" readonly >
+            </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+        <mat-form-field appearance="legacy" style="display: block;">
+            <input matInput type=""  (input)="changevalue($event,50)">
+          </mat-form-field>
+        
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+        <mat-form-field appearance="legacy" style="display: block;">
+            <input matInput type="" [value]="vz5" readonly >
+          </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+            <input matInput type="" value="20" readonly >
+          </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+          <input matInput type=""  (input)="changevalue($event,20)">
+        </mat-form-field>
+
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+          <input matInput type="" [value]="vz6" readonly >
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+          <input matInput type="" value="10" readonly >
+        </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+        <input matInput type=""  (input)="changevalue($event,10)">
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+        <input matInput type="" [value]="vz7" readonly >
+      </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+        <input matInput type="" value="5" readonly >
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type=""  (input)="changevalue($event,5)">
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type="" [value]="vz8" readonly >
+      </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type="" value="2" readonly >
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type=""  (input)="changevalue($event,2)">
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type="" [value]="vz9" readonly >
+      </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type="" value="1" readonly >
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">*</span>
+      <div class="col-3">
+      <mat-form-field appearance="legacy" style="display: block;">
+      <input matInput type=""  (input)="changevalue($event,1)">
+      </mat-form-field>
+      </div>
+      <span style="margin-top: 20px;">=</span>
+      <div class="col-3">
+        <mat-form-field appearance="legacy" style="display: block;">
+        <input matInput type="" [value]="vz10" readonly >
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
+</mat-dialog-content>
+</section>

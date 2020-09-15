@@ -1,0 +1,5 @@
+.checkbox input[type="checkbox"]:checked + label:after {
+    font-family: "FontAwesome";
+    content: "\F00C";
+    color: #fff;
+  }

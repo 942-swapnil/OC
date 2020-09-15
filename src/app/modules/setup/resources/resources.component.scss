@@ -1,0 +1,39 @@
+.select-wrapper:after {
+    content: "";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 52%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 25px;
+    width: 0;
+    height: initial;
+    z-index: 2;
+    pointer-events: none;
+    color: #2c2c2c;
+}
+
+.modal .modal-header {
+    text-align: center;
+    border-bottom: 0;
+    padding: 25px 25px 0;
+    display: block;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #24334A;
+    border-color: #24334A;
+}
+
+.nav-tabs-simple>li.active a, .nav-tabs-simple>li.active a:hover, .nav-tabs-simple>li.active a:focus {
+    background-color: transparent;
+    border-color: transparent;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border-color: #e5e5e5;
+    color: #24334A;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}

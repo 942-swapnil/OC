@@ -1,0 +1,17 @@
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 2.428571;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(4.25rem + 2px);
+}
+
+.material-icons {
+  
+    font-size: 23px;
+    color: #cac2c2;
+   
+}

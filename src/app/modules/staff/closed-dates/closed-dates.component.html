@@ -1,0 +1,320 @@
+<div class="_2k68E6 _260Y5f scrollable-content _2NH_by" data-qa="scrollable-content"
+    style="display: flex; flex-direction: column;">
+
+    <section class="page-wrapper full-height">
+        <div class="full-height" id="closed-dates-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="closed-dates-list">
+                        <div class="row sm-m-t-20">
+                            <div class="col-sm-6"></div>
+                            <div class="col-sm-6 text-right">
+                                <a class="btn btn-success event-link add-closed-date btn-plus modal-small"
+                                    (click)="sin()" data-remote="true">
+                                    <span class="visible-xs">
+                                        <i class="s-icon-plus-b"></i>
+                                    </span>
+                                    <span class="hidden-xs" style="color: white;">
+                                        New Closed Date
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4 hide" id="filter-message">
+                                <div class="label label-info"></div>
+                            </div>
+                        </div>
+                        <div class="row m-t-20">
+                            <div class="col-sm-12">
+                                <div>
+                                    <div class="table-responsive">
+                                        <table class="table table-condensed table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date Range</th>
+                                                    <th>No. of Days</th>
+                                                    <th>Locations</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="closed_dates">
+                                                <tr class="clickable-row closed_date edit-closed-date"
+                                                    data-closed-date="326166" data-href="/closed_dates/326166/edit"
+                                                    data-remote="true" id="closed_date_326166" (click)="modal2()">
+                                                    <td>
+                                                        Wed, 08 Apr 2020 - Mon, 13 Apr 2020
+                                                    </td>
+                                                    <td>
+                                                        6 Days
+                                                    </td>
+                                                    <td>
+                                                        All locations
+                                                    </td>
+                                                    <td>
+                                                        dsfsadfs
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+<!--Modal-->
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in" id="new-closed-date" *ngIf="sn"
+    role="dialog" tabindex="-1" style="display: block; padding-left: 15px;">
+    <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-center">
+                    <!-- <button aria-hidden="true" class="close" data-dismiss="modal" (click)="sin()">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button> -->
+                    <div role="button" style="float:right" class="_2y31id _3d4M2L _2nu1E8" data-qa="action-icon" (click)="sin()">
+                        <div class="_10jmov">
+                            <div><span class="_3Q2N2k _30vxLD _3s37z7 skx_qq XuZows"><svg viewBox="0 0 18 18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 1.914L16.086 1 9 8.086 1.914 1 1 1.914 8.086 9 1 16.086l.914.914L9 9.914 16.086 17l.914-.914L9.914 9z">
+                                        </path>
+                                    </svg></span></div>
+                        </div>
+                    </div>
+                    <h4>New Closed Date</h4>
+                </div>
+                <div class="new-form">
+                    <form novalidate="novalidate" class="simple_form new_closed_date" id="new_closed_date"
+                        action="/closed_dates" accept-charset="UTF-8" data-remote="true" method="post"><input
+                            name="utf8" type="hidden" value="✓">
+                        <div class="modal-body sm-padding-10">
+                            <input value="315146" type="hidden" name="closed_date[provider_id]"
+                                id="closed_date_provider_id">
+                            <div class="alert alert-info m-t-5">
+                                Online bookings can not be placed during closed dates.
+                            </div>
+                            <div class="row attached-fields">
+                                <div class="col-xs-6 no-padding">
+                                    <div class="form-group middle-item">
+                                        <label for="closed_date_start_date">Start Date</label>
+                                        <div class="select-wrapper">
+                                            <input
+                                                class="string optional readonly date-input form-control hasDatepicker"
+                                                data-qa="closed-date-start-date" readonly="readonly"
+                                                placeholder="Select start date" type="text"
+                                                name="closed_date[start_date]" id="closed_date_start_date">
+                                                <span _ngcontent-vap-c23="" class="_3Q2N2k _30vxLD _3v1cJZ _3gKdf_ _3SgRf2"><svg _ngcontent-vap-c23=""
+                                                        viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                                        <path _ngcontent-vap-c23=""
+                                                            d="M13.762 6.684l-.48-.458c-.168-.15-.362-.226-.585-.226-.227 0-.42.075-.578.226L9 9.196l-3.12-2.97C5.723 6.076 5.53 6 5.304 6c-.223 0-.417.075-.584.226l-.476.458C4.08 6.84 4 7.024 4 7.24c0 .22.08.404.244.55l4.178 3.978c.154.155.347.232.578.232.227 0 .422-.077.584-.232l4.178-3.978c.16-.15.238-.334.238-.55 0-.21-.08-.397-.238-.556z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 no-padding">
+                                    <div class="form-group">
+                                        <label for="closed_date_end_date">End Date</label>
+                                        <div class="select-wrapper">
+                                            <input
+                                                class="string optional readonly date-input form-control hasDatepicker"
+                                                data-qa="closed-date-end-date" readonly="readonly"
+                                                placeholder="Select end date" type="text" name="closed_date[end_date]"
+                                                id="closed_date_end_date">
+                                                <span _ngcontent-vap-c23="" class="_3Q2N2k _30vxLD _3v1cJZ _3gKdf_ _3SgRf2"><svg _ngcontent-vap-c23=""
+                                                    viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                                    <path _ngcontent-vap-c23=""
+                                                        d="M13.762 6.684l-.48-.458c-.168-.15-.362-.226-.585-.226-.227 0-.42.075-.578.226L9 9.196l-3.12-2.97C5.723 6.076 5.53 6 5.304 6c-.223 0-.417.075-.584.226l-.476.458C4.08 6.84 4 7.024 4 7.24c0 .22.08.404.244.55l4.178 3.978c.154.155.347.232.578.232.227 0 .422-.077.584-.232l4.178-3.978c.16-.15.238-.334.238-.55 0-.21-.08-.397-.238-.556z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group string required closed_date_description m-t-20"
+                                data-qa="closed-date-description"><label class="control-label string required"
+                                    for="closed_date_description"><abbr title="required">*</abbr>
+                                    Description</label><input class="form-control string required"
+                                    placeholder="e.g. public holiday" type="text" name="closed_date[description]"
+                                    id="closed_date_description"></div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="m-b-20">
+                                        <div class="checkbox check-success m-l-15 m-b-15">
+                                            <input name="closed_date[all_locations]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="closed_date[all_locations]" id="closed_date_all_locations">
+                                            <label class="string optional" for="closed_date_all_locations">All
+                                                locations</label>
+                                        </div>
+                                    </div>
+                                    <ul class="selection-list row m-b-none">
+                                        <div class="col-md-12">
+                                            <li>
+                                                <div class="checkbox location-checkbox check-success">
+                                                    <input type="checkbox" name="closed_date[location_ids][]"
+                                                        id="closed_date_location_ids_354590" value="354590"
+                                                        class="check_boxes">
+                                                    <label class="bold" for="closed_date_location_ids_354590">A</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox location-checkbox check-success">
+                                                    <input type="checkbox" name="closed_date[location_ids][]"
+                                                        id="closed_date_location_ids_338195" value="338195"
+                                                        class="check_boxes">
+                                                    <label class="bold"
+                                                        for="closed_date_location_ids_338195">Arihant</label>
+                                                </div>
+                                            </li>
+
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button aria-hidden="" class="btn btn-default" data-dismiss="modal"
+                                type="button" (click)="sin()">Cancel</button>
+                            <button class="btn btn-success" data-qa="closed-date-save">Save</button>
+                            <div class="pull-left">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal2 -->
+
+<div aria-hidden="false" aria-labelledby="modalSlideUpLabel" class="modal small-modal in" id="edit-closed-date"
+    role="dialog" tabindex="-1" style="display: block; padding-left: 15px;" *ngIf="dal">
+    <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-center">
+                    <!-- <button aria-hidden="true" class="close" data-dismiss="modal" (click)="modal2()">
+                        <i class="fa fa-times"></i>
+                    </button> -->
+                    <div role="button" style="float:right" class="_2y31id _3d4M2L _2nu1E8" data-qa="action-icon" (click)="modal2()">
+                        <div class="_10jmov">
+                            <div><span class="_3Q2N2k _30vxLD _3s37z7 skx_qq XuZows"><svg viewBox="0 0 18 18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 1.914L16.086 1 9 8.086 1.914 1 1 1.914 8.086 9 1 16.086l.914.914L9 9.914 16.086 17l.914-.914L9.914 9z">
+                                        </path>
+                                    </svg></span></div>
+                        </div>
+                    </div>
+                    <h4>Edit Closed Date</h4>
+                </div>
+                <div class="new-form">
+                    <form novalidate="novalidate" class="simple_form edit_closed_date" id="edit_closed_date_326166"
+                        action="/closed_dates/326166" accept-charset="UTF-8" data-remote="true" method="post"><input
+                            name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch">
+                        <div class="modal-body sm-padding-10">
+                            <input value="315146" type="hidden" name="closed_date[provider_id]"
+                                id="closed_date_provider_id">
+                            <div class="alert alert-info m-t-5">
+                                Online bookings can not be placed during closed dates.
+                            </div>
+                            <div class="row attached-fields">
+                                <div class="col-xs-6 no-padding">
+                                    <div class="form-group middle-item">
+                                        <label for="closed_date_start_date">Start Date</label>
+                                        <div class="select-wrapper">
+                                            <input
+                                                class="string optional readonly date-input form-control hasDatepicker"
+                                                value="Wednesday, 08 April 2020" data-qa="closed-date-start-date"
+                                                readonly="readonly" placeholder="Select start date" type="text"
+                                                name="closed_date[start_date]" id="closed_date_start_date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 no-padding">
+                                    <div class="form-group">
+                                        <label for="closed_date_end_date">End Date</label>
+                                        <div class="select-wrapper">
+                                            <input
+                                                class="string optional readonly date-input form-control hasDatepicker"
+                                                value="Monday, 13 April 2020" data-qa="closed-date-end-date"
+                                                readonly="readonly" placeholder="Select end date" type="text"
+                                                name="closed_date[end_date]" id="closed_date_end_date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group string required closed_date_description m-t-20"
+                                data-qa="closed-date-description"><label class="control-label string required"
+                                    for="closed_date_description"><abbr title="required">*</abbr>
+                                    Description</label><input class="form-control string required"
+                                    placeholder="e.g. public holiday" type="text" value="dsfsadfs"
+                                    name="closed_date[description]" id="closed_date_description"></div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="m-b-20">
+                                        <div class="checkbox check-success m-l-15 m-b-15">
+                                            <input name="closed_date[all_locations]" type="hidden" value="0"><input
+                                                class="boolean optional" type="checkbox" value="1" checked="checked"
+                                                name="closed_date[all_locations]" id="closed_date_all_locations">
+                                            <label class="string optional" for="closed_date_all_locations">All
+                                                locations</label>
+                                        </div>
+                                    </div>
+                                    <ul class="selection-list row m-b-none">
+                                        <div class="col-md-12">
+                                            <li>
+                                                <div class="checkbox location-checkbox check-success">
+                                                    <input type="checkbox" name="closed_date[location_ids][]"
+                                                        id="closed_date_location_ids_354590" value="354590"
+                                                        class="check_boxes" checked="checked">
+                                                    <label class="bold" for="closed_date_location_ids_354590">A</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox location-checkbox check-success">
+                                                    <input type="checkbox" name="closed_date[location_ids][]"
+                                                        id="closed_date_location_ids_338195" value="338195"
+                                                        class="check_boxes" checked="checked">
+                                                    <label class="bold"
+                                                        for="closed_date_location_ids_338195">Arihant</label>
+                                                </div>
+                                            </li>
+
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button aria-hidden="" class="btn btn-default" data-dismiss="modal"
+                                type="button" (click)="modal2()">Cancel</button>
+                            <button class="btn btn-success" data-qa="closed-date-save">Save</button>
+                            <div class="pull-left">
+                                <a class="btn btn-danger" data-remote="true" rel="nofollow" data-method="delete"
+                                    href="/closed_dates/326166">Delete</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

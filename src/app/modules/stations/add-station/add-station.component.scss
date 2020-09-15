@@ -1,0 +1,36 @@
+.hdd{
+    font-size: 23px;
+    font-weight: 400;
+}
+
+  .example-header-image {
+    background-image: url('../../../../assets/images/hair.png');
+    background-size: cover;
+    border:1px solid;
+  }
+  .mat-mini-fab {
+    box-shadow: none;
+
+    width: 20px;
+    height: 20px;
+  
+}
+
+mat-dialog-container#mat-dialog-2 {
+  width: 70%;
+}
+
+.asdf{
+  margin-top: 14px;
+}
+
+table {
+  width: 100%;
+  overflow: hidden;
+}
+.asd{
+  text-overflow: ellipsis;   /* IE, Safari (WebKit) */
+  overflow:hidden;              /* don't show excess chars */
+  white-space:nowrap;           /* force single line */
+  width: 50px;  /*This property playing a major role*/
+}

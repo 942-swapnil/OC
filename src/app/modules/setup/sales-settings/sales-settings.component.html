@@ -1,0 +1,113 @@
+<section class="main-content">
+    <section class="page-wrapper">
+        <div class="row">
+            <div class="col-sm-6 form-wrapper">
+                <form novalidate="novalidate" class="simple_form edit_provider" id="edit_provider_315146"
+                    action="/provider" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden"
+                        value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden"
+                        name="authenticity_token"
+                        value="vWpQNyrBJLUEALkozNklfLgjRMbQGTyQOdBtn4MAM0z4KaulMVZg+GI/BALqI/CC46rW8O3ip4uEYSryuOVK/A=="><input
+                        type="hidden" name="source_action" id="source_action" value="sales_settings">
+                    <div class="row m-t-20">
+                        <div class="col-sm-12 col-ms-12 col-lg-12">
+                            <div class="row sales-settings-container" id="sales-settings">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h5>
+                                                Staff Commissions
+                                                <i class="hint-icon v-align-middle" data-placement="bottom"
+                                                    data-toggle="tooltip"
+                                                    title="Changes to commission and tax settings will only apply to new invoices, existing invoices are not impacted"></i>
+                                            </h5>
+                                            <div class="inputs">
+                                                <div class="form-group">
+                                                    <div class="form-inline">
+                                                        <div
+                                                            class="form-group boolean optional provider_commission_before_discount">
+                                                            <div class="checkbox check-success"><input
+                                                                    name="provider[commission_before_discount]"
+                                                                    type="hidden" value="0"><input
+                                                                    class="boolean optional" type="checkbox" value="1"
+                                                                    name="provider[commission_before_discount]"
+                                                                    id="provider_commission_before_discount"><label
+                                                                    class="boolean optional"
+                                                                    for="provider_commission_before_discount">Calculate
+                                                                    by item sale price before discount</label></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" id="commission-after-tax">
+                                                    <div class="form-inline">
+                                                        <div
+                                                            class="form-group boolean optional provider_commission_after_tax">
+                                                            <div class="checkbox check-success"><input
+                                                                    name="provider[commission_after_tax]" type="hidden"
+                                                                    value="0"><input class="boolean optional"
+                                                                    type="checkbox" value="1"
+                                                                    name="provider[commission_after_tax]"
+                                                                    id="provider_commission_after_tax"><label
+                                                                    class="boolean optional"
+                                                                    for="provider_commission_after_tax">Calculate by
+                                                                    item sale price including tax</label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="help help-block visible-xs">Changes to commission and
+                                                        tax settings will only apply to new invoices, existing invoices
+                                                        are not impacted</div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <h5>
+                                                Vouchers
+                                                <div class="inputs">
+                                                    <div class="form-group">
+                                                        <label for="provider_voucher_expiration_period">Default expiry
+                                                            period</label>
+                                                        <div class="select-wrapper">
+                                                            <select include_blank="false"
+                                                                class="select optional form-control"
+                                                                name="provider[voucher_expiration_period]"
+                                                                id="provider_voucher_expiration_period">
+                                                                <option value="months_1">1 Month</option>
+                                                                <option value="months_2">2 Months</option>
+                                                                <option value="months_3">3 Months</option>
+                                                                <option value="months_4">4 Months</option>
+                                                                <option selected="selected" value="months_6">6 Months
+                                                                </option>
+                                                                <option value="years_1">1 Year</option>
+                                                                <option value="years_3">3 Years</option>
+                                                                <option value="years_5">5 Years</option>
+                                                                <option value="never">No Expiry</option>
+                                                            </select>
+                                                            <span _ngcontent-vap-c23="" class="_3Q2N2k _30vxLD _3v1cJZ _3gKdf_ _3SgRf2"><svg _ngcontent-vap-c23=""
+                                                                viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                                                <path _ngcontent-vap-c23=""
+                                                                    d="M13.762 6.684l-.48-.458c-.168-.15-.362-.226-.585-.226-.227 0-.42.075-.578.226L9 9.196l-3.12-2.97C5.723 6.076 5.53 6 5.304 6c-.223 0-.417.075-.584.226l-.476.458C4.08 6.84 4 7.024 4 7.24c0 .22.08.404.244.55l4.178 3.978c.154.155.347.232.578.232.227 0 .422-.077.584-.232l4.178-3.978c.16-.15.238-.334.238-.55 0-.21-.08-.397-.238-.556z">
+                                                                </path>
+                                                            </svg>
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-t-20 mobile-m-b-30">
+                                <div class="col-lg-12">
+                                    <div class="text-left">
+                                        <input type="submit" name="commit" value="Save Changes" class="btn btn-success"
+                                            id="submit-button">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</section>

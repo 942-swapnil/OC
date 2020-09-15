@@ -1,0 +1,515 @@
+<div class="container" *ngIf="!sark">
+  <section style="margin-top: 150px;">
+    <div class="row q1">
+      <div class="hh1">
+        <div class="btn-group" role="group"><button class="ss btn btn-secondary"><span class="material-icons i1">
+              receipt
+            </span></button>
+          <button class="ss btn btn-secondary "><span class="material-icons i1">
+              view_agenda
+            </span></button></div>
+      </div>
+      <div class="q2">
+        <div class="dropdown">
+          <button class="q3 btn btn-secondary  x2" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            EXPORT <span class="material-icons" style="margin-left: 10px;">
+              save_alt
+            </span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">PDF</button>
+            <button class="dropdown-item" type="button">Excel</button>
+            <button class="dropdown-item" type="button">CSV</button>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="b1 btn btn-secondary  x2" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            ADD NEW
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button" (click)="slideon()">New Service</button>
+            <button class="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModal11">New
+              Category</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section style="margin-top: 20px;">
+    <div class="col-12">
+      <div class="card">
+        <div class="hhh1 card-body">
+          <div class="q1">
+            <div>
+              <span class="material-icons">
+                dehaze
+              </span>
+
+              <span class="z1">AAAA</span>
+
+            </div>
+            <div class="dropdown">
+              <button class="r1" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="material-icons">
+                  more_horiz
+                </span>
+              </button>
+              <div class="ss1 dropdown-menu " aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button" (click)="slideon()">Add New Service</button>
+                <button class="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModal1">Edit
+                  Category</button>
+                <button class="dropdown-item d11" type="button">Delete Category</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 w1">
+      <div class="card">
+        <div class="hhh1 card-body">
+          <div class="q1">
+            <div>
+              <span class="material-icons">
+                dehaze
+              </span>
+              <span class="z1">Hair</span>
+            </div>
+            <div class="dropdown">
+              <button class="r1" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="material-icons">
+                  more_horiz
+                </span>
+              </button>
+              <div class="ss1 dropdown-menu " aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button" (click)="slideon()">Add New Service</button>
+                <button class="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModal">Edit
+                  Category</button>
+                <button class="dropdown-item d11" type="button">Delete Category</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">Edit Category</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Category name</label>
+            <input type="text" class="form-control" id="recipient-name" value="" placeholder="e.g.Hair Service"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Appointment</label>
+
+            <button type="button" class=" ww1 btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="dot d4"></span>
+            </button>
+            <div class="dropdown-menu pp1">
+              <div class="p1">
+                <a class="dropdown-item"><span class="dot d1"></span></a>
+                <a class="dropdown-item"><span class="dot d2"></span></a>
+                <a class="dropdown-item"><span class="dot d3"></span></a>
+                <a class="dropdown-item"><span class="dot d4"></span></a>
+                <a class="dropdown-item"><span class="dot d5"></span></a>
+
+              </div>
+              <div class="p1">
+                <a class="dropdown-item"><span class="dot d6"></span></a>
+                <a class="dropdown-item"><span class="dot d7"></span></a>
+                <a class="dropdown-item"><span class="dot d8"></span></a>
+                <a class="dropdown-item"><span class="dot d9"></span></a>
+                <a class="dropdown-item"><span class="dot d10"></span></a>
+
+              </div>
+            </div>
+            <div style="color: #67768c;">See your Calendar Settings page under Setup to set how colors are displayed on
+              the calendar</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="ll1">
+
+
+          <button type="button" class="gun btn btn-primary btn-block">SAVE</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">Edit Category</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Category name</label>
+            <input type="text" class="form-control" id="recipient-name" value="Hair">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Appointment</label>
+
+            <button type="button" class=" ww1 btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="dot d4"></span>
+            </button>
+            <div class="dropdown-menu pp1">
+              <div class="p1">
+                <a class="dropdown-item"><span class="dot d1"></span></a>
+                <a class="dropdown-item"><span class="dot d2"></span></a>
+                <a class="dropdown-item"><span class="dot d3"></span></a>
+                <a class="dropdown-item"><span class="dot d4"></span></a>
+                <a class="dropdown-item"><span class="dot d5"></span></a>
+
+              </div>
+              <div class="p1">
+                <a class="dropdown-item"><span class="dot d6"></span></a>
+                <a class="dropdown-item"><span class="dot d7"></span></a>
+                <a class="dropdown-item"><span class="dot d8"></span></a>
+                <a class="dropdown-item"><span class="dot d9"></span></a>
+                <a class="dropdown-item"><span class="dot d10"></span></a>
+
+              </div>
+            </div>
+            <div style="color: #67768c;">See your Calendar Settings page under Setup to set how colors are displayed on
+              the calendar</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="ll1">
+
+          <button type="button" class="gun btn btn-danger btn-block">DELETE</button>
+          <button type="button" class="gun btn btn-primary btn-block">SAVE</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel" style="text-align: center;">Edit Category</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Category name</label>
+            <input type="text" class="form-control" id="recipient-name" value="AAAA">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Appointment</label>
+
+            <button type="button" class=" ww1 btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="dot d4"></span>
+            </button>
+            <div class="dropdown-menu pp1">
+              <div class="p1">
+                <a class="dropdown-item"><span class="dot d1"></span></a>
+                <a class="dropdown-item"><span class="dot d2"></span></a>
+                <a class="dropdown-item"><span class="dot d3"></span></a>
+                <a class="dropdown-item"><span class="dot d4"></span></a>
+                <a class="dropdown-item"><span class="dot d5"></span></a>
+
+              </div>
+              <div class="p1">
+                <a class="dropdown-item"><span class="dot d6"></span></a>
+                <a class="dropdown-item"><span class="dot d7"></span></a>
+                <a class="dropdown-item"><span class="dot d8"></span></a>
+                <a class="dropdown-item"><span class="dot d9"></span></a>
+                <a class="dropdown-item"><span class="dot d10"></span></a>
+
+              </div>
+            </div>
+            <div style="color: #67768c;">See your Calendar Settings page under Setup to set how colors are displayed on
+              the calendar</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="ll1">
+
+          <button type="button" class="gun btn btn-danger btn-block">DELETE</button>
+          <button type="button" class="gun btn btn-primary btn-block">SAVE</button>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="mySidenav" class="sidenav11" *ngIf="sark">
+  <span class="material-icons" style="float: right;" (click)="slideoff()">
+    clear
+  </span>
+
+  <section>
+    <div class="disp container" style="text-align: center;">
+      <p class="m1">Step 1 of 3</p>
+      <p class="m2">Add an offering to your service menu</p>
+    </div>
+    <div class="card" (click)="nexton()">
+      <div class=" card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="material-icons" style="font-size: 60px;">
+              supervised_user_circle
+            </span>
+          </div>
+          <div class="col-sm-6">
+            <h2>Service</h2>
+            <p>Services booked by one client in a single visit
+            </p>
+          </div>
+          <div class="col-sm-1 offset-4">
+            <span><i class="fa fa-angle-right" style="font-size:36px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="material-icons" style="font-size: 60px;">
+              supervised_user_circle
+            </span>
+          </div>
+          <div class="col-sm-7">
+            <h2>Class</h2>
+            <p>Services booked by multiple clients in scheduled sessions
+            </p>
+          </div>
+          <div class="col-sm-2 offset-2">
+            <span class="_3SwoHv tg1XF7 _2cOoP-">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="material-icons" style="font-size: 60px;">
+              supervised_user_circle
+            </span>
+          </div>
+          <div class="col-sm-7">
+            <h2>Plan</h2>
+            <p>Pre-paid memberships or courses used over multiple visits
+
+            </p>
+          </div>
+          <div class="col-sm-2 offset-2">
+            <span class="_3SwoHv tg1XF7 _2cOoP-">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<div id="mySidenav" class="sidenav111" *ngIf="next">
+  <div class="flex">
+    <span class="material-icons" (click)="nexton()">
+      keyboard_backspace
+    </span>
+    <span class="material-icons" (click)="slideoff()">
+      clear
+    </span>
+  </div>
+  <section>
+
+    <div class="disp container" style="text-align: center;">
+      <p class="m1">Step 2 of 3</p>
+      <p class="m2">Choose a service type</p>
+    </div>
+    <div class="card" (click)="secondon()">
+      <div class=" card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="material-icons" style="font-size: 60px;">
+              supervised_user_circle
+            </span>
+          </div>
+          <div class="col-sm-6">
+            <h2>Single Service</h2>
+            <p>Services which can be booked individually
+            </p>
+          </div>
+          <div class="col-sm-1 offset-4">
+            <span><i class="fa fa-angle-right" style="font-size:36px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" (click)="secondon()">
+      <div class=" card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="material-icons" style="font-size: 60px;">
+              supervised_user_circle
+            </span>
+          </div>
+          <div class="col-sm-6">
+            <h2>Single Service</h2>
+            <p>Services which can be booked individually
+            </p>
+          </div>
+          <div class="col-sm-1 offset-4">
+            <span><i class="fa fa-angle-right" style="font-size:36px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+</div>
+
+
+<div id="mySidenav" class="sidenav111" *ngIf="second">
+  <div class="flex">
+    <span class="material-icons" (click)="secondon()">
+      keyboard_backspace
+    </span>
+    <span class="material-icons" (click)="slideoff()">
+      clear
+    </span>
+  </div>
+  <section>
+
+    <div class="disp container" style="text-align: center;">
+      <p class="m1">Step 3 of 3</p>
+      <p class="m2">Choose a category</p>
+    </div>
+    
+    <!-- categoryListing starts  -->
+    <div class="card" *ngFor="let category of serviceCategoryList">
+      <div class=" card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="dot d4"></span>
+          </div>
+          <div class="col-sm-6">
+            <h2> {{category.name}}</h2>
+
+          </div>
+          <div class="col-sm-1 offset-4">
+            <span><i class="fa fa-angle-right" style="font-size:36px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- categoryListing ends  -->
+
+
+
+
+    <div class="card">
+      <div class=" card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="dot d4"></span>
+          </div>
+          <div class="col-sm-6">
+            <h2> AAAA</h2>
+
+          </div>
+          <div class="col-sm-1 offset-4">
+            <span><i class="fa fa-angle-right" style="font-size:36px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class=" card-body">
+        <div class="row ss5">
+          <div class="col-sm-1">
+            <span class="dot d4"></span>
+          </div>
+          <div class="col-sm-6">
+            <h2> Hair</h2>
+          </div>
+          <div class="col-sm-1 offset-4">
+            <span><i class="fa fa-angle-right" style="font-size:36px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

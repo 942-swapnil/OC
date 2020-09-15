@@ -1,0 +1,11 @@
+.checkbox input[type="checkbox"]:checked + label:after {
+    font-family: "FontAwesome";
+    content: "\F00C";
+    color: #fff;
+  }
+
+  .shedul-app {
+  height: 90vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}

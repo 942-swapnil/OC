@@ -1,0 +1,118 @@
+<!-- <section>
+       
+<div class="container-fluid">
+    <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2  col-sm-12 ">
+        <div style="text-align:center;">
+            <h2 class="head"><span class="space">CONTROL<i class="fa fa-heart-o"></i>OUTLET</span></h2>
+            <p class="head1">Control Outlet is proudly created by the folks at Shedul</p>
+        </div>
+        <div class="card" >
+            <div class="card-header" >
+               <h1 class="head"> Log in for professionals</h1>
+               <p class="head1" >Access your partner account to manage your business</p>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="text" class="form-control" formControlName="user_id" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" formControlName="password" minlength="8" maxlength="14" id="exampleInputPassword1" placeholder="Password">
+                
+                    </div>
+                
+           
+                    <div>
+                        <button class="btn btn-block" style="background-color: black;color: white;font-weight: 700;" [disabled]="!loginForm.valid" (click)="login()">LOG IN</button>
+                    </div>
+                </form>
+                <div class="flex1">
+                    <a [routerLink]="['/forgot-password']" ><button class="btn btn-secondary" >Forgot Password</button></a> 
+                    
+                    <a [routerLink]="['/register']" ><button class="btn btn-success">Registration</button></a>
+                    
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-5"><hr></div>
+                    <div class="col-2 or" >or</div>
+                    <div class="col-5"><hr></div>
+
+                </div>
+                <div class="card-footer" >
+                    <h3>Login with your social media account</h3>
+                </div>
+                <div class="flex">
+                    <a href="#" class="fa fa-facebook"> Facebook</a>
+                    <a href="#" class="fa fa-google"> Google</a>
+                    <a href="#" class="fa fa-instagram" style="background-color: #FF1155;"> Instagram</a>
+                </div>
+                
+            </div>
+        </div>       
+
+     </div>
+</div>
+</section> -->
+
+<section  style="background-color: black;z-index: -1; height:100vh;" >
+    <img src="../../../assets/images/loginImage.jpeg" style="width: 100%;height:100vh;opacity: 0.3; position: absolute;z-index: 1;"> 
+    <div class="container-fluid" style="display: flex;justify-content: center;align-items: center;" >
+        
+
+    <!-- <div class="row" style="margin-top: 20px;">
+        <div class="offset-9 col-3" style="display: flex;justify-content: space-around;align-items:center;">
+            <button mat-raised-button style="">First View</button>
+            <button mat-raised-button>Second View</button>
+        </div>
+    </div> -->
+
+    <div class="" style="margin-top: 20px; position: relative;z-index: 999;width: 35%;height: 90vh;">
+    <mat-card class="example-card" style="background-color: #1f1f1f;height: 100%;">
+        <mat-card-header>
+          
+          <mat-card-title style="color: white;display: block;margin:auto;text-align: center ;">Log in to Outlet Control</mat-card-title>
+          <!-- <mat-card-subtitle></mat-card-subtitle> -->
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <mat-card-content >
+            <div>
+            <mat-card style="display: flex; margin-top: 20px;height: 53px;"><img src="../../../assets/images/google-favicon.png" style="width: 30px;height:30px;border-radius: 50%;"> <span style="display: block;margin: auto; text-align: center;"> <span style="font-weight: 500;font-size: 18px;"> Log In with Google</span> </span></mat-card>
+            <!-- LOG IN WITH GOOGLE -->
+            <mat-card style="display: flex; margin-top: 20px;height: 53px;"><img src="../../../assets/images/facebookLogo.png" style="width: 30px;height:30px;border-radius: 50%;"> <span style="display: block;margin: auto; text-align: center;"> <span style="font-weight: 500;font-size: 18px;"> Log In with Facebook</span> </span></mat-card>
+
+            <mat-card style="display: flex;margin-top: 20px;height: 53px;"><img src="../../../assets/images/apple2.png" style="width: 30px;height:30px;border-radius: 50%;"> <span style="display: block;margin: auto; text-align: center;"> <span style="font-weight: 500;font-size: 18px;"> Log In with Apple </span> </span></mat-card>
+        
+            <mat-card *ngIf="!loginfield" style="display: flex;margin-top: 20px;height: 53px;background-color: #1f1f1f;box-shadow: 0px 0px 0px 1px white;"><mat-icon style="color: white;">markunread</mat-icon> <span style="display: block;margin: auto; text-align: center;"> <span style="font-weight: 500;font-size: 18px;color: white;"> Sign Up With Email</span> </span></mat-card>
+
+            
+                <div class="row" *ngIf="loginfield">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username or e-mail" style="margin: 15px 15px 10px 15px;background-color: #1f1f1f;color: white;">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="margin: 5px 15px 10px 15px;background-color: #1f1f1f;color: white;">
+
+                    <button mat-stroked-button color="primary" style="color: black;margin: 15px;background-color: #ffc600;width: 100%;height: 50px;font-size: 20px;" > Log In </button>
+            </div>
+        </div>
+            <!-- <div style="display: block;color: yellow;float:right;font-size: 18px;margin:10px 0px;">
+           Log In
+            </div> -->
+            <div style="font-size: 16px;margin-top: 10px;text-align: center;">
+               <span style="color: white;"> Already have an account? </span> <span *ngIf="!loginfield" mat-button style="color: #ffc600;" (click)="loginChange()"> Log In </span>  <span mat-button style="color: #ffc600;" (click)="loginChange()" *ngIf="loginfield"> Sigh Up </span>
+            </div>
+            <div style="display:block;margin-top: 20px;">
+                <p style="color: white;">
+                    By signing up, you confirm that you agree to our Terms Of Service and have read and understood our Privacy Policy
+                </p>
+            </div>
+            
+
+
+        </mat-card-content>
+       
+      </mat-card>
+    </div>
+   
+</div>
+</section>
